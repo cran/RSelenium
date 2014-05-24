@@ -1,6 +1,10 @@
 R Bindings for Selenium 2.0 Remote WebDriver
 ==========================
 
+#### Travis build status
+[![Build Status](https://travis-ci.org/johndharrison/RSelenium.svg?branch=master)](https://travis-ci.org/johndharrison/RSelenium)
+
+#### Selenium test status
 [![Selenium Test Status](https://saucelabs.com/buildstatus/rselenium0)](https://saucelabs.com/u/rselenium0)
 
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/rselenium0.svg)](https://saucelabs.com/u/rselenium0)
@@ -11,7 +15,7 @@ can download from http://selenium-release.storage.googleapis.com/index.html .Thi
 
 ### Install 
 
-To install, install the `devtools` package if necessary (`install.packages("devtools")`) and run:
+To install RSelenium from CRAN run install.packages('RSelenium'). If you require the development version you will need the devtools package. If necessary (install.packages("devtools")) and run:
 
 ```
 devtools::install_github("RSelenium", "johndharrison")
@@ -28,6 +32,8 @@ vignette('RSelenium-basics')
 
 or the basic vignette can be viewed on [Rpubs](http://rpubs.com/johndharrison/12843).
 
+There is a second vignette dealing with running RSelenium on different browsers/OS locally and remotely which can be viewed at [RSelenium: Driving OS/Browsers local and remote](http://rpubs.com/johndharrison/13885).
+
 ### Test Shiny Apps
 
 Use RSelenium to test your Shiny Apps.
@@ -35,8 +41,9 @@ Use RSelenium to test your Shiny Apps.
 Read the introductory tutorial on [Rpubs](http://rpubs.com/johndharrison/13408).
 
 
-### Use sauceLabs
-Added support for sauceLabs:
+### Use Sauce Labs and BrowserStack
+
+#### Sauce Labs
 
 ```
 user <- "rselenium0"
@@ -50,6 +57,22 @@ extraCapabilities <- list(name = "Test RSelenium", username = user, accessKey = 
 
 remDr <- remoteDriver$new(remoteServerAddr = ip, port = port, browserName = browser
                           , version = version, platform = platform
+                          , extraCapabilities = extraCapabilities)
+```
+#### BrowserStack
+
+```
+require(RSelenium)
+user <- "johnharrison" 
+pass <- "*******************"
+port <- 80
+ip <- paste0(user, ':', pass, "@hub.browserstack.com")
+extraCapabilities <- list("browser" = "IE",
+                          "browser_version" = "7.0",
+                          "os" = "Windows",
+                          "os_version" = "XP",
+                          "browserstack.debug" = "true")
+remDr <- remoteDriver$new(remoteServerAddr = ip, port = port
                           , extraCapabilities = extraCapabilities)
 ```
 

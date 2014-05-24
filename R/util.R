@@ -47,16 +47,18 @@ startServer <- function (dir = NULL)
   selDIR <- ifelse(is.null(dir), paste0(find.package("RSelenium"), 
                                         "/bin/"), dir)
   selFILE <- paste0(selDIR, "selenium-server-standalone.jar")
+  logFILE <- paste0(selDIR, "sellog.txt")
+  write("", logFILE)
   if (!file.exists(selFILE)) {
     stop("No Selenium Server binary exists. Run checkForServer or start server manually.")
   }
   else {
     if (.Platform$OS.type == "unix") {
-      system(paste0("java -jar ", shQuote(selFILE)), wait = FALSE, 
+      system(paste0("java -jar ", shQuote(selFILE), " -log ", shQuote(logFILE)), wait = FALSE, 
              ignore.stdout = TRUE, ignore.stderr = TRUE)
     }
     else {
-      system(paste0("java -jar ", shQuote(selFILE)), wait = FALSE, 
+      system(paste0("java -jar ", shQuote(selFILE), " -log ", shQuote(logFILE)), wait = FALSE, 
              invisible = FALSE)
     }
   }
@@ -84,16 +86,66 @@ getFirefoxProfile <- function(profDir, useBase = FALSE){
   }
   tmpfile <- tempfile(fileext = '.zip')
   reqFiles <- list.files(profDir, recursive = TRUE)
-#  if(!useBase){
-    zip(tmpfile, paste(profDir, reqFiles, sep ="/"),  altNames = reqFiles)
-#  }else{
-#    zip(tmpfile, paste0(path.expand(profDir), reqFiles), flags = "-r9Xjq")
-#  }
+  if(!useBase){
+    Rcompression::zip(tmpfile, paste(profDir, reqFiles, sep ="/"),  altNames = reqFiles)
+  }else{
+    currWd <- getwd()
+    on.exit(setwd(currWd))
+    setwd(profDir)
+    # break the zip into chunks as windows command line has limit of 8191 characters
+    # ignore .sqllite files
+    reqFiles <- reqFiles[grep("^.*\\.sqlite$", reqFiles, perl = TRUE, invert = TRUE)]
+    chunks <- sum(nchar(reqFiles))%/%8000 + 2
+    chunks <- as.integer(seq(1, length(reqFiles), length.out= chunks))
+    chunks <- mapply(`:`, head(chunks, -1)
+           , tail(chunks, -1) - c(rep(1, length(chunks) - 2), 0)
+           , SIMPLIFY = FALSE)
+    out <- lapply(chunks, function(x){zip(tmpfile, reqFiles[x])})
+  }
   zz <- file(tmpfile, "rb")
   ar <- readBin(tmpfile, "raw", file.info(tmpfile)$size)
   fireprof <- base64encode(ar)
   close(zz)
   list("firefox_profile" = fireprof)
+}
+
+#' Get Chrome profile.
+#' 
+#' \code{getChromeProfile}
+#' A utility function to get a Chrome profile. 
+#' @param dataDir Specifies the user data directory, which is where the browser will look for all of its state.
+#' @param profileDir Selects directory of profile to associate with the first browser launched.
+#' @export
+#' @section Detail: A chrome profile directory is passed as an extraCapability.
+#' The data dir has a number of default locations
+#' \describe{
+#' \item{Windows XP}{
+#' Google Chrome: C:/Documents and Settings/\%USERNAME\%/Local Settings/Application Data/Google/Chrome/User Data
+#' }
+#' \item{Windows 8 or 7 or Vista}{
+#' Google Chrome: C:/Users/\%USERNAME\%/AppData/Local/Google/Chrome/User Data
+#' }
+#' \item{Mac OS X}{
+#' Google Chrome: ~/Library/Application Support/Google/Chrome
+#' }
+#' \item{Linux}{
+#' Google Chrome: ~/.config/google-chrome
+#' }
+#' }
+#' The profile directory is contained in the user directory and by default is named "Default" 
+#' @examples
+#' \dontrun{
+#' # example from windows using a profile directory "Profile 1"
+#' cprof <- getChromeProfile("C:\\Users\\john\\AppData\\Local\\Google\\Chrome\\User Data", "Profile 1")
+#' remDr <- remoteDriver(browserName = "chrome", extraCapabilities = cprof)
+#' }
+getChromeProfile <- function(dataDir, profileDir){
+  # see
+  # http://peter.sh/experiments/chromium-command-line-switches/#user-data-dir
+  # http://peter.sh/experiments/chromium-command-line-switches/#profile-directory
+  cprof <- list(chromeOptions = list(args = list(paste0('--user-data-dir=',dataDir)
+                                                 , paste0('--profile-directory=',profileDir))))
+  cprof
 }
 
 

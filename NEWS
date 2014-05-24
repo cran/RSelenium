@@ -1,0 +1,22 @@
+# RSelenium 1.3.0
+* Add the content from OC-RUG webinar as a vignette.
+* Update the Driving OS/Browsers local and remote vignette.
+
+# RSelenium 1.2.5
+
+* Update reference classes to use `@field` and inline docstrings for methods
+* Allow partial string matching on the `using` argument of the findElement and findElements method from the remoteDriver class.
+* Allow partial string matching on the `using` argument of the findChildElement and findChildElements method from the webElement class.
+
+# RSelenium 1.2.4
+
+* Add getLogtypes() and log(type) methods to remoteDriver class
+* Fix getFirefoxProfile so useBase = TRUE works under windows.
+* Add additional support for encoding (thanks to Nicola Logrillo issue #16)
+* Add file argument to screenshot method in remoteDriver class to allow writing screenshot to file
+* Add a getChromeProfile utility function.
+
+# RSelenium 1.2.3
+
+* Add option to display screenshot in viewer panel if using RStudio
+
