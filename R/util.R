@@ -17,11 +17,11 @@ checkForServer <- function (dir = NULL, update = FALSE)
   selURL <- "http://selenium-release.storage.googleapis.com"
   selXML <- xmlParse(paste0(selURL), "/?delimiter=")
   selJAR <- xpathSApply(selXML, "//s:Key[contains(text(),'selenium-server-standalone')]", namespaces = c(s = "http://doc.s3.amazonaws.com/2006-03-01"), xmlValue)
-# get the most up-to-date jar
+  # get the most up-to-date jar
   selJAR <- selJAR[order(as.numeric(gsub("(.*)/.*", "\\1",selJAR)), decreasing = TRUE)][1]
-  selDIR <- ifelse(is.null(dir), paste0(find.package("RSelenium"), 
-                                        "/bin/"), dir)
-  selFILE <- paste0(selDIR, "selenium-server-standalone.jar")
+  selDIR <- ifelse(is.null(dir), file.path(find.package("RSelenium"), 
+                                        "bin"), dir)
+  selFILE <- file.path(selDIR, "selenium-server-standalone.jar")
   if (update || !file.exists(selFILE)) {
     dir.create(selDIR, showWarnings=FALSE)
     print("DOWNLOADING STANDALONE SELENIUM SERVER. THIS MAY TAKE SEVERAL MINUTES")
@@ -34,32 +34,44 @@ checkForServer <- function (dir = NULL, update = FALSE)
 #' \code{startServer}
 #' A utility function to start the standalone server. 
 #' @param dir A directory in which the binary is to be placed.
+#' @param args Additional arguments to be passed to Selenium Server.
+#' @param invisible Windows specific. Show shell or not.
+#' @param log Logical value indicating whether to write a log file to the directory containing the Selenium Server binary.
 #' @export
 #' @section Detail: By default the binary is assumed to be in
-#' the RSelenium package /bin directory. 
+#' the RSelenium package /bin directory. The log argument is for convience. Setting it to FALSE and 
+#' stipulating args = c("-log /user/etc/somePath/somefile.log") allows a custom location. Using log = TRUE sets the location
+#' to a file named sellog.txt in the directory containing the Selenium Server binary.
 #' @examples
 #' \dontrun{
 #' startServer()
+#' # example of commandline passing
+#' startServer(args = c("-port 4455"), log = FALSE, invisible = FALSE)
+#' remDr <- remoteDriver(browserName = "chrome", port = 4455)
+#' remDr$open()
 #' }
 
-startServer <- function (dir = NULL) 
+startServer <- function (dir = NULL, args = NULL, invisible = TRUE, log = TRUE) 
 {
-  selDIR <- ifelse(is.null(dir), paste0(find.package("RSelenium"), 
-                                        "/bin/"), dir)
-  selFILE <- paste0(selDIR, "selenium-server-standalone.jar")
-  logFILE <- paste0(selDIR, "sellog.txt")
-  write("", logFILE)
+  selDIR <-  ifelse(is.null(dir), file.path(find.package("RSelenium"), 
+                                        "bin"), dir)
+  selFILE <- file.path(selDIR, "selenium-server-standalone.jar")
+  logFILE <- file.path(selDIR, "sellog.txt")
+  selArgs <- c(paste("-jar", shQuote(selFILE)))
+  if(log){
+    write("", logFILE)
+    selArgs <- c(selArgs, paste("-log", shQuote(logFILE)))
+  }
   if (!file.exists(selFILE)) {
     stop("No Selenium Server binary exists. Run checkForServer or start server manually.")
   }
   else {
+    selArgs <- c(selArgs, args)
     if (.Platform$OS.type == "unix") {
-      system(paste0("java -jar ", shQuote(selFILE), " -log ", shQuote(logFILE)), wait = FALSE, 
-             ignore.stdout = TRUE, ignore.stderr = TRUE)
+      system2("java", selArgs, wait = FALSE, stdout = FALSE, stderr = FALSE)
     }
     else {
-      system(paste0("java -jar ", shQuote(selFILE), " -log ", shQuote(logFILE)), wait = FALSE, 
-             invisible = FALSE)
+      system2("java", selArgs, wait = FALSE, invisible = invisible)
     }
   }
 }
@@ -81,9 +93,6 @@ startServer <- function (dir = NULL)
 
 getFirefoxProfile <- function(profDir, useBase = FALSE){
   
-  if(!useBase){
-    require(Rcompression)
-  }
   tmpfile <- tempfile(fileext = '.zip')
   reqFiles <- list.files(profDir, recursive = TRUE)
   if(!useBase){
@@ -98,8 +107,8 @@ getFirefoxProfile <- function(profDir, useBase = FALSE){
     chunks <- sum(nchar(reqFiles))%/%8000 + 2
     chunks <- as.integer(seq(1, length(reqFiles), length.out= chunks))
     chunks <- mapply(`:`, head(chunks, -1)
-           , tail(chunks, -1) - c(rep(1, length(chunks) - 2), 0)
-           , SIMPLIFY = FALSE)
+                     , tail(chunks, -1) - c(rep(1, length(chunks) - 2), 0)
+                     , SIMPLIFY = FALSE)
     out <- lapply(chunks, function(x){zip(tmpfile, reqFiles[x])})
   }
   zz <- file(tmpfile, "rb")
@@ -148,6 +157,76 @@ getChromeProfile <- function(dataDir, profileDir){
   cprof
 }
 
+#' Start a phantomjs binary in webdriver mode.
+#' 
+#' \code{phantom}
+#' A utility function to control a phantomjs binary in webdriver mode. 
+#' @param pjs_cmd The name, full or partial path of a phantomjs executable. This is optional only state if the executable is not in your path.
+#' @param port An integer giving the port on which phantomjs will listen. Defaults to 4444. format [[<IP>:]<PORT>]
+#' @param extras An optional character vector: see 'Details'.
+#' @param ... Arguments to pass to \code{\link{system2}}
+#' @export
+#' @importFrom tools pskill
+#' @section Detail: phantom() is used to start a phantomjs binary in webdriver mode. This can be used to drive
+#' a phantomjs binary on a machine without selenium server. 
+#' Argument extras can be used to specify optional extra command line arguments see \url{http://phantomjs.org/api/command-line.html}
+#' @section Value: phantom() returns a list with two functions:
+#' \describe{
+#' \item{getPID}{returns the process id of the phantomjs binary running in webdriver mode.}
+#' \item{stop}{terminates the phantomjs binary running in webdriver mode using \code{\link{pskill}}}
+#' }
+#' @examples
+#' \dontrun{
+#' pJS <- phantom()
+#' # note we are running here without a selenium server phantomjs is listening on port 4444
+#' # in webdriver mode
+#' remDr <- remoteDriver(browserName = "phantomjs")
+#' remDr$open()
+#' remDr$navigate("http://www.google.com/ncr")
+#' remDr$screenshot(display = TRUE)
+#' webElem <- remDr$findElement("name", "q")
+#' webElem$sendKeysToElement(list("HELLO WORLD"))
+#' remDr$screenshot(display = TRUE)
+#' remDr$close()
+#' # note remDr$closeServer() is not called here. We stop the phantomjs binary using
+#' pJS$stop()
+#' }
+
+phantom <- function (pjs_cmd = "", port = 4444L, extras = "", ...){
+  if (!nzchar(pjs_cmd)) {
+    pjsPath <- Sys.which("phantomjs")
+  }else{
+    pjsPath <- pjs_cmd
+  }
+  if(nchar(pjsPath) == 0){stop("PhantomJS binary not located.")}
+  pjsargs <- c(paste0("--webdriver=", port), extras)
+  if (.Platform$OS.type == "windows"){
+    system2(pjsPath, pjsargs, invisible = TRUE, wait = FALSE, ...)
+    pjsPID <- read.csv(text = system("tasklist /v /fo csv", intern = TRUE))
+    # support for MS-DOS-compatible (short) file name
+    pjsPID <- pjsPID$PID[grepl("phantomjs.exe|PHANTO~1.EXE", pjsPID$Image.Name)]
+  }else{
+    system2(pjsPath, pjsargs, wait = FALSE, ...)
+    if(Sys.info()["sysname"] == "Darwin"){
+      pjsPID <- system('ps -Ao"pid,args"', intern = TRUE)
+      pjsPID <- sub("^\\s*(\\d+)(.*)", "\\1,\\2", pjsPID)
+      pjsPID <- read.csv(text = pjsPID[-1], stringsAsFactors = FALSE, header = FALSE) 
+      names(pjsPID) <- c("PID", "COMMAND")       
+    }else{
+      pjsPID <- read.csv(text = system('ps -Ao"%p,%a"', intern = TRUE), stringsAsFactors = FALSE)        
+    }
+    pjsPID <- as.integer(pjsPID$PID[grepl("phantomjs", pjsPID$COMMAND)])
+  }
+  
+  list(
+    stop = function(){
+      tools::pskill(pjsPID)
+    },
+    getPID = function(){
+      return(pjsPID)
+    }
+  )
+}
 
 #' @export .DollarNames.remoteDriver
 #' @export .DollarNames.webElement
@@ -157,13 +236,13 @@ getChromeProfile <- function(dataDir, profileDir){
 
 matchSelKeys <- function(x){
   if(any(names(x) =='key')){
-      x[names(x) =='key']<-selKeys[match(x[names(x) == 'key'],names(selKeys))]
+    x[names(x) =='key']<-selKeys[match(x[names(x) == 'key'],names(selKeys))]
   }
   unname(x)      
 }
 
 .DollarNames.remoteDriver <- function(x, pattern){
-    grep(pattern, getRefClass(class(x))$methods(), value=TRUE)
+  grep(pattern, getRefClass(class(x))$methods(), value=TRUE)
 }
 
 .DollarNames.webElement <- function(x, pattern){
@@ -174,3 +253,64 @@ matchSelKeys <- function(x){
   grep(pattern, getRefClass(class(x))$methods(), value=TRUE)
 }
 
+makePrefjs <- function(opts) {
+  op <- options(useFancyQuotes = FALSE)
+  on.exit(options(op))
+  
+  optsQuoted <- lapply(opts, function(x) {
+    if(is.character(x)) {
+      dQuote(x)
+    } else if(is.double(x)) {
+      sprintf("%f", x)
+    } else if(is.integer(x)) {
+      sprintf("%d", x)
+    } else if(is.logical(x)) {
+      if(x) {
+        "true"
+      } else {
+        "false"
+      }
+    }
+  })
+  
+  sprintf("user_pref(\"%s\", %s);", names(opts), optsQuoted)
+}
+
+#' Make Firefox profile.
+#' 
+#' \code{makeFirefoxProfile}
+#' A utility function to make a firefox profile. 
+#' @param opts option list of firefox
+#' @export
+#' @section Detail: A firefox profile directory is zipped and base64 encoded. It can then be passed
+#' to the selenium server as a required capability with key firefox_profile
+#' @note Windows doesn't come with command-line zip capability. Installing rtools
+#' \url{http://cran.r-project.org/bin/windows/Rtools/index.html} is a straightforward way to gain 
+#' this capability.
+#' @examples
+#' \dontrun{
+#' fprof <- makeFirefoxProfile(list(browser.download.dir = "D:/temp"))
+#' remDr <- remoteDriver(extraCapabilities = fprof)
+#' remDr$open()
+#' }
+
+makeFirefoxProfile <- function(opts){
+  # make profile
+  profDir <- file.path(tempdir(), "firefoxprofile")
+  dir.create(profDir, showWarnings = FALSE)
+  prefs.js <- file.path(profDir, "prefs.js")
+  writeLines(makePrefjs(opts), con = prefs.js)
+  
+  # zip
+  tmpfile <- tempfile(fileext = '.zip')
+  utils::zip(tmpfile, prefs.js, flags = "-r9Xjq")
+  zz <- file(tmpfile, "rb")
+  ar <- readBin(tmpfile, "raw", file.info(tmpfile)$size)
+  
+  # base64
+  fireprof <- base64encode(ar)
+  close(zz)
+  
+  # output
+  list("firefox_profile" = fireprof)
+}

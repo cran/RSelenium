@@ -2,7 +2,7 @@ R Bindings for Selenium 2.0 Remote WebDriver
 ==========================
 
 #### Travis build status
-[![Build Status](https://travis-ci.org/johndharrison/RSelenium.svg?branch=master)](https://travis-ci.org/johndharrison/RSelenium)
+[![Build Status](https://travis-ci.org/ropensci/RSelenium.svg?branch=master)](https://travis-ci.org/ropensci/RSelenium)
 
 #### Selenium test status
 [![Selenium Test Status](https://saucelabs.com/buildstatus/rselenium0)](https://saucelabs.com/u/rselenium0)
@@ -18,7 +18,7 @@ can download from http://selenium-release.storage.googleapis.com/index.html .Thi
 To install RSelenium from CRAN run install.packages('RSelenium'). If you require the development version you will need the devtools package. If necessary (install.packages("devtools")) and run:
 
 ```
-devtools::install_github("RSelenium", "johndharrison")
+devtools::install_github("ropensci/RSelenium")
 ```
 
 To get started using `RSelenium` you can look at the introduction vignette located 
@@ -32,7 +32,14 @@ vignette('RSelenium-basics')
 
 or the basic vignette can be viewed on [Rpubs](http://rpubs.com/johndharrison/12843).
 
-There is a second vignette dealing with running RSelenium on different browsers/OS locally and remotely which can be viewed at [RSelenium: Driving OS/Browsers local and remote](http://rpubs.com/johndharrison/13885).
+There is a second vignette dealing with running RSelenium on different browsers/OS locally and remotely which can be viewed at [RSelenium: Driving OS/Browsers local and remote](http://rpubs.com/johndharrison/13885). Finally you can read all about running a headless browser or running a normal browser on a headless server [RSelenium: Headless browsing.](http://rpubs.com/johndharrison/RSelenium-headless).
+
+#### Summary of vignettes
+1.  [RSelenium: basics](http://rpubs.com/johndharrison/12843)
+2.  [RSelenium: Driving OS/Browsers local and remote](http://rpubs.com/johndharrison/13885)
+3.  [RSelenium: Testing Shiny Apps](http://rpubs.com/johndharrison/13408)
+4.  [Orange County R Users Group (OC-RUG): RSelenium Webinar](http://johndharrison.blogspot.com/2014/05/orange-county-r-users-group-oc-rug.html)
+5.  [RSelenium: Headless browsing.](http://rpubs.com/johndharrison/RSelenium-headless)
 
 ### Test Shiny Apps
 
