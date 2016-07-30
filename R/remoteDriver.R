@@ -594,7 +594,7 @@ remoteDriver <- setRefClass("remoteDriver",
                                 "Set a cookie on the domain. The inputs are required apart from `secure` which defaults to FALSE."
                                 cookie<-list(name = name,value = value,path = path,domain = domain,secure = secure)
                                 queryRD(paste0(serverURL,'/session/',sessionInfo$id,'/cookie'),
-                                        "POST",qdata=toJSON(cookie = list(cookie)))
+                                        "POST",qdata=toJSON(list(cookie = cookie)))
                               },
                               
                               deleteAllCookies = function(){
@@ -609,9 +609,9 @@ remoteDriver <- setRefClass("remoteDriver",
                                         ,"DELETE")
                               },
                               
-                              getPageSource = function(header = TRUE){
+                              getPageSource = function(header = TRUE, .mapUnicode = FALSE){
                                 "Get the current page source."
-                                queryRD(paste0(serverURL,'/session/',sessionInfo$id,'/source'), header = header)
+                                queryRD(paste0(serverURL,'/session/',sessionInfo$id,'/source'), header = header, .mapUnicode = .mapUnicode)
                                 .self$value
                               },
                               

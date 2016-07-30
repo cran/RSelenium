@@ -18,40 +18,47 @@ checkForServer <- function (dir = NULL, update = FALSE)
   selXML <- xmlParse(paste0(selURL), "/?delimiter=")
   selJAR <- xpathSApply(selXML, "//s:Key[contains(text(),'selenium-server-standalone')]", namespaces = c(s = "http://doc.s3.amazonaws.com/2006-03-01"), xmlValue)
   # get the most up-to-date jar
-  selJAR <- selJAR[order(as.numeric(gsub("(.*)/.*", "\\1",selJAR)), decreasing = TRUE)][1]
+  selJARstable <- grep("^.*-([0-9\\.]*)\\.jar$", selJAR, value = TRUE)
+  selJARdownload <- selJARstable[order(gsub(".*-(.*).jar$", "\\1", selJARstable), decreasing = TRUE)][1]
   selDIR <- ifelse(is.null(dir), file.path(find.package("RSelenium"), 
                                         "bin"), dir)
   selFILE <- file.path(selDIR, "selenium-server-standalone.jar")
   if (update || !file.exists(selFILE)) {
     dir.create(selDIR, showWarnings=FALSE)
     print("DOWNLOADING STANDALONE SELENIUM SERVER. THIS MAY TAKE SEVERAL MINUTES")
-    download.file(paste0( selURL, "/", selJAR), selFILE, mode = "wb")
+    download.file(paste0( selURL, "/", selJARdownload), selFILE, mode = "wb")
   }
 }
 
 #' Start the standalone server.
 #' 
 #' \code{startServer}
-#' A utility function to start the standalone server. 
+#' A utility function to start the standalone server. Return two functions see values.
 #' @param dir A directory in which the binary is to be placed.
 #' @param args Additional arguments to be passed to Selenium Server.
-#' @param invisible Windows specific. Show shell or not.
 #' @param log Logical value indicating whether to write a log file to the directory containing the Selenium Server binary.
+#' @param ... arguments passed \code{\link{system2}}. Unix defaults wait = FALSE, stdout = FALSE, stderr = FALSE. Windows defaults wait = FALSE, invisible = TRUE. 
 #' @export
 #' @section Detail: By default the binary is assumed to be in
 #' the RSelenium package /bin directory. The log argument is for convience. Setting it to FALSE and 
 #' stipulating args = c("-log /user/etc/somePath/somefile.log") allows a custom location. Using log = TRUE sets the location
 #' to a file named sellog.txt in the directory containing the Selenium Server binary.
+#' @return Returns a list containing two functions. The 'getpid' function returns the process id of the started Selenium binary. 
+#' The 'stop' function stops the started Selenium server using the process id. 
 #' @examples
 #' \dontrun{
-#' startServer()
+#' selServ <- startServer()
 #' # example of commandline passing
-#' startServer(args = c("-port 4455"), log = FALSE, invisible = FALSE)
+#' selServ <- startServer(args = c("-port 4455"), log = FALSE, invisible = FALSE)
 #' remDr <- remoteDriver(browserName = "chrome", port = 4455)
 #' remDr$open()
+#' # get the process id of the selenium binary
+#' selServ$getpid()
+#' # stop the selenium binary
+#' selServ$stop()
 #' }
 
-startServer <- function (dir = NULL, args = NULL, invisible = TRUE, log = TRUE) 
+startServer <- function (dir = NULL, args = NULL, log = TRUE, ...) 
 {
   selDIR <-  ifelse(is.null(dir), file.path(find.package("RSelenium"), 
                                         "bin"), dir)
@@ -67,12 +74,46 @@ startServer <- function (dir = NULL, args = NULL, invisible = TRUE, log = TRUE)
   }
   else {
     selArgs <- c(selArgs, args)
+    userArgs <- list(...)
     if (.Platform$OS.type == "unix") {
-      system2("java", selArgs, wait = FALSE, stdout = FALSE, stderr = FALSE)
+      initArgs <- list(command = "java", args = selArgs, wait = FALSE, stdout = FALSE, stderr = FALSE)
     }
     else {
-      system2("java", selArgs, wait = FALSE, invisible = invisible)
+      initArgs <- list(command = "java",args = selArgs, wait = FALSE, invisible = TRUE)
     }
+    initArgs[names(userArgs)] <- userArgs 
+    do.call(system2, initArgs)
+    if (.Platform$OS.type == "windows"){
+      wmicOut <- system2("wmic",
+                         args = c("path win32_process get Caption,Processid,Commandline"
+                                                 , "/format:htable")
+                         , stdout=TRUE, stderr=NULL)
+      wmicOut <- readHTMLTable(htmlParse(wmicOut), header = TRUE, stringsAsFactors = FALSE)[[1]]
+      wmicOut[["ProcessId"]] <- as.integer(wmicOut[["ProcessId"]])
+      idx <- grepl(selFILE, wmicOut$CommandLine)
+      if(!any(idx)) stop("Selenium binary error: Unable to start Selenium binary. Check java is installed.")
+      selPID <- wmicOut[idx,"ProcessId"]
+    }else{
+      if(Sys.info()["sysname"] == "Darwin"){
+        sPids <- system('ps -Ao"pid"', intern = TRUE)
+        sArgs <- system('ps -Ao"args"', intern = TRUE)
+      }else{
+        sPids <- system('ps -Ao"%p"', intern = TRUE)
+        sArgs <- system('ps -Ao"%a"', intern = TRUE)
+      }
+      idx <- grepl(selFILE, sArgs)
+      if(!any(idx)) stop("Selenium binary error: Unable to start Selenium binary. Check java is installed.")
+      selPID <- as.integer(sPids[idx])
+    }
+    
+    list(
+      stop = function(){
+        tools::pskill(selPID)
+      },
+      getPID = function(){
+        return(selPID)
+      }
+    )
   }
 }
 #' Get Firefox profile.
@@ -208,14 +249,15 @@ phantom <- function (pjs_cmd = "", port = 4444L, extras = "", ...){
   }else{
     system2(pjsPath, pjsargs, wait = FALSE, ...)
     if(Sys.info()["sysname"] == "Darwin"){
-      pjsPID <- system('ps -Ao"pid,args"', intern = TRUE)
-      pjsPID <- sub("^\\s*(\\d+)(.*)", "\\1,\\2", pjsPID)
-      pjsPID <- read.csv(text = pjsPID[-1], stringsAsFactors = FALSE, header = FALSE) 
-      names(pjsPID) <- c("PID", "COMMAND")       
+      pids <- system('ps -Ao"pid"', intern = TRUE)
+      args <- system('ps -Ao"args"', intern = TRUE)
     }else{
-      pjsPID <- read.csv(text = system('ps -Ao"%p,%a"', intern = TRUE), stringsAsFactors = FALSE)        
+      pids <- system('ps -Ao"%p"', intern = TRUE)
+      args <- system('ps -Ao"%a"', intern = TRUE)
     }
-    pjsPID <- as.integer(pjsPID$PID[grepl("phantomjs", pjsPID$COMMAND)])
+    idx <- grepl("phantomjs", args)
+    if(!any(idx)) warning("Couldn't find the phantomjs process")
+    pjsPID <- pids[idx]
   }
   
   list(
@@ -228,11 +270,6 @@ phantom <- function (pjs_cmd = "", port = 4444L, extras = "", ...){
   )
 }
 
-#' @export .DollarNames.remoteDriver
-#' @export .DollarNames.webElement
-#' @export .DollarNames.errorHandler
-#' @import methods
-#' 
 
 matchSelKeys <- function(x){
   if(any(names(x) =='key')){
@@ -241,14 +278,26 @@ matchSelKeys <- function(x){
   unname(x)      
 }
 
+#' @export
+#' @import methods
+#' @import utils
+#' 
 .DollarNames.remoteDriver <- function(x, pattern){
   grep(pattern, getRefClass(class(x))$methods(), value=TRUE)
 }
 
+#' @export
+#' @import methods
+#' @import utils
+#' 
 .DollarNames.webElement <- function(x, pattern){
   grep(pattern, getRefClass(class(x))$methods(), value=TRUE)
 }
 
+#' @export
+#' @import methods
+#' @import utils
+#' 
 .DollarNames.errorHandler <- function(x, pattern){
   grep(pattern, getRefClass(class(x))$methods(), value=TRUE)
 }
