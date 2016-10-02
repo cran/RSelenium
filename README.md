@@ -1,11 +1,11 @@
 R Bindings for Selenium 2.0 Remote WebDriver
 ==========================
+| CRAN version       | Travis build status    | SauceTests  | Coverage |
+| :-------------: |:-------------:|:-------------:|:-------------:|
+| [![](http://www.r-pkg.org/badges/version/RSelenium)](https://CRAN.R-project.org/package=RSelenium) | [![Build Status](https://travis-ci.org/ropensci/RSelenium.svg?branch=master)](https://travis-ci.org/ropensci/RSelenium) | [![Selenium Test Status](https://saucelabs.com/buildstatus/rselenium0)](https://saucelabs.com/u/rselenium0) | [![codecov](https://codecov.io/gh/ropensci/RSelenium/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/RSelenium)|
 
-#### Travis build status
-[![Build Status](https://travis-ci.org/ropensci/RSelenium.svg?branch=master)](https://travis-ci.org/ropensci/RSelenium)
 
 #### Selenium test status
-[![Selenium Test Status](https://saucelabs.com/buildstatus/rselenium0)](https://saucelabs.com/u/rselenium0)
 
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/rselenium0.svg)](https://saucelabs.com/u/rselenium0)
 
@@ -40,6 +40,7 @@ There is a second vignette dealing with running RSelenium on different browsers/
 3.  [RSelenium: Testing Shiny Apps](http://rpubs.com/johndharrison/13408)
 4.  [Orange County R Users Group (OC-RUG): RSelenium Webinar](http://johndharrison.blogspot.com/2014/05/orange-county-r-users-group-oc-rug.html)
 5.  [RSelenium: Headless browsing.](http://rpubs.com/johndharrison/RSelenium-headless)
+6.  [RSelenium: Docker Containers](http://rpubs.com/johndharrison/RSelenium-Docker)
 
 ### Test Shiny Apps
 
@@ -83,8 +84,22 @@ remDr <- remoteDriver$new(remoteServerAddr = ip, port = port
                           , extraCapabilities = extraCapabilities)
 ```
 
+### RELATED WORK
+
+* [seleniumPipes](https://github.com/johndharrison/seleniumPipes) seleniumPipes is a lightweight implementation of the w3c webdriver specification. It has been built utilising xml2, httr and magrittr so provides an alternative for users who are familiar with piping.
+
+* [webdriver](https://github.com/MangoTheCat/webdriver) A client for the 'WebDriver' 'API'. It allows driving a (probably headless) web browser, and can be used to test web applications, including 'Shiny' apps. In theory it works with any 'WebDriver' implementation, but it was only tested with 'PhantomJS'.
+
+* [rwebdriver](https://github.com/crubba/Rwebdriver) R bindings to the Webdriver API
+
+* [rdom](https://github.com/cpsievert/rdom) Render and parse the DOM from R via phantomjs.
+
 ### License
 
-The RSelenium package is licensed under the <a href="http://www.tldrlegal.com/l/AGPL3" target="_blank">AGPLv3</a>. The help files are licensed under the creative commons attribution, non-commercial, share-alike license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA</a>.
+The RSelenium package is licensed under the <a href="https://www.r-project.org/Licenses/AGPL-3" target="_blank">AGPLv3</a>. The help files are licensed under the creative commons attribution, non-commercial, share-alike license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA</a>.
 
 As a summary, the AGPLv3 license requires, attribution, include copyright and license in copies of the software, state changes if you modify the code, and disclose all source code. Details are in the COPYING file.
+
+---
+
+[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

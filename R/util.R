@@ -4,6 +4,8 @@
 #' A utility function to check if the Selenium Server stanalone binary is present.
 #' @param dir A directory in which the binary is to be placed.
 #' @param update A boolean indicating whether to update the binary if it is present.
+#' @param rename A boolean indicating whether to rename to "selenium-server-standalone.jar".
+#' @param beta A boolean indicating whether to include beta releases.
 #' @export
 #' @import XML
 #' @section Detail: The downloads for the Selenium project can be found at http://selenium-release.storage.googleapis.com/index.html. This convience function downloads the standalone server and places it in the RSelenium package directory bin folder by default.
@@ -12,20 +14,36 @@
 #' checkForServer()
 #' }
 
-checkForServer <- function (dir = NULL, update = FALSE) 
+checkForServer <- function (dir = NULL, update = FALSE, rename = TRUE, beta = FALSE) 
 {
+  .Deprecated(package = "RSelenium", msg = "checkForServer is deprecated.
+Users in future can find the function in file.path(find.package(\"RSelenium\"), \"example/serverUtils\").
+The sourcing/starting of a Selenium Server is a users responsiblity. 
+Options include manually starting a server see vignette(\"RSelenium-basics\", package = \"RSelenium\")
+and running a docker container see  vignette(\"RSelenium-docker\", package = \"RSelenium\")")
   selURL <- "http://selenium-release.storage.googleapis.com"
   selXML <- xmlParse(paste0(selURL), "/?delimiter=")
   selJAR <- xpathSApply(selXML, "//s:Key[contains(text(),'selenium-server-standalone')]", namespaces = c(s = "http://doc.s3.amazonaws.com/2006-03-01"), xmlValue)
+  
   # get the most up-to-date jar
-  selJARstable <- grep("^.*-([0-9\\.]*)\\.jar$", selJAR, value = TRUE)
-  selJARdownload <- selJARstable[order(gsub(".*-(.*).jar$", "\\1", selJARstable), decreasing = TRUE)][1]
+  selJAR <- if(!beta){
+    grep("^.*-([0-9\\.]*)\\.jar$", selJAR, value = TRUE)
+  }else{
+    selJAR
+  }
+  
+  selJARdownload <- selJAR[order(gsub(".*-(.*).jar$", "\\1", selJAR), decreasing = TRUE)][1]
   selDIR <- ifelse(is.null(dir), file.path(find.package("RSelenium"), 
-                                        "bin"), dir)
-  selFILE <- file.path(selDIR, "selenium-server-standalone.jar")
+                                           "bin"), dir)
+  selFILE <- if(rename){
+    file.path(selDIR, "selenium-server-standalone.jar")
+  }else{
+    file.path(selDIR, gsub(".*(selenium-server-standalone.*)", "\\1", selJARdownload))
+  }
+  
   if (update || !file.exists(selFILE)) {
     dir.create(selDIR, showWarnings=FALSE)
-    print("DOWNLOADING STANDALONE SELENIUM SERVER. THIS MAY TAKE SEVERAL MINUTES")
+    message("DOWNLOADING STANDALONE SELENIUM SERVER. THIS MAY TAKE SEVERAL MINUTES")
     download.file(paste0( selURL, "/", selJARdownload), selFILE, mode = "wb")
   }
 }
@@ -36,6 +54,7 @@ checkForServer <- function (dir = NULL, update = FALSE)
 #' A utility function to start the standalone server. Return two functions see values.
 #' @param dir A directory in which the binary is to be placed.
 #' @param args Additional arguments to be passed to Selenium Server.
+#' @param javaargs arguments passed to JVM as opposed to the Selenium Server jar.
 #' @param log Logical value indicating whether to write a log file to the directory containing the Selenium Server binary.
 #' @param ... arguments passed \code{\link{system2}}. Unix defaults wait = FALSE, stdout = FALSE, stderr = FALSE. Windows defaults wait = FALSE, invisible = TRUE. 
 #' @export
@@ -58,64 +77,85 @@ checkForServer <- function (dir = NULL, update = FALSE)
 #' selServ$stop()
 #' }
 
-startServer <- function (dir = NULL, args = NULL, log = TRUE, ...) 
+startServer <- function (dir = NULL, args = NULL, javaargs = NULL, log = TRUE,  ...) 
 {
+  .Deprecated(package = "RSelenium", msg = "startServer is deprecated.
+Users in future can find the function in file.path(find.package(\"RSelenium\"), \"example/serverUtils\").
+The sourcing/starting of a Selenium Server is a users responsiblity. 
+Options include manually starting a server see vignette(\"RSelenium-basics\", package = \"RSelenium\")
+and running a docker container see  vignette(\"RSelenium-docker\", package = \"RSelenium\")")
   selDIR <-  ifelse(is.null(dir), file.path(find.package("RSelenium"), 
-                                        "bin"), dir)
+                                            "bin"), dir)
   selFILE <- file.path(selDIR, "selenium-server-standalone.jar")
+  if (!file.exists(selFILE)) {
+    possFiles <- list.files(selDIR, "selenium-server-standalone")
+    if(length(possFiles) == 0){
+      stop("No Selenium Server binary exists. Run checkForServer or start server manually.")
+    }
+    # pick most recent driver
+    selFILE <- possFiles[order(gsub(".*-(.*).jar$", "\\1", possFiles), decreasing = TRUE)][1]
+    selFILE <- file.path(selDIR, selFILE)
+  }
   logFILE <- file.path(selDIR, "sellog.txt")
   selArgs <- c(paste("-jar", shQuote(selFILE)))
   if(log){
     write("", logFILE)
     selArgs <- c(selArgs, paste("-log", shQuote(logFILE)))
   }
-  if (!file.exists(selFILE)) {
-    stop("No Selenium Server binary exists. Run checkForServer or start server manually.")
+  selArgs <- c(javaargs, selArgs, args)
+  userArgs <- list(...)
+  if (.Platform$OS.type == "unix") {
+    initArgs <- list(command = "java", args = selArgs, wait = FALSE, stdout = FALSE, stderr = FALSE)
   }
   else {
-    selArgs <- c(selArgs, args)
-    userArgs <- list(...)
-    if (.Platform$OS.type == "unix") {
-      initArgs <- list(command = "java", args = selArgs, wait = FALSE, stdout = FALSE, stderr = FALSE)
-    }
-    else {
-      initArgs <- list(command = "java",args = selArgs, wait = FALSE, invisible = TRUE)
-    }
-    initArgs[names(userArgs)] <- userArgs 
-    do.call(system2, initArgs)
-    if (.Platform$OS.type == "windows"){
-      wmicOut <- system2("wmic",
-                         args = c("path win32_process get Caption,Processid,Commandline"
-                                                 , "/format:htable")
-                         , stdout=TRUE, stderr=NULL)
+    initArgs <- list(command = "java",args = selArgs, wait = FALSE, invisible = TRUE)
+  }
+  initArgs[names(userArgs)] <- userArgs 
+  do.call(system2, initArgs)
+  if (.Platform$OS.type == "windows"){
+    wmicOut <- tryCatch({
+      system2("wmic",
+              args = c("path win32_process get Caption,Processid,Commandline"
+                       , "/format:htable")
+              , stdout=TRUE, stderr=NULL)
+    }, error = function(e)e)
+    selPID <- if(inherits(wmicOut, "error")){
+      wmicArgs <- paste0(c("path win32_process where \"commandline like '%",
+                           selFILE, "%'\" get Processid"))
+      wmicOut <- system2("wmic", 
+              args = wmicArgs
+              , stdout = TRUE)
+      as.integer(gsub("\r", "", wmicOut[2]))
+    }else{
       wmicOut <- readHTMLTable(htmlParse(wmicOut), header = TRUE, stringsAsFactors = FALSE)[[1]]
       wmicOut[["ProcessId"]] <- as.integer(wmicOut[["ProcessId"]])
       idx <- grepl(selFILE, wmicOut$CommandLine)
-      if(!any(idx)) stop("Selenium binary error: Unable to start Selenium binary. Check java is installed.")
-      selPID <- wmicOut[idx,"ProcessId"]
-    }else{
-      if(Sys.info()["sysname"] == "Darwin"){
-        sPids <- system('ps -Ao"pid"', intern = TRUE)
-        sArgs <- system('ps -Ao"args"', intern = TRUE)
-      }else{
-        sPids <- system('ps -Ao"%p"', intern = TRUE)
-        sArgs <- system('ps -Ao"%a"', intern = TRUE)
-      }
-      idx <- grepl(selFILE, sArgs)
-      if(!any(idx)) stop("Selenium binary error: Unable to start Selenium binary. Check java is installed.")
-      selPID <- as.integer(sPids[idx])
+      if(!any(idx)) stop("Selenium binary error: Unable to start Selenium binary. Check if java is installed.")
+      wmicOut[idx,"ProcessId"]
     }
-    
-    list(
-      stop = function(){
-        tools::pskill(selPID)
-      },
-      getPID = function(){
-        return(selPID)
-      }
-    )
+  }else{
+    if(Sys.info()["sysname"] == "Darwin"){
+      sPids <- system('ps -Ao"pid"', intern = TRUE)
+      sArgs <- system('ps -Ao"args"', intern = TRUE)
+    }else{
+      sPids <- system('ps -Ao"%p"', intern = TRUE)
+      sArgs <- system('ps -Ao"%a"', intern = TRUE)
+    }
+    idx <- grepl(selFILE, sArgs)
+    if(!any(idx)) stop("Selenium binary error: Unable to start Selenium binary. Check if java is installed.")
+    selPID <- as.integer(sPids[idx])
   }
+  
+  list(
+    stop = function(){
+      tools::pskill(selPID)
+    },
+    getPID = function(){
+      return(selPID)
+    }
+  )
 }
+
 #' Get Firefox profile.
 #' 
 #' \code{getFirefoxProfile}
@@ -334,7 +374,7 @@ makePrefjs <- function(opts) {
 #' @section Detail: A firefox profile directory is zipped and base64 encoded. It can then be passed
 #' to the selenium server as a required capability with key firefox_profile
 #' @note Windows doesn't come with command-line zip capability. Installing rtools
-#' \url{http://cran.r-project.org/bin/windows/Rtools/index.html} is a straightforward way to gain 
+#' \url{https://CRAN.R-project.org/bin/windows/Rtools/index.html} is a straightforward way to gain 
 #' this capability.
 #' @examples
 #' \dontrun{
