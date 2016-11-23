@@ -1,3 +1,19 @@
+# RSelenium 1.4.9
+* Fix .DollarNames to correct issues running under recent RStudio version.
+
+# RSelenium 1.4.8
+* Added tests for executeScript
+* Fixed issue in executeScript/executeAsyncScript with returning nested
+    web elements
+
+# RSelenium 1.4.7
+* Code tidied up
+* statCodes added as an internal data.frame
+* tidy up imports. importFrom instead of import
+
+# RSelenium 1.4.6
+* Replace calls to cat with message when error
+
 # RSelenium 1.4.5
 * Use canonical form for referring to r-project
 
