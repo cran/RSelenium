@@ -6,10 +6,7 @@
 #'    describes how drivers may respond. With a wide range of browsers etc 
 #'    the response can be variable.
 #'  
-#' @importFrom RCurl basicHeaderGatherer basicTextGatherer debugGatherer
-#'    getURLContent
 #' @importFrom methods setRefClass new
-#' @importFrom rjson fromJSON
 #' @field statusCodes A list with status codes and their descriptions.
 #' @field status A status code summarizing the result of the command. A 
 #'    non-zero value indicates that the command failed. A value of one is 
@@ -90,145 +87,115 @@ errorHandler <-
     fields   = list(
       statusCodes = "data.frame", 
       status = "numeric", 
-      encoding = "character", 
       statusclass = "character", 
       sessionid = "character", 
       hcode = "numeric", 
-      value = "list", 
-      responseheader = "list", 
-      debugheader = "list"),
+      value = "list"),
     methods  = list(
       initialize = function(){
         # statCodes are status codes stored in sysdata.rda
         statusCodes <<- statCodes
         status <<- 0L # initial status success
-        encoding <<- NA_character_
         statusclass <<- NA_character_
         sessionid <<- NA_character_
         hcode <<- NA_integer_
         value <<- list()
-        responseheader <<- list()
-        debugheader <<- list()
         },
       
       queryRD = 
-        function(ipAddr, method = "GET",
-                 httpheader = c('Content-Type' = 
-                                  'application/json;charset=UTF-8'),
-                 qdata = NULL, json = FALSE, header = TRUE,
-                 .mapUnicode = TRUE){
+        function(ipAddr, method = "GET", qdata = NULL){
           "A method to communicate with the remote server implementing the 
           JSON wire protocol."
-        h <- basicHeaderGatherer()
-        w <- basicTextGatherer(.mapUnicode = .mapUnicode)
-        d <- debugGatherer()
-        getUC.params <- if(is.null(qdata)){
-          list(url = ipAddr, customrequest = method, 
-               httpheader = httpheader, isHTTP = FALSE)
-        }else{
-          list(url = ipAddr, customrequest = method,
-               httpheader = httpheader, postfields = qdata, isHTTP = FALSE)
-        }
-        if(header){
-          getUC.params <- 
-            c(getUC.params, 
-              list(headerfunction = h$update, writefunction = w$update)
-            )
-        }
-        eMessage <- list(
-          "Invalid call to server. Please check you have opened a browser.",
-          paste0("Couldnt connect to host on ", serverURL, 
-                 ".\nPlease ensure a Selenium server is running."),
-          function(x){
-            paste0("Undefined error in RCurl call. Rcurl output: ", x)
-          }
-        )
+        getUC.params <- 
+          list(url = ipAddr, verb = method, body = qdata, encode = "json")
         res <- tryCatch(
-          {do.call(getURLContent, getUC.params)}, 
-          error = function(e){
-            err <- switch(
-              e$message,
-              "<url> malformed" = eMessage[[1]],
-              "couldn't connect to host" = eMessage[[2]],
-              eMessage[[3]](e$message)
-          )
-          message(err)
-          NA
-        }
+          {do.call(httr::VERB, getUC.params)}, 
+          error = function(e){e}
         )
-        if(is.na(res)){stop()}
-        
-        if(header){
-          responseheader <<- as.list(h$value())
-        }
-        debugheader <<- as.list(d$value())
-        res <- w$value()
-        res <- ifelse(is.raw(res), rawToChar(res), res)
-        res1 <- try(fromJSON(res), TRUE)
-        if(identical(class(res1), "try-error") && 
-           grepl("\"value\":", res)){
-          # try manually parse JSON rjson wont handle
-          testRes <- sub("(.*?\"value\":\")(.*)(\",\"state\":.*)", 
-                         "\\1YYYYY\\3", res)
-          testValue <- sub("(.*?\"value\":\")(.*)(\",\"state\":.*)", 
-                           "\\2", res)
-          res1 <- fromJSON(testRes)
-          res1$value <- gsub("\\\"", "\"", testValue)
-        }
-        if( !identical(class(res1), "try-error")){
-          if(!is.null(res1$status)){status <<- res1$status}
-          if(!is.null(res1$class)){statusclass <<- res1$class}
-          if(!is.null(res1$sessionId)){sessionid <<- res1$sessionId}
-          if(!is.null(res1$hCode)){hcode <<- res1$hCode}
-          if(!is.null(res1$value)){
-            if(length(res1$value) > 0){
-              if(is.list(res1$value)){
-                value <<- res1$value
-              }else{
-                value <<- list(res1$value)                                      
-              }
-            }else{
-              value <<- list()
-            }
-          }
+        if(inherits(res, "response")){
+          resContent <- httr::content(res, simplifyVector = FALSE)
+          checkStatus(resContent)
         }else{
-          # try JSON
-          status <<- 1L # user check for error
-          statusclass <<- NA_character_
-          sessionid <<- NA_character_
-          hcode <<- NA_integer_
-          value <<- list(res)
-          
+          checkError(res)
         }
-        checkStatus()
-      }
-      , checkStatus = function(){
+      },
+      
+      checkStatus = function(resContent){
         "An internal method to check the status returned by the server. If 
         status indicates an error an appropriate error message is thrown."
-        if(status > 1){
-          errId <- which(statusCodes$Code == as.integer(status))
-          if(length(errId) > 0){
+        if(!is.null(resContent[["status"]])){
+          status <<- resContent[["status"]]
+          statusclass <<- if(!is.null(resContent[["class"]])){
+            resContent[["class"]]
+          }else{
+            NA_character_
+          }
+          if(!is.null(resContent[["sessionId"]])){
+            sessionid <<- resContent[["sessionId"]]
+          }
+          hcode <<- if(!is.null(resContent[["hCode"]])){
+            as.integer(resContent[["hCode"]])
+          }else{
+            NA_integer_
+          }
+          value <<- if(!is.null(resContent[["value"]])){
+            if(is.list(resContent[["value"]])){
+              resContent[["value"]]
+            }else{
+              list(resContent[["value"]])
+            }
+          }else{
+            list()
+          }
+          errId <- which(
+            statusCodes[["Code"]] == as.integer(status)
+          )
+          if(length(errId) > 0 && status > 1L){
             errMessage <- statusCodes[errId, c("Summary", "Detail")]
-            errMessage$class <- value$class
+            errMessage[["class"]] <- value[["class"]]
             errMessage <- paste("\t", paste(names(errMessage), 
                                             errMessage, sep = ": "))
             errMessage[-1] <- paste("\n", errMessage[-1])
             errMessage <- 
               c(errMessage,
                 "\n\t Further Details: run errorDetails method")
-            if(!is.null(value$message)){
-              message("\nSelenium message:", value$message, "\n")
+            if(!is.null(value[["message"]])){
+              message("\nSelenium message:", value[["message"]], "\n")
             }
             stop(errMessage, call. = FALSE)
           }
+        }else{
+          
         }
-      }
-      , errorDetails = function(type = "value"){
+      },
+      
+      checkError = function(res){
+        status <<- 13L
+        statusclass <<- NA_character_
+        hcode <<- NA_integer_
+        value <<- list()
+        eMessage <- list(
+          "Invalid call to server. Please check you have opened a browser.",
+          paste0("Couldnt connect to host on ", serverURL, 
+                 ".\n  Please ensure a Selenium server is running."),
+          function(x){
+            paste0("Undefined error in httr call. httr output: ", x)
+          }
+        )
+        err <- switch(
+          res[["message"]], 
+          "Couldn't connect to server" = eMessage[[2]],
+          eMessage[[3]](res[["message"]])
+        )
+        stop(err)
+      },
+      
+      errorDetails = function(type = "value"){
         "Return error details. Type can one of c(\"value\", \"class\", 
         \"status\")"
         switch(type,
                value = value,
-               class = statusClass,
+               class = statusclass,
                status = status
         )
       }
