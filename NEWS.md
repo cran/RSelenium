@@ -1,3 +1,24 @@
+# RSelenium 1.7.0
+* Basic vignette update with appendix on using rsDriver
+* Print method added for environment returned by rsDriver
+* Default PhantomJS version switched to 2.1.1 (2.5.0-beta has old
+  version of ghostdriver)
+
+# RSelenium 1.6.6
+* phantom is marked as deprecated. To drive PhantomJS via selenium use the
+  rsDriver function. To drive directly use wdman::phantomjs
+
+# RSelenium 1.6.5
+* checkForServer and startServer are now defunct. rsDriver is marked as a
+  dual replacement. Docker is recommended to run a selenium server/browser.
+
+# RSelenium 1.6.4
+* Add a rsDriver function to return a Selenium/webdriver server and a 
+  browser client.
+
+# RSelenium 1.6.3
+* Return a selected value with the selectTag method.
+
 # RSelenium 1.6.1
 * Added a selectTag method to the webElement class see #108.
 * RSelenium Basics vignette was updated/revised.
