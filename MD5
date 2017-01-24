@@ -1,12 +1,12 @@
-58d36bf8fbff7f70d1215d736cee8764 *DESCRIPTION
+4051fa8413d4261466444f94947131fc *DESCRIPTION
 e4846ff35e31e113f4d0c1d24a8b9cd0 *NAMESPACE
-9280c513e4175d76cbf4a2ffa4772d7d *NEWS.md
+e7a2409b60dd2b62bfe52d16109e5a96 *NEWS.md
 44c3d59f8be85673a907258d37b81ed4 *R/errorHandler.R
-0893e0e5876f669de07798f86bb2c5a8 *R/remoteDriver.R
-2ad2e511480eb21dc9351215a7b86370 *R/rsDriver.R
+bde6e967d6ead87ac5dbac1bd0f2714e *R/remoteDriver.R
+5f00b3097378979a2325744af9871f23 *R/rsDriver.R
 662c581650a7041fb9ec7e59f48d2510 *R/selKeys-data.R
 de075cfa846bc25ac1b3859302540577 *R/sysdata.rda
-773088bbe88caf4097c9cda40182011e *R/util.R
+ac7cbcd26694b44dffa530b00d3be75f *R/util.R
 4e4a414271f3afcbc8657639177644bc *R/webElement.R
 c664740d0484e29c64601edf0ede2fbd *R/zzz.R
 b39d8747a51d027a23e4123b61d952dd *README.md
@@ -51,8 +51,8 @@ a27adbd14bdad23067f5678f8f5b51c8 *inst/doc/OCRUG-webinar.R
 4fbd8809ded30760205817d0630a758b *inst/doc/OCRUG-webinar.Rmd
 140005951bb4c75071bd92a6f0eadaad *inst/doc/OCRUG-webinar.html
 47aeebef3a442cd2289cd1b74452adf6 *inst/doc/RSelenium-basics.R
-68a9e273a47246322b388be20d65af4e *inst/doc/RSelenium-basics.Rmd
-87d656642a4eafb594e7266d8f5b78c1 *inst/doc/RSelenium-basics.html
+f517b58705384cc82eaf16f179a135ef *inst/doc/RSelenium-basics.Rmd
+810fce10a42bc85a20e8759f2695a88e *inst/doc/RSelenium-basics.html
 d94b44a601b9a2e514f0b8adc5ae2a23 *inst/doc/RSelenium-docker.Rmd
 817b0a23f3183bf2c7c967870e07c64e *inst/doc/RSelenium-docker.html
 a27adbd14bdad23067f5678f8f5b51c8 *inst/doc/RSelenium-headless.R
@@ -99,7 +99,7 @@ ffbe9c2cb918d85d313d0dbd387ce61e *tests/testthat/test-misc_remoteDriver_methods_
 49f47c82741026ebfe52bf8e87b57dd9 *tests/testthat/test-util_function_tests.R
 4fbd8809ded30760205817d0630a758b *vignettes/OCRUG-webinar.Rmd
 18d3c510c37f8141cbe65b1dfab97c65 *vignettes/RProject.png
-68a9e273a47246322b388be20d65af4e *vignettes/RSelenium-basics.Rmd
+f517b58705384cc82eaf16f179a135ef *vignettes/RSelenium-basics.Rmd
 d94b44a601b9a2e514f0b8adc5ae2a23 *vignettes/RSelenium-docker.Rmd
 16bf2ee5f2431995c68e2c1a6b90f6af *vignettes/RSelenium-headless.Rmd
 064c2895719148cd368d9a38f9771495 *vignettes/RSelenium-saucelabs.Rmd
