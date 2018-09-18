@@ -1,9 +1,12 @@
 Package: RSelenium
 Type: Package
 Title: R Bindings for 'Selenium WebDriver'
-Version: 1.7.1
-Authors@R: person("John", "Harrison", , "johndharrison0@gmail.com", 
-    role = c("aut", "cre"), comment = "R package RSelenium")
+Version: 1.7.4
+Authors@R: c(
+    person("John", "Harrison", , "johndharrison0@gmail.com",
+    role = "aut", comment = "original author"),
+    person("Ju Yeong", "Kim", , "jkim2345@fredhutch.org",
+    role = "cre", comment = "rOpenSci maintainer"))
 Description: Provides a set of R bindings for the 'Selenium 2.0 WebDriver'
     (see <https://seleniumhq.github.io/docs/wd.html>
     for more information) using the 'JsonWireProtocol' (see
@@ -19,17 +22,19 @@ URL: http://ropensci.github.io/RSelenium
 BugReports: http://github.com/ropensci/RSelenium/issues
 Additional_repositories: http://www.omegahat.net/R
 Depends: R (>= 3.0.0)
-Imports: XML,methods,caTools,tools,utils, openssl, httr, wdman(>=
+Imports: XML, methods, caTools, tools, utils, openssl, httr, wdman(>=
         0.2.2), binman
 Suggests: testthat, knitr, Rcompression, covr, rmarkdown
 VignetteBuilder: knitr
 LazyData: true
-Collate: 'errorHandler.R' 'remoteDriver.R' 'rsDriver.R'
+Collate: 'RSelenium.R' 'errorHandler.R' 'remoteDriver.R' 'rsDriver.R'
         'selKeys-data.R' 'util.R' 'webElement.R' 'zzz.R'
-RoxygenNote: 5.0.1
+Encoding: UTF-8
+RoxygenNote: 6.1.0
 NeedsCompilation: no
-Packaged: 2017-01-24 12:44:40 UTC; john
-Author: John Harrison [aut, cre] (R package RSelenium)
-Maintainer: John Harrison <johndharrison0@gmail.com>
+Packaged: 2018-09-17 18:43:13 UTC; jkim2345
+Author: John Harrison [aut] (original author),
+  Ju Yeong Kim [cre] (rOpenSci maintainer)
+Maintainer: Ju Yeong Kim <jkim2345@fredhutch.org>
 Repository: CRAN
-Date/Publication: 2017-01-24 14:20:32
+Date/Publication: 2018-09-18 08:30:12 UTC
