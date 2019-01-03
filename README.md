@@ -2,7 +2,6 @@ RSelenium
 ================
 
 [![Build Status](https://travis-ci.org/ropensci/RSelenium.svg?branch=master)](https://travis-ci.org/ropensci/RSelenium)
-[![Selenium Test Status](https://saucelabs.com/buildstatus/rselenium)](https://saucelabs.com/u/rselenium)
 [![codecov](https://codecov.io/gh/ropensci/RSelenium/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/RSelenium)
 [![](http://www.r-pkg.org/badges/version/RSelenium)](https://CRAN.R-project.org/package=RSelenium)
 ![](http://cranlogs.r-pkg.org/badges/RSelenium?color=yellow)
@@ -44,6 +43,7 @@ There is a second vignette dealing with running RSelenium on different browsers/
 1. [Testing Shiny Apps](http://ropensci.github.io/RSelenium/articles/shinytesting.html)
 1. [Headless Browsing](http://ropensci.github.io/RSelenium/articles/headless.html)
 1. [Docker](http://ropensci.github.io/RSelenium/articles/docker.html)
+1. [Internet Explorer](http://ropensci.github.io/RSelenium/articles/internetexplorer.html)
 1. [Orange County R Users Group Webinar](http://ropensci.github.io/RSelenium/articles/webinar.html)
 
 
