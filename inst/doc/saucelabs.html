@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
 
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -115,9 +115,6 @@ padding-right: 2em;
 font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 14px;
 line-height: 1.35;
-}
-#header {
-text-align: center;
 }
 #TOC {
 clear: both;
@@ -286,8 +283,12 @@ code > span.st { color: #d14; }
 code > span.co { color: #888888; font-style: italic; } 
 code > span.ot { color: #007020; } 
 code > span.al { color: #ff0000; font-weight: bold; } 
-code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
 </style>
+
+
+
 
 </head>
 
@@ -366,7 +367,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 ## $extraCapabilities
 ## list()</code></pre>
 <p>Other browsers can be driven using <code>RSelenium</code>. We shall split these browsers into three groups. Full-fledged browsers, headless browsers and mobile browsers.</p>
-<p>The standalone selenium jar has the ability to drive other full-fleged browsers such as chrome, internet explorer, safari and opera. First we shall look at how to drive chrome using <code>RSelenium</code></p>
+<p>The standalone selenium jar has the ability to drive other full-fledged browsers such as chrome, internet explorer, safari and opera. First we shall look at how to drive chrome using <code>RSelenium</code></p>
 </div>
 <div id="chrome" class="section level3">
 <h3>Chrome</h3>
@@ -471,7 +472,7 @@ Supports Chrome v31-34</code></pre>
 ## System info: host: 'johnlt', ip: '192.168.58.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_45'
 ## Driver info: driver.version: OperaDriver</code></pre>
 <p>So not surprising win 8.1 was first unveiled and released as a public beta in June 2013 and on July 4, 2013, Opera 12.16 was released being the last current version of opera supported by selenium. OperaLauncherRunner.java located <a href="https://github.com/operasoftware/operadriver/blob/master/src/com/opera/core/systems/runner/launcher/OperaLauncherRunner.java">here</a> does not currently cater for the WIN8 enum returned by Platform.getCurrent().</p>
-<p>The solution is to start the selenium server with additional parameters passed to java (RSelenium::startServer doesnt pass arguments to java atm)</p>
+<p>The solution is to start the selenium server with additional parameters passed to java (RSelenium::startServer doesn’t pass arguments to java atm)</p>
 <pre class="batch"><code>java -Dos.name=windows -jar selenium-server-standalone.jar</code></pre>
 <p>This is actually using <code>java -D</code> which is used to set a system property. The system property we set is <code>os.name</code>. This is nothing to do with selenium-server and the appearance of <code>Dos</code> is a coincidence not related to DOS.</p>
 <p>Now we get a new issue.</p>
@@ -520,7 +521,7 @@ Supports Chrome v31-34</code></pre>
 <li>Render the content into dom, eg executing javascript inside the script tag. and the executed result will be reflected on the browsers dom.</li>
 <li>Render the dom into visualised content.</li>
 </ol>
-<p>A headless browser handles items 1 and 2 but doesnt carryout 3. This means it doesnt display anything. All pages etc. are in memory rather then displayed to the user. The result of this is that headless browsers should perform faster then their full-fledged competitors which could be welcome news to speed up testing.</p>
+<p>A headless browser handles items 1 and 2 but doesn’t carryout 3. This means it doesn’t display anything. All pages etc. are in memory rather then displayed to the user. The result of this is that headless browsers should perform faster then their full-fledged competitors which could be welcome news to speed up testing.</p>
 <div id="phantomjs" class="section level3">
 <h3>phantomjs</h3>
 <p>The first headless browser we shall look at is <code>phantomjs</code>. Firstly download the relevant zip file for your OS from <a href="http://phantomjs.org/download.html">here</a>. We are using windows so we downloaded <a href="https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-windows.zip">phantomjs-2.1.1-windows.zip</a>. It is sufficient to place the location of the directory containing <code>phantomjs.exe</code> in your path. In this case we probably could have just extracted <code>phantomjs.exe</code> to the Documents folder where chromedriver etc current reside.</p>
@@ -585,7 +586,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)</code></pre>
 </div>
 <div id="sdk" class="section level5">
 <h5>SDK</h5>
-<p>Another Developement kit needs to be installed <a href="http://developer.android.com/sdk/index.html">SDK</a> in this case. From the link provided you can download the ADT Bundle for Windows. I downloaded the bundle and extracted the zip to the Desktop this resulted in a directory <code>C:\Users\john\Desktop\adt-bundle-windows-x86_64-20131030</code>. There is a guide to setup the SDK <a href="http://projects.spring.io/spring-android/#quick-start">here</a>. The environment variable <code>ANDROID_HOME</code> needs to be set. This should be set to the /sdk/ directory in the extracted bundle.</p>
+<p>Another Development kit needs to be installed <a href="http://developer.android.com/sdk/index.html">SDK</a> in this case. From the link provided you can download the ADT Bundle for Windows. I downloaded the bundle and extracted the zip to the Desktop this resulted in a directory <code>C:\Users\john\Desktop\adt-bundle-windows-x86_64-20131030</code>. There is a guide to setup the SDK <a href="http://projects.spring.io/spring-android/#quick-start">here</a>. The environment variable <code>ANDROID_HOME</code> needs to be set. This should be set to the /sdk/ directory in the extracted bundle.</p>
 <pre class="batch"><code>echo %ANDROID_HOME%</code></pre>
 <pre><code>C:\Users\john\Desktop\adt-bundle-windows-x86_64-20131030\sdk</code></pre>
 <p>After setting <code>ANDROID_HOME</code> <code>%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools</code> needs to be added to the system path also. Typing android in a command prompt should bring up the following:</p>
@@ -616,7 +617,7 @@ Android AVD my_avd on win 8.1
 </div>
 <div id="selendroid" class="section level5">
 <h5>Selendroid</h5>
-<p>Finally, we need to download the selendroid driver. The selendroid <a href="http://selendroid.io/">homepage</a> has a link at the bootom to the most recent <a href="https://github.com/selendroid/selendroid/releases/download/0.8.0/selendroid-standalone-0.8.0-with-dependencies.jar">jar</a>. This jar should be saved on the local computer. I saved the jar in the Documents folder namely <code>C:\Users\john\Documents</code>. To begin running tests you need to run the jar with java in a command prompt.</p>
+<p>Finally, we need to download the selendroid driver. The selendroid <a href="http://selendroid.io/">homepage</a> has a link at the bottom to the most recent <a href="https://github.com/selendroid/selendroid/releases/download/0.8.0/selendroid-standalone-0.8.0-with-dependencies.jar">jar</a>. This jar should be saved on the local computer. I saved the jar in the Documents folder namely <code>C:\Users\john\Documents</code>. To begin running tests you need to run the jar with java in a command prompt.</p>
 <pre class="batch"><code>java -jar selendroid-standalone-0.8.0-with-dependencies.jar</code></pre>
 </div>
 <div id="rselenium-and-selendroid" class="section level5">
@@ -640,7 +641,7 @@ Android with RSelenium on win 8.1
 </div>
 <div id="rselenium-with-remote-browsers-and-external-sites" class="section level2">
 <h2>RSelenium with Remote Browsers and External Sites</h2>
-<p>Setting up multiple OS/browsers combinations locally is not always the best use of ones time. It is an interesting exercise to implement for example an Android platform locally but the overhead of having multiple systems and browsers quickly overcomes the utility. There are professional service providers who maintain a suite of OS/browsers that can be utilised for testing. Companies such as <a href="Sauce%20Labs">https://saucelabs.com/</a> and <a href="Browser%20Stack">http://www.browserstack.com</a> offer free automated testing to open source projects. In this vignette we will demonstrate remote testing using Sauce Labs.</p>
+<p>Setting up multiple OS/browsers combinations locally is not always the best use of ones time. It is an interesting exercise to implement for example an Android platform locally but the overhead of having multiple systems and browsers quickly overcomes the utility. There are professional service providers who maintain a suite of OS/browsers that can be utilised for testing. Companies such as <a href="https://saucelabs.com/">Sauce Labs</a> and <a href="http://www.browserstack.com">Browser Stack</a> offer free automated testing to open source projects. In this vignette we will demonstrate remote testing using Sauce Labs.</p>
 <div id="setting-up-sauce-labs" class="section level3">
 <h3>Setting up Sauce Labs</h3>
 <p>We assume in this vignette that you are setting up Sauce Labs for an open source project. Firstly you should register your project <a href="https://saucelabs.com/opensauce">here</a>. On the <a href="https://saucelabs.com/account">account page</a> you will find the access key for your account that is in a similar format to <code>49953c74-5c46-4ff9-b584-cf31a4c71809</code>. Using Sauce Labs is pretty straightforward. You need to tell it what OS/Browser combination you would like. A list of possible setups can be viewed <a href="https://saucelabs.com/platforms">here</a>. As an example lets suppose we wished to run google chrome version 33 on OSX version mavericks.</p>
@@ -693,7 +694,7 @@ Android with RSelenium on win 8.1
 <a class="sourceLine" id="cb29-20" data-line-number="20">}</a>
 <a class="sourceLine" id="cb29-21" data-line-number="21"></a>
 <a class="sourceLine" id="cb29-22" data-line-number="22"><span class="kw">testScript</span>(remDr)</a></code></pre></div>
-<p>And thats it. We have ran our first remote test using Sauce Labs. The results of the test can be viewed <a href="https://saucelabs.com/tests/ae22f859de8746f9bfedad2f49c1c329">https://saucelabs.com/tests/ae22f859de8746f9bfedad2f49c1c329</a>. I think you will agree its a nice setup. We have access to screenshots of all the commands we issued and a video (screencast) of the test run. We can view the selenium server logs and the medadata associated with our test.</p>
+<p>And that’s it. We have ran our first remote test using Sauce Labs. The results of the test can be viewed <a href="https://saucelabs.com/tests/ae22f859de8746f9bfedad2f49c1c329">https://saucelabs.com/tests/ae22f859de8746f9bfedad2f49c1c329</a>. I think you will agree its a nice setup. We have access to screenshots of all the commands we issued and a video (screencast) of the test run. We can view the selenium server logs and the medadata associated with our test.</p>
 </div>
 </div>
 <div id="testing-multiple-osbrowsers" class="section level3">
@@ -738,7 +739,7 @@ Sauce Labs results for simple test script
 </div>
 <div id="rselenium-with-remote-browsers-and-local-sites" class="section level2">
 <h2>RSelenium with Remote Browsers and Local Sites</h2>
-<p>Testing external webpages and websites across a range of operating systems and browsers can be achieved using Sauce Labs as we observed in the last section. Often however especially in a developement phase of a project we either do not have or do not want an external version of our webpage/website/webapp. A good example would be our <code>shinytestapp</code>. Lets open a new R session and run our testapp.</p>
+<p>Testing external webpages and websites across a range of operating systems and browsers can be achieved using Sauce Labs as we observed in the last section. Often however especially in a development phase of a project we either do not have or do not want an external version of our webpage/website/webapp. A good example would be our <code>shinytestapp</code>. Lets open a new R session and run our testapp.</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">require</span>(shiny)</a>
 <a class="sourceLine" id="cb31-2" data-line-number="2"><span class="kw">runApp</span>(<span class="kw">file.path</span>(<span class="kw">find.package</span>(<span class="st">&quot;RSelenium&quot;</span>), <span class="st">&quot;apps&quot;</span>, <span class="st">&quot;shinytestapp&quot;</span>), <span class="dt">port =</span> <span class="dv">3000</span>)</a></code></pre></div>
 <p>To access our app we would require the ip address <code>http://localhost:3000/</code>. How do we access this from a remote webdriver?</p>
@@ -782,7 +783,7 @@ remDr &lt;- remoteDriver$new(
   platform = platform,
   extraCapabilities = extraCapabilities
 )</code></pre>
-<p>Everything is as before the exeception is that when we ask to browse to a localhost address Sauce Connect will intervene. Also we connect to Sauce Labs through Sauce Connect on <code>localhost:4445</code> by default instead of <code>ondemand.saucelabs.com:80</code>.</p>
+<p>Everything is as before the exception is that when we ask to browse to a localhost address Sauce Connect will intervene. Also we connect to Sauce Labs through Sauce Connect on <code>localhost:4445</code> by default instead of <code>ondemand.saucelabs.com:80</code>.</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1">localScript &lt;-<span class="st"> </span><span class="cf">function</span>(remDr){</a>
 <a class="sourceLine" id="cb36-2" data-line-number="2">  remDr<span class="op">$</span><span class="kw">open</span>()</a>
 <a class="sourceLine" id="cb36-3" data-line-number="3">  remDr<span class="op">$</span><span class="kw">setImplicitWaitTimeout</span>(<span class="dv">2000</span>) <span class="co"># wait for elements for 2 seconds</span></a>
@@ -810,6 +811,9 @@ remDr &lt;- remoteDriver$new(
 </div>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

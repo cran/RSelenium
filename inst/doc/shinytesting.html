@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
 
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -115,9 +115,6 @@ padding-right: 2em;
 font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 14px;
 line-height: 1.35;
-}
-#header {
-text-align: center;
 }
 #TOC {
 clear: both;
@@ -286,8 +283,12 @@ code > span.st { color: #d14; }
 code > span.co { color: #888888; font-style: italic; } 
 code > span.ot { color: #007020; } 
 code > span.al { color: #ff0000; font-weight: bold; } 
-code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
 </style>
+
+
+
 
 </head>
 
@@ -394,7 +395,7 @@ shinytestapp on win 8.1 firefox 26.0
 </div>
 <div id="observations" class="section level3">
 <h3>Observations</h3>
-<p>From the screenshot we retrieved from the remote Driver there are some interesting observations to make. Note that the <code>selectInput</code> and <code>numericInput</code> boxes are sticking out. This is occuring because the sidePanel is given a bootstrap span of 3. This is however fluid. The resolution on the remote machine is low so the pixel count on the span 3 is also low. On a local machine with high resolution (Nothing amazing just a laptop) we did not observe the <code>selectInput</code> and <code>numericInput</code> boxes sticking out.</p>
+<p>From the screenshot we retrieved from the remote Driver there are some interesting observations to make. Note that the <code>selectInput</code> and <code>numericInput</code> boxes are sticking out. This is occurring because the sidePanel is given a bootstrap span of 3. This is however fluid. The resolution on the remote machine is low so the pixel count on the span 3 is also low. On a local machine with high resolution (Nothing amazing just a laptop) we did not observe the <code>selectInput</code> and <code>numericInput</code> boxes sticking out.</p>
 <p>We could have run with a higher resolution by passing the additional <code>screen-resolution</code> parameter to <code>sauceLabs</code>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">extraCapabilities &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">name =</span> <span class="st">&quot;shinytestapp screenshot&quot;</span>, <span class="dt">username =</span> user</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">                          , <span class="dt">accessKey =</span> pass, <span class="st">&quot;screen-resolution&quot;</span> =<span class="st"> &quot;1280x1024&quot;</span>)</a></code></pre></div>
@@ -413,7 +414,7 @@ shinytestapp on win 8.1 firefox 26.0 res 1280x1024
 <h2>Basic Tests</h2>
 <div id="basic-functionality" class="section level3">
 <h3>Basic Functionality</h3>
-<p>The first test we will look at implementing will be basic connection to the app. Typically we would make a request for the page and then observe what status code was returned. Selenium doesnt currently give the html status code of a navigation request so instead we will check if the title of the web page is correct. Our <code>Shiny Test App</code> has a title of “Shiny Test App” so we will check for this.</p>
+<p>The first test we will look at implementing will be basic connection to the app. Typically we would make a request for the page and then observe what status code was returned. Selenium doesn’t currently give the html status code of a navigation request so instead we will check if the title of the web page is correct. Our <code>Shiny Test App</code> has a title of “Shiny Test App” so we will check for this.</p>
 <p>We create a <code>test/</code> directory in our <code>Shiny Test App</code> folder. The first set of tests will be basic so we create a file <code>test-basic.r</code>. In this file we have the following code to start with:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">context</span>(<span class="st">&quot;basic&quot;</span>)</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"></a>
@@ -457,7 +458,7 @@ ok 1 can connect to app
 <a class="sourceLine" id="cb8-14" data-line-number="14">  <span class="kw">expect_equal</span>(appTabLabels[[<span class="dv">1</span>]], <span class="st">&quot;Plots&quot;</span>)  </a>
 <a class="sourceLine" id="cb8-15" data-line-number="15">  <span class="kw">expect_equal</span>(appTabLabels[[<span class="dv">2</span>]], <span class="st">&quot;About&quot;</span>)  </a>
 <a class="sourceLine" id="cb8-16" data-line-number="16">})</a></code></pre></div>
-<p>When we rerun our basic test we should hopefully now see that it is checking for the prescence of the controls and the tabs.</p>
+<p>When we rerun our basic test we should hopefully now see that it is checking for the presence of the controls and the tabs.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">test_dir</span>(<span class="kw">paste0</span>(<span class="kw">find.package</span>(<span class="st">&quot;RSelenium&quot;</span>), <span class="st">&quot;/apps/shinytestapp/tests/&quot;</span>), <span class="dt">filter =</span> <span class="st">'basic'</span>, <span class="dt">reporter =</span> <span class="st">&quot;Tap&quot;</span>)</a></code></pre></div>
 <pre><code>[1] &quot;Connecting to remote server&quot;
 1..8
@@ -524,7 +525,7 @@ ok 12 can select/deselect checkbox 4 </code></pre>
 <p>We filter here on “checkbox” to only select this test file to run. If you watch the test running it will filter through the checkbox control checking each checkbox is functioning. The <code>checkboxGroupInput</code> drives the required controls which has id <code>reqcontrols</code>. Each of these controls is one of the building blocks of shiny and we will add a test for each.</p>
 <div id="testing-the-selectinput" class="section level3">
 <h3>Testing the selectInput</h3>
-<p>We write a simple test for the <code>selectInput</code>. It tests the options presented and the label of the control. We isolate the code in a seperate file <code>test-selectinput.r</code> in the test folder of our <code>Shiny Test App</code>. It also then selects an element from the options at random. It is tested whether the output changes or not.</p>
+<p>We write a simple test for the <code>selectInput</code>. It tests the options presented and the label of the control. We isolate the code in a separate file <code>test-selectinput.r</code> in the test folder of our <code>Shiny Test App</code>. It also then selects an element from the options at random. It is tested whether the output changes or not.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">test_that</span>(<span class="st">&quot;selectInput dataSet correct&quot;</span>, {  </a>
 <a class="sourceLine" id="cb14-2" data-line-number="2">  remDr<span class="op">$</span><span class="kw">navigate</span>(appURL)</a>
 <a class="sourceLine" id="cb14-3" data-line-number="3">  webElem &lt;-<span class="st"> </span>remDr<span class="op">$</span><span class="kw">findElement</span>(<span class="st">&quot;css selector&quot;</span>, <span class="st">&quot;#ctrlSelect1&quot;</span>)</a>
@@ -639,6 +640,9 @@ controls : [1] &quot;Connecting to remote server&quot;
 </ul>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
 
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -115,9 +115,6 @@ padding-right: 2em;
 font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 14px;
 line-height: 1.35;
-}
-#header {
-text-align: center;
 }
 #TOC {
 clear: both;
@@ -286,8 +283,12 @@ code > span.st { color: #d14; }
 code > span.co { color: #888888; font-style: italic; } 
 code > span.ot { color: #007020; } 
 code > span.al { color: #ff0000; font-weight: bold; } 
-code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
 </style>
+
+
+
 
 </head>
 
@@ -368,18 +369,18 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">docker</span> run -d -p 4445:4444 selenium/standalone-firefox:2.53.1</a></code></pre></div>
 <p>Use a debug image with a VNC viewer if you wish to view the browser:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">docker</span> run -d -p 5901:5900 -p 127.0.0.1:4445:4444 --link http-server selenium/standalone-firefox-debug:2.53.1</a></code></pre></div>
-<p>There is a seperate vignette which covers the using <code>RSelenium</code> with Docker see <code>vignette(&quot;docker&quot;, package = &quot;RSelenium&quot;)</code> or <a href="http://ropensci.github.io/RSelenium/articles/docker.html">here</a>.</p>
+<p>There is a separate vignette which covers the using <code>RSelenium</code> with Docker see <code>vignette(&quot;docker&quot;, package = &quot;RSelenium&quot;)</code> or <a href="https://docs.ropensci.org/RSelenium/articles/docker.html">here</a>.</p>
 </div>
 <div id="rsdriver" class="section level4">
 <h4><code>rsDriver</code></h4>
-<p>For users who are not familiar with Docker, there is now a function <code>rsDriver</code> which will manage the binaries needed for running a Selenium Server. This provides a wrapper around the <code>wdman::selenium</code> function. For additional options and more control, see the <a href="https://ropensci.github.io/wdman/">wdman</a> project. Examples using the <code>rsDriver</code> function are given in the appendix. <strong><em>Please submit any issues with running binaries to the wdman project</em></strong></p>
+<p>For users who are not familiar with Docker, there is now a function <code>rsDriver</code> which will manage the binaries needed for running a Selenium Server. This provides a wrapper around the <code>wdman::selenium</code> function. For additional options and more control, see the <a href="https://docs.ropensci.org/wdman/">wdman</a> project. Examples using the <code>rsDriver</code> function are given in the appendix. <strong><em>Please submit any issues with running binaries to the wdman project</em></strong></p>
 </div>
 <div id="java-binary" class="section level4">
 <h4>Java Binary</h4>
 <p>Alternatively, you can run the binary manually. Open a console in your OS and navigate to where the binary is located and run:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="ex">java</span> -jar selenium-server-standalone-x.xx.x.jar</a></code></pre></div>
 <p>By default, the Selenium Server listens for connections on port 4444.</p>
-<p><strong><em>Note for Mac OSX:</em></strong> The default port 4444 is sometimes used by other programs such as kerberos. In our examples, we use port 4445 in respect of this and for consistency with <a href="http://ropensci.github.io/RSelenium/articles/docker.html">the Docker vignette</a>.</p>
+<p><strong><em>Note for Mac OSX:</em></strong> The default port 4444 is sometimes used by other programs such as kerberos. In our examples, we use port 4445 in respect of this and for consistency with <a href="https://docs.ropensci.org/RSelenium/articles/docker.html">the Docker vignette</a>.</p>
 </div>
 </div>
 <div id="how-do-i-connect-to-a-running-server" class="section level3">
@@ -395,8 +396,8 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <p>For example:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="ex">docker-machine</span> ip</a></code></pre></div>
 <pre><code>## 192.168.99.100</code></pre>
-<p><strong><em>Note:</em></strong> See <a href="http://ropensci.github.io/RSelenium/articles/docker.html">the Docker vignette</a> for further details. The newer Docker for windows however should be accessible on the localhost.</p>
-<p>It would have been sufficient to call <code>remDr &lt;- remoteDriver(port = 4445L)</code>, but the options where explicitly listed to show how one may connect to an arbitrary ip/port/browser etc. More detail maybe found on <a href="http://ropensci.github.io/RSelenium/articles/saucelabs.html">the SauceLabs vignette</a>.</p>
+<p><strong><em>Note:</em></strong> See <a href="https://docs.ropensci.org/RSelenium/articles/docker.html">the Docker vignette</a> for further details. The newer Docker for windows however should be accessible on the localhost.</p>
+<p>It would have been sufficient to call <code>remDr &lt;- remoteDriver(port = 4445L)</code>, but the options where explicitly listed to show how one may connect to an arbitrary ip/port/browser etc. More detail maybe found on <a href="https://docs.ropensci.org/RSelenium/articles/saucelabs.html">the SauceLabs vignette</a>.</p>
 <p>To connect to the server, use the <code>open</code> method:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">remDr<span class="op">$</span><span class="kw">open</span>()</a></code></pre></div>
 <p><code>remDr</code> should now have a connection to the Selenium Server. You can query the status of the remote server using the <code>getStatus</code> method:</p>
@@ -664,7 +665,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </div>
 <div id="injecting-javascript-asynchronously" class="section level3">
 <h3>Injecting JavaScript Asynchronously</h3>
-<p>I will briefly touch on asynch versus sync calls here. Firstly, we need to set an appropriate asynchronous timeout (that is longer than the async operation we are likely to carryout, but it will ensure that we will eventually error out in case of an issue).</p>
+<p>I will briefly touch on async versus sync calls here. Firstly, we need to set an appropriate asynchronous timeout (that is longer than the async operation we are likely to carryout, but it will ensure that we will eventually error out in case of an issue).</p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1">remDr<span class="op">$</span><span class="kw">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</a>
 <a class="sourceLine" id="cb63-2" data-line-number="2">remDr<span class="op">$</span><span class="kw">setAsyncScriptTimeout</span>(<span class="dv">10000</span>)</a></code></pre></div>
 <p>Observe:</p>
@@ -965,7 +966,7 @@ RProject front page
 </div>
 <div id="rsdriver-1" class="section level3">
 <h3>rsDriver</h3>
-<p>The <code>rsDriver</code> function is a wrapper for the <code>selenium</code> function from the <a href="https://ropensci.github.io/wdman/">wdman</a> package. It allows the user to manage the binaries used to run a Selenium Server. It returns an environment containing a <code>client</code> and a <code>server</code>.</p>
+<p>The <code>rsDriver</code> function is a wrapper for the <code>selenium</code> function from the <a href="https://docs.ropensci.org/wdman/">wdman</a> package. It allows the user to manage the binaries used to run a Selenium Server. It returns an environment containing a <code>client</code> and a <code>server</code>.</p>
 <p>By default, it runs a Chrome browser. Other browsers such as Firefox, PhantomJS, and Internet Explorer can be selected using the <code>browser</code> argument.</p>
 <p>The default port a Selenium Server is run on using the <code>rsDriver</code> function is 4567L.</p>
 <div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" data-line-number="1">rD &lt;-<span class="st"> </span><span class="kw">rsDriver</span>(<span class="dt">verbose =</span> <span class="ot">FALSE</span>)</a>
@@ -1033,10 +1034,13 @@ RProject front page
 ## command   : /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Dwebdriver.chrome.driver=/home/john/.local/share/binman_chromedriver/linux64/2.27/chromedriver -Dwebdriver.gecko.driver=/home/john/.local/share/binman_geckodriver/linux64/0.13.0/geckodriver -Dphantomjs.binary.path=/home/john/.local/share/binman_phantomjs/linux64/2.1.1/phantomjs-2.1.1-linux-x86_64/bin/phantomjs -jar /home/john/.local/share/binman_seleniumserver/generic/3.0.1/selenium-server-standalone-3.0.1.jar -port 4567
 ## system id : 120670
 ## state     : terminated</code></pre>
-<p>For further detail and any issues you may have with the <code>rsDriver</code> function, please see the <a href="https://ropensci.github.io/wdman/">wdman</a> project.</p>
+<p>For further detail and any issues you may have with the <code>rsDriver</code> function, please see the <a href="https://docs.ropensci.org/wdman/">wdman</a> project.</p>
 </div>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
