@@ -1,12 +1,15 @@
 Package: RSelenium
 Type: Package
 Title: R Bindings for 'Selenium WebDriver'
-Version: 1.7.9
+Version: 1.7.10
 Authors@R: c(
-    person("John", "Harrison", , "johndharrison0@gmail.com",
-    role = "aut", comment = "original author"),
-    person("Ju Yeong", "Kim", , "jkim2345@fredhutch.org",
-    role = "cre", comment = "rOpenSci maintainer"))
+    person("John", "Harrison", , "johndharrison0@gmail.com", role = "aut",
+           comment = "original author"),
+    person("Ju Yeong", "Kim", , "jkim2345@fredhutch.org", role = "aut",
+           comment = "rOpenSci maintainer"),
+    person("Jonathan", "Völkle", , "jonathan.voelkle@web.de", role = c("aut", "cre")),
+    person("Indranil", "Gayen", , "nil.gayen@gmail.com", role = "ctb")
+  )
 Description: Provides a set of R bindings for the 'Selenium 2.0 WebDriver'
     (see <https://www.selenium.dev/documentation/>
     for more information) using the 'JsonWireProtocol' (see
@@ -22,16 +25,18 @@ URL: https://docs.ropensci.org/RSelenium/
 BugReports: https://github.com/ropensci/RSelenium/issues
 Depends: R (>= 3.0.0)
 Imports: methods, caTools, utils, httr, wdman(>= 0.2.2)
-Suggests: binman, XML, testthat, knitr, covr, rmarkdown
+Suggests: binman, XML, testthat, knitr, covr, rmarkdown, selectr
 VignetteBuilder: knitr
 Collate: 'RSelenium.R' 'errorHandler.R' 'remoteDriver.R' 'rsDriver.R'
         'selKeys-data.R' 'util.R' 'webElement.R'
 Encoding: UTF-8
-RoxygenNote: 7.2.1
+RoxygenNote: 7.3.3
 NeedsCompilation: no
-Packaged: 2022-09-01 20:00:13 UTC; juyeongkim
+Packaged: 2026-02-19 10:39:54 UTC; jonat
 Author: John Harrison [aut] (original author),
-  Ju Yeong Kim [cre] (rOpenSci maintainer)
-Maintainer: Ju Yeong Kim <jkim2345@fredhutch.org>
+  Ju Yeong Kim [aut] (rOpenSci maintainer),
+  Jonathan Völkle [aut, cre],
+  Indranil Gayen [ctb]
+Maintainer: Jonathan Völkle <jonathan.voelkle@web.de>
 Repository: CRAN
-Date/Publication: 2022-09-02 08:10:11 UTC
+Date/Publication: 2026-02-19 14:40:08 UTC

@@ -29,25 +29,26 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -63,55 +64,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -406,11 +406,12 @@ in Selenium</a></li>
 <h2>Introduction</h2>
 <p>The goal of RSelenium is to make it easy to connect to a Selenium
 Server/Remote Selenium Server from within R. RSelenium provides R
-bindings for the Selenium Webdriver API. <a href="http://docs.seleniumhq.org/">Selenium</a> is a project focused on
-automating web browsers. RSelenium allows you to carry out unit testing
-and regression testing on your webapps and webpages across a range of
-browser/OS combinations. This allows us to integrate from within R
-testing and manipulation of popular projects such as <a href="https://shiny.rstudio.com/">Shiny Apps</a>.</p>
+bindings for the Selenium Webdriver API. <a href="https://www.selenium.dev/documentation/webdriver/">Selenium</a> is
+a project focused on automating web browsers. RSelenium allows you to
+carry out unit testing and regression testing on your webapps and
+webpages across a range of browser/OS combinations. This allows us to
+integrate from within R testing and manipulation of popular projects
+such as <a href="https://shiny.posit.co/">Shiny Apps</a>.</p>
 </div>
 <div id="connecting-to-a-selenium-server" class="section level2">
 <h2>Connecting to a Selenium Server</h2>
@@ -441,10 +442,10 @@ Look for <code>selenium-server-standalone-x.xx.x.jar</code>.</p>
 <p><strong>The recommended way</strong> to run a Selenium Server is by
 running a <a href="https://www.docker.com/">Docker</a> container.</p>
 <p>Run a server for example using Docker:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 selenium/standalone-firefox:2.53.1</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 selenium/standalone-firefox:2.53.1</span></code></pre></div>
 <p>Use a debug image with a VNC viewer if you wish to view the
 browser:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 5901:5900 <span class="at">-p</span> 127.0.0.1:4445:4444 <span class="at">--link</span> http-server selenium/standalone-firefox-debug:2.53.1</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 5901:5900 <span class="at">-p</span> 127.0.0.1:4445:4444 <span class="at">--link</span> http-server selenium/standalone-firefox-debug:2.53.1</span></code></pre></div>
 <p>There is a separate vignette which covers the using
 <code>RSelenium</code> with Docker see
 <code>vignette(&quot;docker&quot;, package = &quot;RSelenium&quot;)</code> or <a href="https://docs.ropensci.org/RSelenium/articles/docker.html">here</a>.</p>
@@ -464,7 +465,7 @@ to the wdman project</em></strong></p>
 <h4>Java Binary</h4>
 <p>Alternatively, you can run the binary manually. Open a console in
 your OS and navigate to where the binary is located and run:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> selenium-server-standalone-x.xx.x.jar</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> selenium-server-standalone-x.xx.x.jar</span></code></pre></div>
 <p>By default, the Selenium Server listens for connections on port
 4444.</p>
 <p><strong><em>Note for Mac OSX:</em></strong> The default port 4444 is
@@ -479,17 +480,17 @@ Docker vignette</a>.</p>
 <code>remoteDriver</code>. To connect to a server, you need to
 instantiate a new <code>remoteDriver</code> with appropriate
 options.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">remoteServerAddr =</span> <span class="st">&quot;localhost&quot;</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">port =</span> 4445L,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">browserName =</span> <span class="st">&quot;firefox&quot;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  <span class="at">remoteServerAddr =</span> <span class="st">&quot;localhost&quot;</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  <span class="at">port =</span> <span class="dv">4445</span><span class="dt">L</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  <span class="at">browserName =</span> <span class="st">&quot;firefox&quot;</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>)</span></code></pre></div>
 <p><strong><em>Note for Windows:</em></strong> If you are using Docker
 toolbox, your remote server address will not be localhost. You need to
 use the ip address of the VM that is running docker.</p>
 <p>For example:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-machine</span> ip</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">docker-machine</span> ip</span></code></pre></div>
 <pre><code>## 192.168.99.100</code></pre>
 <p><strong><em>Note:</em></strong> See <a href="https://docs.ropensci.org/RSelenium/articles/docker.html">the
 Docker vignette</a> for further details. The newer Docker for windows
@@ -500,11 +501,11 @@ where explicitly listed to show how one may connect to an arbitrary
 ip/port/browser etc. More detail maybe found on <a href="https://docs.ropensci.org/RSelenium/articles/saucelabs.html">the
 SauceLabs vignette</a>.</p>
 <p>To connect to the server, use the <code>open</code> method:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span></code></pre></div>
 <p><code>remDr</code> should now have a connection to the Selenium
 Server. You can query the status of the remote server using the
 <code>getStatus</code> method:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getStatus</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getStatus</span>()</span></code></pre></div>
 <pre><code>## $build
 ## $build$version
 ## [1] &quot;2.53.1&quot;
@@ -537,25 +538,25 @@ Server. You can query the status of the remote server using the
 <div id="basic-navigation" class="section level3">
 <h3>Basic Navigation</h3>
 <p>To start with, we navigate to a url:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span></code></pre></div>
 <p>Then, we navigate to a second page:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.bbc.co.uk&quot;</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentUrl</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.bbc.co.uk&quot;</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentUrl</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;http://www.bbc.co.uk/&quot;</code></pre>
 <p>We can go backwards and forwards using the methods
 <code>goBack</code> and <code>goForward</code>.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">goBack</span>()</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentUrl</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">goBack</span>()</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentUrl</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;https://www.google.com/&quot;</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">goForward</span>()</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentUrl</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">goForward</span>()</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentUrl</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;http://www.bbc.co.uk/&quot;</code></pre>
 <p>To refresh the current page, you can use the <code>refresh</code>
 method:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">refresh</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">refresh</span>()</span></code></pre></div>
 </div>
 </div>
 <div id="accessing-elements-in-the-dom" class="section level2">
@@ -567,20 +568,20 @@ interacting with objects in <code>HTML</code>, <code>XHTML</code> and
 important for us with Selenium, and the webDriver provides a number of
 methods in which to do this.</p>
 <p>A basic HTML page is:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1&gt;</span>My First Heading<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span>My first paragraph.<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>My First Heading<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>My first paragraph.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>The query box on the front page of <code>http://www.google.com</code>
 has html code <code>&lt;input id=..... name=&quot;q&quot; ...&lt;/input&gt;</code>
 associated with it. The full html associated with the input tag is:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;input</span> <span class="er">spellcheck</span><span class="ot">=</span><span class="st">&quot;false&quot;</span> <span class="er">dir</span><span class="ot">=</span><span class="st">&quot;ltr&quot;</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;border: medium none; padding: 0px; margin: 0px; height: auto; width: 100%; background: transparent url(</span><span class="dv">&amp;quot;</span><span class="st">data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D</span><span class="dv">&amp;quot;</span><span class="st">) repeat scroll 0% 0%; position: absolute; z-index: 6; left: 0px; outline: medium none;&quot;</span> <span class="er">aria-autocomplete</span><span class="ot">=</span><span class="st">&quot;both&quot;</span> <span class="er">role</span><span class="ot">=</span><span class="st">&quot;combobox&quot;</span> <span class="er">aria-haspopup</span><span class="ot">=</span><span class="st">&quot;false&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;gsfi&quot;</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;lst-ib&quot;</span> <span class="er">maxlength</span><span class="ot">=</span><span class="st">&quot;2048&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;q&quot;</span> <span class="er">autocomplete</span><span class="ot">=</span><span class="st">&quot;off&quot;</span> <span class="er">title</span><span class="ot">=</span><span class="st">&quot;Search&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;&quot;</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">&quot;Search&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> spellcheck</span><span class="op">=</span><span class="st">&quot;false&quot;</span><span class="ot"> dir</span><span class="op">=</span><span class="st">&quot;ltr&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;border: medium none; padding: 0px; margin: 0px; height: auto; width: 100%; background: transparent url(</span><span class="dv">&amp;quot;</span><span class="st">data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D</span><span class="dv">&amp;quot;</span><span class="st">) repeat scroll 0% 0%; position: absolute; z-index: 6; left: 0px; outline: medium none;&quot;</span><span class="ot"> aria-autocomplete</span><span class="op">=</span><span class="st">&quot;both&quot;</span><span class="ot"> role</span><span class="op">=</span><span class="st">&quot;combobox&quot;</span><span class="ot"> aria-haspopup</span><span class="op">=</span><span class="st">&quot;false&quot;</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;gsfi&quot;</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;lst-ib&quot;</span><span class="ot"> maxlength</span><span class="op">=</span><span class="st">&quot;2048&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;q&quot;</span><span class="ot"> autocomplete</span><span class="op">=</span><span class="st">&quot;off&quot;</span><span class="ot"> title</span><span class="op">=</span><span class="st">&quot;Search&quot;</span><span class="ot"> value</span><span class="op">=</span><span class="st">&quot;&quot;</span><span class="ot"> aria-label</span><span class="op">=</span><span class="st">&quot;Search&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;text&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
 <p><strong><em>NOTE:</em></strong> The above HTML is very liable to
 change however the input node has had an attribute name = q for sometime
 so we can mostly rely on this.</p>
@@ -588,15 +589,15 @@ so we can mostly rely on this.</p>
 <h3>Search by Name</h3>
 <p>To find this element in the DOM, a number of methods can be used. We
 can search by the name:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;name&quot;</span>, <span class="at">value =</span> <span class="st">&quot;q&quot;</span>)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;name&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;name&quot;</span>, <span class="at">value =</span> <span class="st">&quot;q&quot;</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;name&quot;</span>)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;q&quot;</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;class&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;class&quot;</span>)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;gsfi lst-d-f&quot;</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;lst-ib&quot;</code></pre>
 </div>
@@ -606,8 +607,8 @@ can search by the name:</p>
 a good locator to use. As noted above, the Google ID of the query box
 may change (the one we see is “lst-ib”, so we use that). You may see an
 alternative ID.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;id&quot;</span>, <span class="at">value =</span> <span class="st">&quot;lst-ib&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;id&quot;</span>, <span class="at">value =</span> <span class="st">&quot;lst-ib&quot;</span>)</span></code></pre></div>
 <div id="highlight-an-element" class="section level4">
 <h4>Highlight an Element</h4>
 <p>An element that is visible in the DOM can usually be highlighted.
@@ -615,7 +616,7 @@ Using our <code>webElem</code> which is an object of class
 <code>webElement</code>, we can use the associated
 <code>highlightElement</code> method to visually indicate to us we have
 the correct element. Try it:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">highlightElement</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">highlightElement</span>()</span></code></pre></div>
 <p>You should see the query box flashing black and yellow to indicate
 visually the DOM element you have selected.</p>
 </div>
@@ -623,12 +624,12 @@ visually the DOM element you have selected.</p>
 <div id="search-by-class" class="section level3">
 <h3>Search by Class</h3>
 <p>We can also search by the class name:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;class&quot;</span>, <span class="st">&quot;gsfi&quot;</span>)</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;class&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;class&quot;</span>, <span class="st">&quot;gsfi&quot;</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;class&quot;</span>)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;gsfi lst-d-f&quot;</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;type&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;type&quot;</span>)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;text&quot;</code></pre>
 <p><strong><em>NOTE:</em></strong> the class is listed as “gsfi
@@ -641,23 +642,23 @@ xpath instead.</p>
 <div id="search-using-css-selectors" class="section level3">
 <h3>Search Using CSS Selectors</h3>
 <p>To replicate our name search using css selectors, we could use:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;input[name=&#39;q&#39;]&quot;</span>)</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co"># OR</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>webElem2 <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name=&#39;q&#39;]&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;input[name=&#39;q&#39;]&quot;</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="co"># OR</span></span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a>webElem2 <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name=&#39;q&#39;]&quot;</span>)</span></code></pre></div>
 <p>We can see we get the same element (using the
 <code>compareElements</code> method of the <code>webElement</code>
 class):</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">compareElements</span>(webElem2)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">compareElements</span>(webElem2)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] TRUE</code></pre>
 <p>and to search on ID using the CSS Selectors (again, the ID you see
 maybe different):</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;input#lst-ib&quot;</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;name&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;input#lst-ib&quot;</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;name&quot;</span>)</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;q&quot;</code></pre>
 <p>and class:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[class = &#39;gsfi lst-d-f&#39;]&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[class = &#39;gsfi lst-d-f&#39;]&quot;</span>)</span></code></pre></div>
 <p><strong><em>NOTE:</em></strong> no issue with compound class names
 with CSS</p>
 <p>A good example of searching using css-selectors is given <a href="https://saucelabs.com/resources/articles/selenium-tips-css-selectors">here</a>.</p>
@@ -667,9 +668,9 @@ with CSS</p>
 <p>The final option is to search using XPath. Normally, one would use
 XPath by default when searching or CSS. Both are the go-to options.</p>
 <p>XPath using ID:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;xpath&quot;</span>, <span class="st">&quot;//input[@id = &#39;lst-ib&#39;]&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;xpath&quot;</span>, <span class="st">&quot;//input[@id = &#39;lst-ib&#39;]&quot;</span>)</span></code></pre></div>
 <p>Xpath using class:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;xpath&quot;</span>, <span class="st">&quot;//input[@class = &#39;gsfi lst-d-f&#39;]&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;xpath&quot;</span>, <span class="st">&quot;//input[@class = &#39;gsfi lst-d-f&#39;]&quot;</span>)</span></code></pre></div>
 <p><strong><em>NOTE:</em></strong> with XPath, we have no issues using a
 compound class name.</p>
 </div>
@@ -684,9 +685,9 @@ compound class name.</p>
 to find the element for the query box and send the appropriate text to
 it. We can do this using the <code>sendKeysToElement</code> method for
 the <code>webElement</code> class.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name = &#39;q&#39;]&quot;</span>)</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">sendKeysToElement</span>(<span class="fu">list</span>(<span class="st">&quot;R Cran&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name = &#39;q&#39;]&quot;</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">sendKeysToElement</span>(<span class="fu">list</span>(<span class="st">&quot;R Cran&quot;</span>))</span></code></pre></div>
 </div>
 <div id="sending-key-presses-to-elements" class="section level3">
 <h3>Sending Key Presses to Elements</h3>
@@ -695,17 +696,17 @@ query box.</p>
 <p>How do we press enter. We can simply send the enter key to query box.
 The enter key would be denoted as <code>&quot;\uE007&quot;</code>(its UTF-8 code).
 So we could use:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name = &#39;q&#39;]&quot;</span>)</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">sendKeysToElement</span>(<span class="fu">list</span>(<span class="st">&quot;R Cran&quot;</span>, <span class="st">&quot;\uE007&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name = &#39;q&#39;]&quot;</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">sendKeysToElement</span>(<span class="fu">list</span>(<span class="st">&quot;R Cran&quot;</span>, <span class="st">&quot;\uE007&quot;</span>))</span></code></pre></div>
 <p>It is not very easy to remember UTF-8 codes for appropriate keys, so
 a mapping has been provided in <code>RSelenium</code>.
 <code>?selkeys</code> will bring up a help page explaining the mapping.
 The UTF-8 codes have been mapped to easy to remember names.</p>
 <p>To use <code>selkeys</code>, we would send the following:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name = &#39;q&#39;]&quot;</span>)</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">sendKeysToElement</span>(<span class="fu">list</span>(<span class="st">&quot;R Cran&quot;</span>, <span class="at">key =</span> <span class="st">&quot;enter&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name = &#39;q&#39;]&quot;</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">sendKeysToElement</span>(<span class="fu">list</span>(<span class="st">&quot;R Cran&quot;</span>, <span class="at">key =</span> <span class="st">&quot;enter&quot;</span>))</span></code></pre></div>
 <p>Typing <code>selKeys</code> into the console will bring up the list
 of mappings.</p>
 </div>
@@ -714,16 +715,16 @@ of mappings.</p>
 <p>For this example, we will go back to the Google front page and search
 for “R Cran”. then, we will click the link for “The Comprehensive R
 Archive Network”.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name = &#39;q&#39;]&quot;</span>)</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">sendKeysToElement</span>(<span class="fu">list</span>(<span class="st">&quot;R Cran&quot;</span>, <span class="at">key =</span> <span class="st">&quot;enter&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[name = &#39;q&#39;]&quot;</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">sendKeysToElement</span>(<span class="fu">list</span>(<span class="st">&quot;R Cran&quot;</span>, <span class="at">key =</span> <span class="st">&quot;enter&quot;</span>))</span></code></pre></div>
 <p>The header for each link is contained in a
 <code>&lt;h3 class = &quot;r&quot;&gt;</code> tag. We will access the “h3” headers
 first. It will be succinct to find these elements using “css
 selectors”.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="at">using =</span> <span class="st">&quot;css selector&quot;</span>, <span class="st">&quot;h3.r&quot;</span>)</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>resHeaders <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">lapply</span>(webElems, <span class="cf">function</span>(x) {x<span class="sc">$</span><span class="fu">getElementText</span>()}))</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>resHeaders</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a>webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="at">using =</span> <span class="st">&quot;css selector&quot;</span>, <span class="st">&quot;h3.r&quot;</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a>resHeaders <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">lapply</span>(webElems, <span class="cf">function</span>(x) {x<span class="sc">$</span><span class="fu">getElementText</span>()}))</span>
+<span id="cb44-3"><a href="#cb44-3" tabindex="-1"></a>resHeaders</span></code></pre></div>
 <pre><code>## [1] &quot;The Comprehensive R Archive Network&quot;                                   
 ## [2] &quot;Download R-3.3.2 for Windows. The R-project for statistical ... - CRAN&quot;
 ## [3] &quot;About Microsoft R Open: The Enhanced R Distribution . MRAN&quot;            
@@ -738,14 +739,14 @@ selectors”.</p>
 presented at time of writing. Class names etc. are liable to change.</p>
 <p>We can see that the first link is the one we want, but in case
 Google’s search results change, we refer to it as</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> webElems[[<span class="fu">which</span>(resHeaders <span class="sc">==</span> <span class="st">&quot;The Comprehensive R Archive Network&quot;</span>)]]</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> webElems[[<span class="fu">which</span>(resHeaders <span class="sc">==</span> <span class="st">&quot;The Comprehensive R Archive Network&quot;</span>)]]</span></code></pre></div>
 <p>How do we click the link? We can use the <code>clickElement</code>
 method:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">clickElement</span>()</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentUrl</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a>webElem<span class="sc">$</span><span class="fu">clickElement</span>()</span>
+<span id="cb47-2"><a href="#cb47-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentUrl</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;https://cran.r-project.org/&quot;</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;The Comprehensive R Archive Network&quot;</code></pre>
 </div>
@@ -767,19 +768,19 @@ methods.</p>
 “Google” image. The image has <code>id = &quot;hplogo&quot;</code>, and we can use
 this in an XPath or search by ID to select the element. In this case, we
 use “css selectors”:</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;css&quot;</span>, <span class="st">&quot;img#hplogo&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;css&quot;</span>, <span class="st">&quot;img#hplogo&quot;</span>)</span></code></pre></div>
 <p>Is the image visible? Clearly, it is, but we can check using
 JavaScript:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;return document.getElementById(&#39;hplogo&#39;).hidden;&quot;</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;return document.getElementById(&#39;hplogo&#39;).hidden;&quot;</span></span>
+<span id="cb52-2"><a href="#cb52-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>())</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] FALSE</code></pre>
 <p>Great! So the image is not hidden indicated by the
 <code>FALSE</code>. We can hide it executing some simple JavaScript.</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;document.getElementById(&#39;hplogo&#39;).hidden = true; </span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="st">           return document.getElementById(&#39;hplogo&#39;).hidden;&quot;</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;document.getElementById(&#39;hplogo&#39;).hidden = true; </span></span>
+<span id="cb54-2"><a href="#cb54-2" tabindex="-1"></a><span class="st">           return document.getElementById(&#39;hplogo&#39;).hidden;&quot;</span></span>
+<span id="cb54-3"><a href="#cb54-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>())</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] TRUE
 </code></pre>
@@ -790,8 +791,8 @@ have used <code>webElem</code> which we had specified earlier.</p>
 <p>If we pass a <code>webElement</code> object as an argument to either
 <code>executeScript</code> or <code>executeAsyncScript</code>,
 <code>RSelenium</code> will pass it in an appropriate fashion.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;arguments[0].hidden = false; return arguments[0].hidden;&quot;</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>(webElem))</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;arguments[0].hidden = false; return arguments[0].hidden;&quot;</span></span>
+<span id="cb56-2"><a href="#cb56-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>(webElem))</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] FALSE</code></pre>
 <p>Notice that how we passed the <code>webElement</code> object to the
@@ -800,9 +801,9 @@ script to execute in the form of a function body. The value returned by
 that function will be returned to the client. The function will be
 invoked with the provided arguments. If the function returns an element,
 this will be returned as an object of <code>webElement</code> class:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;return document.getElementsByName(&#39;q&#39;);&quot;</span></span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>())</span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>test[[<span class="dv">1</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;return document.getElementsByName(&#39;q&#39;);&quot;</span></span>
+<span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a>test <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>())</span>
+<span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a>test[[<span class="dv">1</span>]]</span></code></pre></div>
 <pre><code>## [1] &quot;remoteDriver fields&quot;
 ## $remoteServerAddr
 ## [1] &quot;localhost&quot;
@@ -831,12 +832,12 @@ this will be returned as an object of <code>webElement</code> class:</p>
 ## [1] &quot;webElement fields&quot;
 ## $elementId
 ## [1] &quot;21&quot;</code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(test[[<span class="dv">1</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a><span class="fu">class</span>(test[[<span class="dv">1</span>]])</span></code></pre></div>
 <pre><code>## [1] &quot;webElement&quot;
 ## attr(,&quot;package&quot;)
 ## [1] &quot;RSelenium&quot;</code></pre>
 <p>Try to highlight the element as before:</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>test[[<span class="dv">1</span>]]<span class="sc">$</span><span class="fu">highlightElement</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" tabindex="-1"></a>test[[<span class="dv">1</span>]]<span class="sc">$</span><span class="fu">highlightElement</span>()</span></code></pre></div>
 </div>
 <div id="injecting-javascript-asynchronously" class="section level3">
 <h3>Injecting JavaScript Asynchronously</h3>
@@ -844,24 +845,24 @@ this will be returned as an object of <code>webElement</code> class:</p>
 need to set an appropriate asynchronous timeout (that is longer than the
 async operation we are likely to carryout, but it will ensure that we
 will eventually error out in case of an issue).</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">setAsyncScriptTimeout</span>(<span class="dv">10000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb63-2"><a href="#cb63-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">setAsyncScriptTimeout</span>(<span class="dv">10000</span>)</span></code></pre></div>
 <p>Observe:</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;css&quot;</span>, <span class="st">&quot;img#hplogo&quot;</span>)</span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="st">cb = arguments[arguments.length -1];</span></span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="st">webElem = arguments[0];</span></span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="st">setTimeout(function(){webElem.hidden = true; cb(&#39;DONE&#39;);},5000);&quot;</span></span>
-<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeAsyncScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>(webElem))</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;css&quot;</span>, <span class="st">&quot;img#hplogo&quot;</span>)</span>
+<span id="cb64-2"><a href="#cb64-2" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
+<span id="cb64-3"><a href="#cb64-3" tabindex="-1"></a><span class="st">cb = arguments[arguments.length -1];</span></span>
+<span id="cb64-4"><a href="#cb64-4" tabindex="-1"></a><span class="st">webElem = arguments[0];</span></span>
+<span id="cb64-5"><a href="#cb64-5" tabindex="-1"></a><span class="st">setTimeout(function(){webElem.hidden = true; cb(&#39;DONE&#39;);},5000);&quot;</span></span>
+<span id="cb64-6"><a href="#cb64-6" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeAsyncScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>(webElem))</span></code></pre></div>
 <p>Versus</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;css&quot;</span>, <span class="st">&quot;img#hplogo&quot;</span>)</span>
-<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
-<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="st">webElem = arguments[0];</span></span>
-<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a><span class="st">setTimeout(function(){webElem.hidden = true;},5000);</span></span>
-<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a><span class="st">return &#39;DONE&#39;;</span></span>
-<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span></span>
-<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>(webElem))</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb65-2"><a href="#cb65-2" tabindex="-1"></a>webElem <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;css&quot;</span>, <span class="st">&quot;img#hplogo&quot;</span>)</span>
+<span id="cb65-3"><a href="#cb65-3" tabindex="-1"></a>script <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
+<span id="cb65-4"><a href="#cb65-4" tabindex="-1"></a><span class="st">webElem = arguments[0];</span></span>
+<span id="cb65-5"><a href="#cb65-5" tabindex="-1"></a><span class="st">setTimeout(function(){webElem.hidden = true;},5000);</span></span>
+<span id="cb65-6"><a href="#cb65-6" tabindex="-1"></a><span class="st">return &#39;DONE&#39;;</span></span>
+<span id="cb65-7"><a href="#cb65-7" tabindex="-1"></a><span class="st">&quot;</span></span>
+<span id="cb65-8"><a href="#cb65-8" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">executeScript</span>(script, <span class="at">args =</span> <span class="fu">list</span>(webElem))</span></code></pre></div>
 <p>The async version waits until the callback (defined as the last
 argument <code>arguments[arguments.length - 1]</code> as JavaScript is
 zero-indexed) is called whereas the sync version returns straight away.
@@ -879,44 +880,44 @@ the ability to load content independently.</p>
 Network</a> conveniently contains frames so we shall use
 <code>RSelenium</code> to interact with it.</p>
 <p>Assume that we have a remoteDriver opened:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;https://CRAN.r-project.org/&quot;</span>)</span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>XML<span class="sc">::</span><span class="fu">htmlParse</span>(remDr<span class="sc">$</span><span class="fu">getPageSource</span>()[[<span class="dv">1</span>]])</span></code></pre></div>
-<div class="sourceCode" id="cb67"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;<span class="dt">&gt;</span></span>
-<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">xmlns</span><span class="ot">=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>The Comprehensive R Archive Network<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;text/html; charset=utf-8&quot;</span> <span class="er">http-equiv</span><span class="ot">=</span><span class="st">&quot;content-type&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;image/x-icon&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;favicon.ico&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;icon&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;image/x-icon&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;favicon.ico&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;shortcut icon&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;R.css&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/css&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frameset</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;border: none;&quot;</span> <span class="er">cols</span><span class="ot">=</span><span class="st">&quot;1*, 4*&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frameset</span> <span class="er">rows</span><span class="ot">=</span><span class="st">&quot;120, 1*&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frame</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">&quot;0&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;logo&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;logo.html&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frame</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">&quot;0&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;contents&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;navbar.html&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/frameset&gt;</span></span>
-<span id="cb67-15"><a href="#cb67-15" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frame</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">&quot;0&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;banner.shtml&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb67-16"><a href="#cb67-16" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;noframes&gt;</span></span>
-<span id="cb67-17"><a href="#cb67-17" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;lt;</span>h1<span class="dv">&amp;gt;</span>The Comprehensive R Archive Network<span class="dv">&amp;lt;</span>/h1<span class="dv">&amp;gt;</span></span>
-<span id="cb67-18"><a href="#cb67-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-19"><a href="#cb67-19" aria-hidden="true" tabindex="-1"></a>Your browser seems not to support frames,</span>
-<span id="cb67-20"><a href="#cb67-20" aria-hidden="true" tabindex="-1"></a>here is the <span class="dv">&amp;lt;</span>A href=&quot;navbar.html&quot;<span class="dv">&amp;gt;</span>contents page<span class="dv">&amp;lt;</span>/A<span class="dv">&amp;gt;</span> of CRAN.</span>
-<span id="cb67-21"><a href="#cb67-21" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/noframes&gt;</span></span>
-<span id="cb67-22"><a href="#cb67-22" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/frameset&gt;</span></span>
-<span id="cb67-23"><a href="#cb67-23" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;https://CRAN.r-project.org/&quot;</span>)</span>
+<span id="cb66-2"><a href="#cb66-2" tabindex="-1"></a>XML<span class="sc">::</span><span class="fu">htmlParse</span>(remDr<span class="sc">$</span><span class="fu">getPageSource</span>()[[<span class="dv">1</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html PUBLIC <span class="st">&quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot;</span> <span class="st">&quot;http://www.w3.org/TR/html4/frameset.dtd&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> xmlns</span><span class="op">=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-3"><a href="#cb67-3" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb67-4"><a href="#cb67-4" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>The Comprehensive R Archive Network<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb67-5"><a href="#cb67-5" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;text/html; charset=utf-8&quot;</span><span class="ot"> http-equiv</span><span class="op">=</span><span class="st">&quot;content-type&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-6"><a href="#cb67-6" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;image/x-icon&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;favicon.ico&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;icon&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-7"><a href="#cb67-7" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;image/x-icon&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;favicon.ico&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;shortcut icon&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-8"><a href="#cb67-8" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;R.css&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-9"><a href="#cb67-9" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb67-10"><a href="#cb67-10" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frameset</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;border: none;&quot;</span><span class="ot"> cols</span><span class="op">=</span><span class="st">&quot;1*, 4*&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-11"><a href="#cb67-11" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frameset</span><span class="ot"> rows</span><span class="op">=</span><span class="st">&quot;120, 1*&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-12"><a href="#cb67-12" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frame</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">&quot;0&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;logo&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;logo.html&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-13"><a href="#cb67-13" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frame</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">&quot;0&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;contents&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;navbar.html&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-14"><a href="#cb67-14" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">frameset</span><span class="dt">&gt;</span></span>
+<span id="cb67-15"><a href="#cb67-15" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frame</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">&quot;0&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;banner.shtml&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb67-16"><a href="#cb67-16" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">noframes</span><span class="dt">&gt;</span></span>
+<span id="cb67-17"><a href="#cb67-17" tabindex="-1"></a><span class="dv">&amp;lt;</span>h1<span class="dv">&amp;gt;</span>The Comprehensive R Archive Network<span class="dv">&amp;lt;</span>/h1<span class="dv">&amp;gt;</span></span>
+<span id="cb67-18"><a href="#cb67-18" tabindex="-1"></a></span>
+<span id="cb67-19"><a href="#cb67-19" tabindex="-1"></a>Your browser seems not to support frames,</span>
+<span id="cb67-20"><a href="#cb67-20" tabindex="-1"></a>here is the <span class="dv">&amp;lt;</span>A href=&quot;navbar.html&quot;<span class="dv">&amp;gt;</span>contents page<span class="dv">&amp;lt;</span>/A<span class="dv">&amp;gt;</span> of CRAN.</span>
+<span id="cb67-21"><a href="#cb67-21" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">noframes</span><span class="dt">&gt;</span></span>
+<span id="cb67-22"><a href="#cb67-22" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">frameset</span><span class="dt">&gt;</span></span>
+<span id="cb67-23"><a href="#cb67-23" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>We can see that the content is contained in three frames, and we
 don’t appear to have access to the content within a frame, but in the
 browser, we see all the content:</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">maxWindowSize</span>()</span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">screenshot</span>(<span class="at">display =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">maxWindowSize</span>()</span>
+<span id="cb68-2"><a href="#cb68-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">screenshot</span>(<span class="at">display =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>To access the content, we have to switch to a frame using the
 <code>switchToFrame</code> method of the <code>remoteDriver</code>
 class.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="at">using =</span> <span class="st">&quot;tag name&quot;</span>, <span class="st">&quot;frame&quot;</span>)</span>
-<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="co"># webElems &lt;- remDr$findElements(value = &quot;//frame&quot;) # using xpath</span></span>
-<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="co"># webElems &lt;- remDr$findElements(&quot;css&quot;, value = &quot;frame&quot;) # using css</span></span>
-<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(webElems, <span class="cf">function</span>(x){x<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;src&quot;</span>)})</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" tabindex="-1"></a>webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="at">using =</span> <span class="st">&quot;tag name&quot;</span>, <span class="st">&quot;frame&quot;</span>)</span>
+<span id="cb69-2"><a href="#cb69-2" tabindex="-1"></a><span class="co"># webElems &lt;- remDr$findElements(value = &quot;//frame&quot;) # using xpath</span></span>
+<span id="cb69-3"><a href="#cb69-3" tabindex="-1"></a><span class="co"># webElems &lt;- remDr$findElements(&quot;css&quot;, value = &quot;frame&quot;) # using css</span></span>
+<span id="cb69-4"><a href="#cb69-4" tabindex="-1"></a></span>
+<span id="cb69-5"><a href="#cb69-5" tabindex="-1"></a><span class="fu">sapply</span>(webElems, <span class="cf">function</span>(x){x<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;src&quot;</span>)})</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;https://cran.r-project.org/logo.html&quot;
 ## 
@@ -925,35 +926,35 @@ class.</p>
 ## 
 ## [[3]]
 ## [1] &quot;https://cran.r-project.org/banner.shtml&quot;</code></pre>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToFrame</span>(webElems[[<span class="dv">2</span>]])</span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>XML<span class="sc">::</span><span class="fu">htmlParse</span>(remDr<span class="sc">$</span><span class="fu">getPageSource</span>()[[<span class="dv">1</span>]])</span></code></pre></div>
-<div class="sourceCode" id="cb72"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;<span class="dt">&gt;</span></span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">xmlns</span><span class="ot">=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>R Contents<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;text/html; charset=utf-8&quot;</span> <span class="er">http-equiv</span><span class="ot">=</span><span class="st">&quot;content-type&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;R.css&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/css&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;em</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;navigation&quot;</span><span class="kw">&gt;</span>CRAN<span class="kw">&lt;/em&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;mirrors.html&quot;</span><span class="kw">&gt;</span>Mirrors<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;//www.R-project.org/news.html&quot;</span><span class="kw">&gt;</span>What&#39;s new?<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;web/views/&quot;</span><span class="kw">&gt;</span>Task Views<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;search.html&quot;</span><span class="kw">&gt;</span>Search<span class="kw">&lt;/a&gt;&lt;br&gt;</span><span class="co">&lt;!--&lt;a href=&quot;pkg_submit.html&quot; target=&quot;_top&quot;&gt;Submit&lt;/a&gt;&lt;BR&gt;--&gt;</span><span class="kw">&lt;p&gt;</span></span>
-<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;em</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;navigation&quot;</span><span class="kw">&gt;</span>About R<span class="kw">&lt;/em&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;_top&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;//www.R-project.org/&quot;</span><span class="kw">&gt;</span>R Homepage<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;_top&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;http://journal.R-project.org/&quot;</span><span class="kw">&gt;</span>The R Journal<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb72-12"><a href="#cb72-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb72-13"><a href="#cb72-13" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/p&gt;</span></span>
-<span id="cb72-14"><a href="#cb72-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span></span>
-<span id="cb72-15"><a href="#cb72-15" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;em</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;navigation&quot;</span><span class="kw">&gt;</span>Software<span class="kw">&lt;/em&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;sources.html&quot;</span><span class="kw">&gt;</span>R Sources<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;bin/&quot;</span><span class="kw">&gt;</span>R Binaries<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;web/packages/&quot;</span><span class="kw">&gt;</span>Packages<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;other-software.html&quot;</span><span class="kw">&gt;</span>Other<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb72-16"><a href="#cb72-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb72-17"><a href="#cb72-17" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/p&gt;</span></span>
-<span id="cb72-18"><a href="#cb72-18" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span></span>
-<span id="cb72-19"><a href="#cb72-19" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;em</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;navigation&quot;</span><span class="kw">&gt;</span>Documentation<span class="kw">&lt;/em&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;manuals.html&quot;</span><span class="kw">&gt;</span>Manuals<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;faqs.html&quot;</span><span class="kw">&gt;</span>FAQs<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;other-docs.html&quot;</span><span class="kw">&gt;</span>Contributed<span class="kw">&lt;/a&gt;&lt;br&gt;&lt;/p&gt;</span></span>
-<span id="cb72-20"><a href="#cb72-20" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb72-21"><a href="#cb72-21" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToFrame</span>(webElems[[<span class="dv">2</span>]])</span>
+<span id="cb71-2"><a href="#cb71-2" tabindex="-1"></a>XML<span class="sc">::</span><span class="fu">htmlParse</span>(remDr<span class="sc">$</span><span class="fu">getPageSource</span>()[[<span class="dv">1</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb72-1"><a href="#cb72-1" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html PUBLIC <span class="st">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span> <span class="st">&quot;http://www.w3.org/TR/html4/loose.dtd&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb72-2"><a href="#cb72-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> xmlns</span><span class="op">=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb72-3"><a href="#cb72-3" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb72-4"><a href="#cb72-4" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>R Contents<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb72-5"><a href="#cb72-5" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;text/html; charset=utf-8&quot;</span><span class="ot"> http-equiv</span><span class="op">=</span><span class="st">&quot;content-type&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb72-6"><a href="#cb72-6" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;R.css&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb72-7"><a href="#cb72-7" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb72-8"><a href="#cb72-8" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb72-9"><a href="#cb72-9" tabindex="-1"></a></span>
+<span id="cb72-10"><a href="#cb72-10" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">em</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;navigation&quot;</span><span class="dt">&gt;</span>CRAN<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;mirrors.html&quot;</span><span class="dt">&gt;</span>Mirrors<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;//www.R-project.org/news.html&quot;</span><span class="dt">&gt;</span>What&#39;s new?<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;web/views/&quot;</span><span class="dt">&gt;</span>Task Views<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;search.html&quot;</span><span class="dt">&gt;</span>Search<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span><span class="co">&lt;!--&lt;a href=&quot;pkg_submit.html&quot; target=&quot;_top&quot;&gt;Submit&lt;/a&gt;&lt;BR&gt;--&gt;</span><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb72-11"><a href="#cb72-11" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">em</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;navigation&quot;</span><span class="dt">&gt;</span>About R<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;_top&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;//www.R-project.org/&quot;</span><span class="dt">&gt;</span>R Homepage<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;_top&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;http://journal.R-project.org/&quot;</span><span class="dt">&gt;</span>The R Journal<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb72-12"><a href="#cb72-12" tabindex="-1"></a></span>
+<span id="cb72-13"><a href="#cb72-13" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb72-14"><a href="#cb72-14" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb72-15"><a href="#cb72-15" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">em</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;navigation&quot;</span><span class="dt">&gt;</span>Software<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;sources.html&quot;</span><span class="dt">&gt;</span>R Sources<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;bin/&quot;</span><span class="dt">&gt;</span>R Binaries<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;web/packages/&quot;</span><span class="dt">&gt;</span>Packages<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;other-software.html&quot;</span><span class="dt">&gt;</span>Other<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb72-16"><a href="#cb72-16" tabindex="-1"></a></span>
+<span id="cb72-17"><a href="#cb72-17" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb72-18"><a href="#cb72-18" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb72-19"><a href="#cb72-19" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">em</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;navigation&quot;</span><span class="dt">&gt;</span>Documentation<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;manuals.html&quot;</span><span class="dt">&gt;</span>Manuals<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;faqs.html&quot;</span><span class="dt">&gt;</span>FAQs<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;other-docs.html&quot;</span><span class="dt">&gt;</span>Contributed<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb72-20"><a href="#cb72-20" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb72-21"><a href="#cb72-21" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>Now, we see the source code of the navigation side panel. Notice that
 how we used a <code>webElement</code> in the method
 <code>switchToFrame</code>. To further demonstrate, we are now “in” this
 frame. Let’s get all the “href” attributes:</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[href]&quot;</span>)</span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(<span class="fu">sapply</span>(webElems, <span class="cf">function</span>(x) {x<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;href&quot;</span>)}))</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" tabindex="-1"></a>webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="at">using =</span> <span class="st">&quot;css&quot;</span>, <span class="st">&quot;[href]&quot;</span>)</span>
+<span id="cb73-2"><a href="#cb73-2" tabindex="-1"></a><span class="fu">unlist</span>(<span class="fu">sapply</span>(webElems, <span class="cf">function</span>(x) {x<span class="sc">$</span><span class="fu">getElementAttribute</span>(<span class="st">&quot;href&quot;</span>)}))</span></code></pre></div>
 <pre><code>## [1] &quot;https://cran.r-project.org/R.css&quot;              
 ## [2] &quot;https://cran.r-project.org/mirrors.html&quot;       
 ## [3] &quot;https://www.r-project.org/news.html&quot;           
@@ -970,138 +971,138 @@ frame. Let’s get all the “href” attributes:</p>
 ## [14] &quot;https://cran.r-project.org/other-docs.html&quot;    </code></pre>
 <p>Notice that if we pass a <code>NULL</code> value to the method
 <code>switchToFrame</code>, we move back to the default view.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToFrame</span>(<span class="cn">NULL</span>)</span>
-<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>XML<span class="sc">::</span><span class="fu">htmlParse</span>(remDr<span class="sc">$</span><span class="fu">getPageSource</span>()[[<span class="dv">1</span>]])</span></code></pre></div>
-<div class="sourceCode" id="cb76"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;<span class="dt">&gt;</span></span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">xmlns</span><span class="ot">=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>The Comprehensive R Archive Network<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;text/html; charset=utf-8&quot;</span> <span class="er">http-equiv</span><span class="ot">=</span><span class="st">&quot;content-type&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;image/x-icon&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;favicon.ico&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;icon&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;image/x-icon&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;favicon.ico&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;shortcut icon&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;R.css&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/css&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-9"><a href="#cb76-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb76-10"><a href="#cb76-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frameset</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;border: none;&quot;</span> <span class="er">cols</span><span class="ot">=</span><span class="st">&quot;1*, 4*&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-11"><a href="#cb76-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frameset</span> <span class="er">rows</span><span class="ot">=</span><span class="st">&quot;120, 1*&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-12"><a href="#cb76-12" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frame</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">&quot;0&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;logo&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;logo.html&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-13"><a href="#cb76-13" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frame</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">&quot;0&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;contents&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;navbar.html&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-14"><a href="#cb76-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/frameset&gt;</span></span>
-<span id="cb76-15"><a href="#cb76-15" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;frame</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">&quot;0&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;banner&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;banner.shtml&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb76-16"><a href="#cb76-16" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;noframes&gt;</span></span>
-<span id="cb76-17"><a href="#cb76-17" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;lt;</span>h1<span class="dv">&amp;gt;</span>The Comprehensive R Archive Network<span class="dv">&amp;lt;</span>/h1<span class="dv">&amp;gt;</span></span>
-<span id="cb76-18"><a href="#cb76-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-19"><a href="#cb76-19" aria-hidden="true" tabindex="-1"></a>Your browser seems not to support frames,</span>
-<span id="cb76-20"><a href="#cb76-20" aria-hidden="true" tabindex="-1"></a>here is the <span class="dv">&amp;lt;</span>A href=&quot;navbar.html&quot;<span class="dv">&amp;gt;</span>contents page<span class="dv">&amp;lt;</span>/A<span class="dv">&amp;gt;</span> of CRAN.</span>
-<span id="cb76-21"><a href="#cb76-21" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/noframes&gt;</span></span>
-<span id="cb76-22"><a href="#cb76-22" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/frameset&gt;</span></span>
-<span id="cb76-23"><a href="#cb76-23" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;&lt;canvas</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;fxdriver-screenshot-canvas&quot;</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;display: none;&quot;</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;1360&quot;</span> <span class="er">height</span><span class="ot">=</span><span class="st">&quot;559&quot;</span><span class="kw">&gt;&lt;/canvas&gt;&lt;/body&gt;</span></span>
-<span id="cb76-24"><a href="#cb76-24" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToFrame</span>(<span class="cn">NULL</span>)</span>
+<span id="cb75-2"><a href="#cb75-2" tabindex="-1"></a>XML<span class="sc">::</span><span class="fu">htmlParse</span>(remDr<span class="sc">$</span><span class="fu">getPageSource</span>()[[<span class="dv">1</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb76-1"><a href="#cb76-1" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html PUBLIC <span class="st">&quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot;</span> <span class="st">&quot;http://www.w3.org/TR/html4/frameset.dtd&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-2"><a href="#cb76-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> xmlns</span><span class="op">=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-3"><a href="#cb76-3" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb76-4"><a href="#cb76-4" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>The Comprehensive R Archive Network<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb76-5"><a href="#cb76-5" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;text/html; charset=utf-8&quot;</span><span class="ot"> http-equiv</span><span class="op">=</span><span class="st">&quot;content-type&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-6"><a href="#cb76-6" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;image/x-icon&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;favicon.ico&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;icon&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-7"><a href="#cb76-7" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;image/x-icon&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;favicon.ico&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;shortcut icon&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-8"><a href="#cb76-8" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;R.css&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-9"><a href="#cb76-9" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb76-10"><a href="#cb76-10" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frameset</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;border: none;&quot;</span><span class="ot"> cols</span><span class="op">=</span><span class="st">&quot;1*, 4*&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-11"><a href="#cb76-11" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frameset</span><span class="ot"> rows</span><span class="op">=</span><span class="st">&quot;120, 1*&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-12"><a href="#cb76-12" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frame</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">&quot;0&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;logo&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;logo.html&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-13"><a href="#cb76-13" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frame</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">&quot;0&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;contents&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;navbar.html&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-14"><a href="#cb76-14" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">frameset</span><span class="dt">&gt;</span></span>
+<span id="cb76-15"><a href="#cb76-15" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">frame</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">&quot;0&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;banner&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;banner.shtml&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb76-16"><a href="#cb76-16" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">noframes</span><span class="dt">&gt;</span></span>
+<span id="cb76-17"><a href="#cb76-17" tabindex="-1"></a><span class="dv">&amp;lt;</span>h1<span class="dv">&amp;gt;</span>The Comprehensive R Archive Network<span class="dv">&amp;lt;</span>/h1<span class="dv">&amp;gt;</span></span>
+<span id="cb76-18"><a href="#cb76-18" tabindex="-1"></a></span>
+<span id="cb76-19"><a href="#cb76-19" tabindex="-1"></a>Your browser seems not to support frames,</span>
+<span id="cb76-20"><a href="#cb76-20" tabindex="-1"></a>here is the <span class="dv">&amp;lt;</span>A href=&quot;navbar.html&quot;<span class="dv">&amp;gt;</span>contents page<span class="dv">&amp;lt;</span>/A<span class="dv">&amp;gt;</span> of CRAN.</span>
+<span id="cb76-21"><a href="#cb76-21" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">noframes</span><span class="dt">&gt;</span></span>
+<span id="cb76-22"><a href="#cb76-22" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">frameset</span><span class="dt">&gt;</span></span>
+<span id="cb76-23"><a href="#cb76-23" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">canvas</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;fxdriver-screenshot-canvas&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: none;&quot;</span><span class="ot"> width</span><span class="op">=</span><span class="st">&quot;1360&quot;</span><span class="ot"> height</span><span class="op">=</span><span class="st">&quot;559&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">canvas</span><span class="dt">&gt;&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb76-24"><a href="#cb76-24" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>Finally we can switch to the main panel using a name</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToFrame</span>(<span class="st">&quot;banner&quot;</span>)</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>XML<span class="sc">::</span><span class="fu">htmlParse</span>(remDr<span class="sc">$</span><span class="fu">getPageSource</span>()[[<span class="dv">1</span>]])</span></code></pre></div>
-<div class="sourceCode" id="cb78"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//IETF//DTD HTML//EN&quot;<span class="dt">&gt;</span></span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">xmlns</span><span class="ot">=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>The Comprehensive R Archive Network<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;R.css&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/css&quot;</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb78-8"><a href="#cb78-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-9"><a href="#cb78-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1&gt;</span>The Comprehensive R Archive Network<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb78-10"><a href="#cb78-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-11"><a href="#cb78-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">align</span><span class="ot">=</span><span class="st">&quot;center&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb78-12"><a href="#cb78-12" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table</span> <span class="er">border</span><span class="ot">=</span><span class="st">&quot;1&quot;</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;80%&quot;</span><span class="kw">&gt;&lt;tbody&gt;</span></span>
-<span id="cb78-13"><a href="#cb78-13" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;tr&gt;</span></span>
-<span id="cb78-14"><a href="#cb78-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;td&gt;</span></span>
-<span id="cb78-15"><a href="#cb78-15" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h3&gt;</span>Download and Install R<span class="kw">&lt;/h3&gt;</span></span>
-<span id="cb78-16"><a href="#cb78-16" aria-hidden="true" tabindex="-1"></a>      Precompiled binary distributions of the base system and</span>
-<span id="cb78-17"><a href="#cb78-17" aria-hidden="true" tabindex="-1"></a>      contributed packages, <span class="kw">&lt;strong&gt;</span>Windows and</span>
-<span id="cb78-18"><a href="#cb78-18" aria-hidden="true" tabindex="-1"></a>      Mac<span class="kw">&lt;/strong&gt;</span> users most likely want one of these versions of R:</span>
-<span id="cb78-19"><a href="#cb78-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;ul&gt;</span></span>
-<span id="cb78-20"><a href="#cb78-20" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;li&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;bin/linux/&quot;</span><span class="kw">&gt;</span>Download R for Linux<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
-<span id="cb78-21"><a href="#cb78-21" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;li&gt;</span></span>
-<span id="cb78-22"><a href="#cb78-22" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;bin/macosx/&quot;</span><span class="kw">&gt;</span>Download R for (Mac) OS X<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb78-23"><a href="#cb78-23" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;/li&gt;</span></span>
-<span id="cb78-24"><a href="#cb78-24" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;li&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;bin/windows/&quot;</span><span class="kw">&gt;</span>Download R for Windows<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
-<span id="cb78-25"><a href="#cb78-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/ul&gt;</span></span>
-<span id="cb78-26"><a href="#cb78-26" aria-hidden="true" tabindex="-1"></a>    R is part of many Linux distributions, you should check with your Linux package management system in addition to the link above.</span>
-<span id="cb78-27"><a href="#cb78-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/td&gt;</span></span>
-<span id="cb78-28"><a href="#cb78-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb78-29"><a href="#cb78-29" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;tr&gt;</span></span>
-<span id="cb78-30"><a href="#cb78-30" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;td&gt;</span></span>
-<span id="cb78-31"><a href="#cb78-31" aria-hidden="true" tabindex="-1"></a>................</span>
-<span id="cb78-32"><a href="#cb78-32" aria-hidden="true" tabindex="-1"></a>................</span>
-<span id="cb78-33"><a href="#cb78-33" aria-hidden="true" tabindex="-1"></a>................</span>
-<span id="cb78-34"><a href="#cb78-34" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h3&gt;</span>Questions About R<span class="kw">&lt;/h3&gt;</span></span>
-<span id="cb78-35"><a href="#cb78-35" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;ul&gt;&lt;li&gt;</span></span>
-<span id="cb78-36"><a href="#cb78-36" aria-hidden="true" tabindex="-1"></a>      If you have questions about R like how to download and install</span>
-<span id="cb78-37"><a href="#cb78-37" aria-hidden="true" tabindex="-1"></a>      the software, or what the license terms are,</span>
-<span id="cb78-38"><a href="#cb78-38" aria-hidden="true" tabindex="-1"></a>      please read our <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;faqs.html&quot;</span><span class="kw">&gt;</span>answers to frequently asked</span>
-<span id="cb78-39"><a href="#cb78-39" aria-hidden="true" tabindex="-1"></a>      questions<span class="kw">&lt;/a&gt;</span> before you send an email.</span>
-<span id="cb78-40"><a href="#cb78-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/li&gt;&lt;/ul&gt;</span></span>
-<span id="cb78-41"><a href="#cb78-41" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/td&gt;</span></span>
-<span id="cb78-42"><a href="#cb78-42" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb78-43"><a href="#cb78-43" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/tbody&gt;&lt;/table&gt;</span></span>
-<span id="cb78-44"><a href="#cb78-44" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
-<span id="cb78-45"><a href="#cb78-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-46"><a href="#cb78-46" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h2&gt;</span>What are R and CRAN?<span class="kw">&lt;/h2&gt;</span></span>
-<span id="cb78-47"><a href="#cb78-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-48"><a href="#cb78-48" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span> R is GNU, a freely available language and environment for</span>
-<span id="cb78-49"><a href="#cb78-49" aria-hidden="true" tabindex="-1"></a>statistical computing and graphics which provides a wide variety of</span>
-<span id="cb78-50"><a href="#cb78-50" aria-hidden="true" tabindex="-1"></a>statistical and graphical techniques: linear and nonlinear modelling,</span>
-<span id="cb78-51"><a href="#cb78-51" aria-hidden="true" tabindex="-1"></a>statistical tests, time series analysis, classification, clustering,</span>
-<span id="cb78-52"><a href="#cb78-52" aria-hidden="true" tabindex="-1"></a>etc. Please consult the <span class="kw">&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;_top&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://www.R-project.org/&quot;</span><span class="kw">&gt;</span>R project homepage<span class="kw">&lt;/a&gt;</span> for further information.</span>
-<span id="cb78-53"><a href="#cb78-53" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/p&gt;</span></span>
-<span id="cb78-54"><a href="#cb78-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-55"><a href="#cb78-55" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span> CRAN is a network of ftp and web servers around the world that</span>
-<span id="cb78-56"><a href="#cb78-56" aria-hidden="true" tabindex="-1"></a>store identical, up-to-date, versions of code and documentation for</span>
-<span id="cb78-57"><a href="#cb78-57" aria-hidden="true" tabindex="-1"></a>R. Please use the CRAN <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;mirrors.html&quot;</span><span class="kw">&gt;</span>mirror<span class="kw">&lt;/a&gt;</span> nearest to you to minimize network</span>
-<span id="cb78-58"><a href="#cb78-58" aria-hidden="true" tabindex="-1"></a>load.</span>
-<span id="cb78-59"><a href="#cb78-59" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/p&gt;</span></span>
-<span id="cb78-60"><a href="#cb78-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-61"><a href="#cb78-61" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h2</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;submitting&quot;</span><span class="kw">&gt;</span>Submitting to CRAN <span class="kw">&lt;/h2&gt;</span></span>
-<span id="cb78-62"><a href="#cb78-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-63"><a href="#cb78-63" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span></span>
-<span id="cb78-64"><a href="#cb78-64" aria-hidden="true" tabindex="-1"></a>To submit a package to CRAN,</span>
-<span id="cb78-65"><a href="#cb78-65" aria-hidden="true" tabindex="-1"></a>check that your submission meets the</span>
-<span id="cb78-66"><a href="#cb78-66" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://CRAN.R-project.org/web/packages/policies.html&quot;</span><span class="kw">&gt;</span>CRAN</span>
-<span id="cb78-67"><a href="#cb78-67" aria-hidden="true" tabindex="-1"></a>  Repository Policy<span class="kw">&lt;/a&gt;</span> and then use the</span>
-<span id="cb78-68"><a href="#cb78-68" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://xmpalantir.wu.ac.at/cransubmit/&quot;</span><span class="kw">&gt;</span>web form<span class="kw">&lt;/a&gt;</span>.</span>
-<span id="cb78-69"><a href="#cb78-69" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/p&gt;</span></span>
-<span id="cb78-70"><a href="#cb78-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-71"><a href="#cb78-71" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span></span>
-<span id="cb78-72"><a href="#cb78-72" aria-hidden="true" tabindex="-1"></a>If this fails, upload to</span>
-<span id="cb78-73"><a href="#cb78-73" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">target</span><span class="ot">=</span><span class="st">&quot;_blank&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;ftp://CRAN.R-project.org/incoming/&quot;</span><span class="kw">&gt;</span>ftp://CRAN.R-project.org/incoming/<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb78-74"><a href="#cb78-74" aria-hidden="true" tabindex="-1"></a>and send an email to</span>
-<span id="cb78-75"><a href="#cb78-75" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;mailto:CRAN@R-project.org&quot;</span><span class="kw">&gt;</span>CRAN@R-project.org<span class="kw">&lt;/a&gt;</span> following the policy.</span>
-<span id="cb78-76"><a href="#cb78-76" aria-hidden="true" tabindex="-1"></a>Please do not attach submissions to emails, because this will clutter up</span>
-<span id="cb78-77"><a href="#cb78-77" aria-hidden="true" tabindex="-1"></a>the mailboxes of half a dozen people.</span>
-<span id="cb78-78"><a href="#cb78-78" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/p&gt;</span></span>
-<span id="cb78-79"><a href="#cb78-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-80"><a href="#cb78-80" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span></span>
-<span id="cb78-81"><a href="#cb78-81" aria-hidden="true" tabindex="-1"></a>Note that we generally do not accept submissions of precompiled</span>
-<span id="cb78-82"><a href="#cb78-82" aria-hidden="true" tabindex="-1"></a>binaries due to security reasons. All binary distribution listed above</span>
-<span id="cb78-83"><a href="#cb78-83" aria-hidden="true" tabindex="-1"></a>are compiled by selected maintainers, who are in charge for all</span>
-<span id="cb78-84"><a href="#cb78-84" aria-hidden="true" tabindex="-1"></a>binaries of their platform, respectively.</span>
-<span id="cb78-85"><a href="#cb78-85" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/p&gt;</span></span>
-<span id="cb78-86"><a href="#cb78-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-87"><a href="#cb78-87" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span></span>
-<span id="cb78-88"><a href="#cb78-88" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/p&gt;</span></span>
-<span id="cb78-89"><a href="#cb78-89" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;hr&gt;</span></span>
-<span id="cb78-90"><a href="#cb78-90" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--#if expr=&quot;$CRAN_HOST&quot; --&gt;&lt;!--#echo  encoding=&quot;none&quot; var=&quot;CRAN_HOST&quot;--&gt;</span><span class="kw">&lt;br&gt;</span><span class="co">&lt;!--#endif --&gt;</span></span>
-<span id="cb78-91"><a href="#cb78-91" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb78-92"><a href="#cb78-92" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToFrame</span>(<span class="st">&quot;banner&quot;</span>)</span>
+<span id="cb77-2"><a href="#cb77-2" tabindex="-1"></a>XML<span class="sc">::</span><span class="fu">htmlParse</span>(remDr<span class="sc">$</span><span class="fu">getPageSource</span>()[[<span class="dv">1</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb78-1"><a href="#cb78-1" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html PUBLIC <span class="st">&quot;-//IETF//DTD HTML//EN&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb78-2"><a href="#cb78-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> xmlns</span><span class="op">=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb78-3"><a href="#cb78-3" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb78-4"><a href="#cb78-4" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>The Comprehensive R Archive Network<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb78-5"><a href="#cb78-5" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;R.css&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb78-6"><a href="#cb78-6" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb78-7"><a href="#cb78-7" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb78-8"><a href="#cb78-8" tabindex="-1"></a></span>
+<span id="cb78-9"><a href="#cb78-9" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>The Comprehensive R Archive Network<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb78-10"><a href="#cb78-10" tabindex="-1"></a></span>
+<span id="cb78-11"><a href="#cb78-11" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> align</span><span class="op">=</span><span class="st">&quot;center&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb78-12"><a href="#cb78-12" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">table</span><span class="ot"> border</span><span class="op">=</span><span class="st">&quot;1&quot;</span><span class="ot"> width</span><span class="op">=</span><span class="st">&quot;80%&quot;</span><span class="dt">&gt;&lt;</span><span class="kw">tbody</span><span class="dt">&gt;</span></span>
+<span id="cb78-13"><a href="#cb78-13" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb78-14"><a href="#cb78-14" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb78-15"><a href="#cb78-15" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Download and Install R<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb78-16"><a href="#cb78-16" tabindex="-1"></a>      Precompiled binary distributions of the base system and</span>
+<span id="cb78-17"><a href="#cb78-17" tabindex="-1"></a>      contributed packages, <span class="dt">&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span>Windows and</span>
+<span id="cb78-18"><a href="#cb78-18" tabindex="-1"></a>      Mac<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span> users most likely want one of these versions of R:</span>
+<span id="cb78-19"><a href="#cb78-19" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb78-20"><a href="#cb78-20" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;bin/linux/&quot;</span><span class="dt">&gt;</span>Download R for Linux<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb78-21"><a href="#cb78-21" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb78-22"><a href="#cb78-22" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;bin/macosx/&quot;</span><span class="dt">&gt;</span>Download R for (Mac) OS X<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb78-23"><a href="#cb78-23" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb78-24"><a href="#cb78-24" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;bin/windows/&quot;</span><span class="dt">&gt;</span>Download R for Windows<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb78-25"><a href="#cb78-25" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb78-26"><a href="#cb78-26" tabindex="-1"></a>    R is part of many Linux distributions, you should check with your Linux package management system in addition to the link above.</span>
+<span id="cb78-27"><a href="#cb78-27" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb78-28"><a href="#cb78-28" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb78-29"><a href="#cb78-29" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb78-30"><a href="#cb78-30" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb78-31"><a href="#cb78-31" tabindex="-1"></a>................</span>
+<span id="cb78-32"><a href="#cb78-32" tabindex="-1"></a>................</span>
+<span id="cb78-33"><a href="#cb78-33" tabindex="-1"></a>................</span>
+<span id="cb78-34"><a href="#cb78-34" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Questions About R<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb78-35"><a href="#cb78-35" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;&lt;</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb78-36"><a href="#cb78-36" tabindex="-1"></a>      If you have questions about R like how to download and install</span>
+<span id="cb78-37"><a href="#cb78-37" tabindex="-1"></a>      the software, or what the license terms are,</span>
+<span id="cb78-38"><a href="#cb78-38" tabindex="-1"></a>      please read our <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;faqs.html&quot;</span><span class="dt">&gt;</span>answers to frequently asked</span>
+<span id="cb78-39"><a href="#cb78-39" tabindex="-1"></a>      questions<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> before you send an email.</span>
+<span id="cb78-40"><a href="#cb78-40" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb78-41"><a href="#cb78-41" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb78-42"><a href="#cb78-42" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb78-43"><a href="#cb78-43" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">tbody</span><span class="dt">&gt;&lt;/</span><span class="kw">table</span><span class="dt">&gt;</span></span>
+<span id="cb78-44"><a href="#cb78-44" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb78-45"><a href="#cb78-45" tabindex="-1"></a></span>
+<span id="cb78-46"><a href="#cb78-46" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>What are R and CRAN?<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb78-47"><a href="#cb78-47" tabindex="-1"></a></span>
+<span id="cb78-48"><a href="#cb78-48" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span> R is GNU, a freely available language and environment for</span>
+<span id="cb78-49"><a href="#cb78-49" tabindex="-1"></a>statistical computing and graphics which provides a wide variety of</span>
+<span id="cb78-50"><a href="#cb78-50" tabindex="-1"></a>statistical and graphical techniques: linear and nonlinear modelling,</span>
+<span id="cb78-51"><a href="#cb78-51" tabindex="-1"></a>statistical tests, time series analysis, classification, clustering,</span>
+<span id="cb78-52"><a href="#cb78-52" tabindex="-1"></a>etc. Please consult the <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;_top&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://www.R-project.org/&quot;</span><span class="dt">&gt;</span>R project homepage<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> for further information.</span>
+<span id="cb78-53"><a href="#cb78-53" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-54"><a href="#cb78-54" tabindex="-1"></a></span>
+<span id="cb78-55"><a href="#cb78-55" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span> CRAN is a network of ftp and web servers around the world that</span>
+<span id="cb78-56"><a href="#cb78-56" tabindex="-1"></a>store identical, up-to-date, versions of code and documentation for</span>
+<span id="cb78-57"><a href="#cb78-57" tabindex="-1"></a>R. Please use the CRAN <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;mirrors.html&quot;</span><span class="dt">&gt;</span>mirror<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> nearest to you to minimize network</span>
+<span id="cb78-58"><a href="#cb78-58" tabindex="-1"></a>load.</span>
+<span id="cb78-59"><a href="#cb78-59" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-60"><a href="#cb78-60" tabindex="-1"></a></span>
+<span id="cb78-61"><a href="#cb78-61" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;submitting&quot;</span><span class="dt">&gt;</span>Submitting to CRAN <span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb78-62"><a href="#cb78-62" tabindex="-1"></a></span>
+<span id="cb78-63"><a href="#cb78-63" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-64"><a href="#cb78-64" tabindex="-1"></a>To submit a package to CRAN,</span>
+<span id="cb78-65"><a href="#cb78-65" tabindex="-1"></a>check that your submission meets the</span>
+<span id="cb78-66"><a href="#cb78-66" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://CRAN.R-project.org/web/packages/policies.html&quot;</span><span class="dt">&gt;</span>CRAN</span>
+<span id="cb78-67"><a href="#cb78-67" tabindex="-1"></a>  Repository Policy<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> and then use the</span>
+<span id="cb78-68"><a href="#cb78-68" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://xmpalantir.wu.ac.at/cransubmit/&quot;</span><span class="dt">&gt;</span>web form<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.</span>
+<span id="cb78-69"><a href="#cb78-69" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-70"><a href="#cb78-70" tabindex="-1"></a></span>
+<span id="cb78-71"><a href="#cb78-71" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-72"><a href="#cb78-72" tabindex="-1"></a>If this fails, upload to</span>
+<span id="cb78-73"><a href="#cb78-73" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;_blank&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;ftp://CRAN.R-project.org/incoming/&quot;</span><span class="dt">&gt;</span>ftp://CRAN.R-project.org/incoming/<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb78-74"><a href="#cb78-74" tabindex="-1"></a>and send an email to</span>
+<span id="cb78-75"><a href="#cb78-75" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;mailto:CRAN@R-project.org&quot;</span><span class="dt">&gt;</span>CRAN@R-project.org<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> following the policy.</span>
+<span id="cb78-76"><a href="#cb78-76" tabindex="-1"></a>Please do not attach submissions to emails, because this will clutter up</span>
+<span id="cb78-77"><a href="#cb78-77" tabindex="-1"></a>the mailboxes of half a dozen people.</span>
+<span id="cb78-78"><a href="#cb78-78" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-79"><a href="#cb78-79" tabindex="-1"></a></span>
+<span id="cb78-80"><a href="#cb78-80" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-81"><a href="#cb78-81" tabindex="-1"></a>Note that we generally do not accept submissions of precompiled</span>
+<span id="cb78-82"><a href="#cb78-82" tabindex="-1"></a>binaries due to security reasons. All binary distribution listed above</span>
+<span id="cb78-83"><a href="#cb78-83" tabindex="-1"></a>are compiled by selected maintainers, who are in charge for all</span>
+<span id="cb78-84"><a href="#cb78-84" tabindex="-1"></a>binaries of their platform, respectively.</span>
+<span id="cb78-85"><a href="#cb78-85" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-86"><a href="#cb78-86" tabindex="-1"></a></span>
+<span id="cb78-87"><a href="#cb78-87" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-88"><a href="#cb78-88" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb78-89"><a href="#cb78-89" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">hr</span><span class="dt">&gt;</span></span>
+<span id="cb78-90"><a href="#cb78-90" tabindex="-1"></a><span class="co">&lt;!--#if expr=&quot;$CRAN_HOST&quot; --&gt;&lt;!--#echo  encoding=&quot;none&quot; var=&quot;CRAN_HOST&quot;--&gt;</span><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span><span class="co">&lt;!--#endif --&gt;</span></span>
+<span id="cb78-91"><a href="#cb78-91" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb78-92"><a href="#cb78-92" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
 </div>
 <div id="windows-in-selenium" class="section level3">
 <h3>Windows in Selenium</h3>
 <p>The easiest way to illustrate Windows in RSelenium is again by way of
 example. We will use the CRAN website. First, we select the “download
 R”” element in the main frame.</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;https://cran.r-project.org/&quot;</span>)</span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToFrame</span>(<span class="st">&quot;banner&quot;</span>)</span>
-<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="st">&quot;partial link text&quot;</span>, <span class="st">&quot;Download R&quot;</span>)</span>
-<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(webElems, <span class="cf">function</span>(x) x<span class="sc">$</span><span class="fu">getElementText</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;https://cran.r-project.org/&quot;</span>)</span>
+<span id="cb79-2"><a href="#cb79-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToFrame</span>(<span class="st">&quot;banner&quot;</span>)</span>
+<span id="cb79-3"><a href="#cb79-3" tabindex="-1"></a>webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="st">&quot;partial link text&quot;</span>, <span class="st">&quot;Download R&quot;</span>)</span>
+<span id="cb79-4"><a href="#cb79-4" tabindex="-1"></a></span>
+<span id="cb79-5"><a href="#cb79-5" tabindex="-1"></a><span class="fu">sapply</span>(webElems, <span class="cf">function</span>(x) x<span class="sc">$</span><span class="fu">getElementText</span>())</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;Download R for Linux&quot;
 ## 
@@ -1114,36 +1115,36 @@ R”” element in the main frame.</p>
 the link it points to in a new window. If you did it manually you would
 move the mouse to the element right click on the link press the down
 arrow key twice then press enter. We will do the same</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>loc <span class="ot">&lt;-</span> webElems[[<span class="dv">1</span>]]<span class="sc">$</span><span class="fu">getElementLocation</span>()</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>loc[<span class="fu">c</span>(<span class="st">&#39;x&#39;</span>,<span class="st">&#39;y&#39;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" tabindex="-1"></a>loc <span class="ot">&lt;-</span> webElems[[<span class="dv">1</span>]]<span class="sc">$</span><span class="fu">getElementLocation</span>()</span>
+<span id="cb81-2"><a href="#cb81-2" tabindex="-1"></a>loc[<span class="fu">c</span>(<span class="st">&#39;x&#39;</span>,<span class="st">&#39;y&#39;</span>)]</span></code></pre></div>
 <pre><code>## $x
 ## [1] 158
 ## 
 ## $y
 ## [1] 132</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">mouseMoveToLocation</span>(<span class="at">webElement =</span> webElems[[<span class="dv">1</span>]]) <span class="co"># move mouse to the element we selected</span></span>
-<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">click</span>(<span class="dv">2</span>) <span class="co"># 2 indicates click the right mouse button</span></span>
-<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">sendKeysToActiveElement</span>(</span>
-<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">key =</span> <span class="st">&#39;down_arrow&#39;</span>, <span class="at">key =</span> <span class="st">&#39;down_arrow&#39;</span>, <span class="at">key =</span> <span class="st">&#39;enter&#39;</span>)</span>
-<span id="cb83-5"><a href="#cb83-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">mouseMoveToLocation</span>(<span class="at">webElement =</span> webElems[[<span class="dv">1</span>]]) <span class="co"># move mouse to the element we selected</span></span>
+<span id="cb83-2"><a href="#cb83-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">click</span>(<span class="dv">2</span>) <span class="co"># 2 indicates click the right mouse button</span></span>
+<span id="cb83-3"><a href="#cb83-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">sendKeysToActiveElement</span>(</span>
+<span id="cb83-4"><a href="#cb83-4" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">key =</span> <span class="st">&#39;down_arrow&#39;</span>, <span class="at">key =</span> <span class="st">&#39;down_arrow&#39;</span>, <span class="at">key =</span> <span class="st">&#39;enter&#39;</span>)</span>
+<span id="cb83-5"><a href="#cb83-5" tabindex="-1"></a>)</span></code></pre></div>
 <p>Notice now that a new windows has opened on the remote browser.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentWindowHandle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getCurrentWindowHandle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;{573d17e5-b95a-41b9-a65f-04092b6a804b}&quot;</code></pre>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getWindowHandles</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getWindowHandles</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;{4896393a-c215-4976-b4ca-030d6b75b67d}&quot;
 ## 
 ## [[2]]
 ## [1] &quot;{69c00f18-d3a7-44d7-a236-c6b5e6c264ff}&quot;</code></pre>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;The Comprehensive R Archive Network&quot;</code></pre>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>currWin <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">getCurrentWindowHandle</span>()</span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>allWins <span class="ot">&lt;-</span> <span class="fu">unlist</span>(remDr<span class="sc">$</span><span class="fu">getWindowHandles</span>())</span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>otherWindow <span class="ot">&lt;-</span> allWins[<span class="sc">!</span>allWins <span class="sc">%in%</span> currWin[[<span class="dv">1</span>]]]</span>
-<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToWindow</span>(otherWindow)</span>
-<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" tabindex="-1"></a>currWin <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">getCurrentWindowHandle</span>()</span>
+<span id="cb90-2"><a href="#cb90-2" tabindex="-1"></a>allWins <span class="ot">&lt;-</span> <span class="fu">unlist</span>(remDr<span class="sc">$</span><span class="fu">getWindowHandles</span>())</span>
+<span id="cb90-3"><a href="#cb90-3" tabindex="-1"></a>otherWindow <span class="ot">&lt;-</span> allWins[<span class="sc">!</span>allWins <span class="sc">%in%</span> currWin[[<span class="dv">1</span>]]]</span>
+<span id="cb90-4"><a href="#cb90-4" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">switchToWindow</span>(otherWindow)</span>
+<span id="cb90-5"><a href="#cb90-5" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;Index of /bin/linux&quot;</code></pre>
 <p>So using the code above one can observe how to switch between
@@ -1164,8 +1165,8 @@ PhantomJS, and Internet Explorer can be selected using the
 <code>browser</code> argument.</p>
 <p>The default port a Selenium Server is run on using the
 <code>rsDriver</code> function is 4567L.</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>rD <span class="ot">&lt;-</span> <span class="fu">rsDriver</span>(<span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>rD</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" tabindex="-1"></a>rD <span class="ot">&lt;-</span> <span class="fu">rsDriver</span>(<span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb92-2"><a href="#cb92-2" tabindex="-1"></a>rD</span></code></pre></div>
 <pre><code>## $client
 ##   browserName                                   id
 ## 1      chrome 1670dcc6-3c97-4717-bf28-4d1fc8eea2c1
@@ -1177,14 +1178,14 @@ PhantomJS, and Internet Explorer can be selected using the
 ## state     : running</code></pre>
 <p>Assign the client to a new variable and drive the client to navigate
 to a page:</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> rD<span class="sc">$</span>client</span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.r-project.org&quot;</span>)</span>
-<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> rD<span class="sc">$</span>client</span>
+<span id="cb94-2"><a href="#cb94-2" tabindex="-1"></a></span>
+<span id="cb94-3"><a href="#cb94-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.r-project.org&quot;</span>)</span>
+<span id="cb94-4"><a href="#cb94-4" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;R: The R Project for Statistical Computing&quot;</code></pre>
 <p>Check the server logs:</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>rD<span class="sc">$</span>server<span class="sc">$</span><span class="fu">log</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" tabindex="-1"></a>rD<span class="sc">$</span>server<span class="sc">$</span><span class="fu">log</span>()</span></code></pre></div>
 <pre><code>#&gt; $stderr
 #&gt;  [1] &quot;10:29:11.536 INFO - Selenium build info: version: &#39;3.0.1&#39;, revision: &#39;1969d75&#39;&quot;                                                                                          
 #&gt;  [2] &quot;10:29:11.537 INFO - Launching a standalone Selenium Server&quot;                                                                                                              
@@ -1221,11 +1222,11 @@ to a page:</p>
 #&gt; $stdout
 #&gt; character(0)</code></pre>
 <p>Close the client and the server:</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">close</span>()</span>
-<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a>rD<span class="sc">$</span>server<span class="sc">$</span><span class="fu">stop</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">close</span>()</span>
+<span id="cb98-2"><a href="#cb98-2" tabindex="-1"></a>rD<span class="sc">$</span>server<span class="sc">$</span><span class="fu">stop</span>()</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <p>Check the server status:</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>rD<span class="sc">$</span>server<span class="sc">$</span>process</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" tabindex="-1"></a>rD<span class="sc">$</span>server<span class="sc">$</span>process</span></code></pre></div>
 <pre><code>## Process Handle
 ## command   : /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Dwebdriver.chrome.driver=/home/john/.local/share/binman_chromedriver/linux64/2.27/chromedriver -Dwebdriver.gecko.driver=/home/john/.local/share/binman_geckodriver/linux64/0.13.0/geckodriver -Dphantomjs.binary.path=/home/john/.local/share/binman_phantomjs/linux64/2.1.1/phantomjs-2.1.1-linux-x86_64/bin/phantomjs -jar /home/john/.local/share/binman_seleniumserver/generic/3.0.1/selenium-server-standalone-3.0.1.jar -port 4567
 ## system id : 120670

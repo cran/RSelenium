@@ -29,25 +29,26 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -63,55 +64,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -416,48 +416,48 @@ docker containers.</p>
 <div id="ubuntu-16.04" class="section level4">
 <h4>Ubuntu 16.04</h4>
 <p>Run system update firstly</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span></code></pre></div>
 <p>Add the official Docker GPG key to your system</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-key adv <span class="at">--keyserver</span> hkp://p80.pool.sks-keyservers.net:80 <span class="at">--recv-keys</span> 58118E89F3A912897C070ADBF76221572C52609D</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> apt-key adv <span class="at">--keyserver</span> hkp://p80.pool.sks-keyservers.net:80 <span class="at">--recv-keys</span> 58118E89F3A912897C070ADBF76221572C52609D</span></code></pre></div>
 <p>Add the Docker repository to APT sources:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;deb https://apt.dockerproject.org/repo ubuntu-xenial main&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/docker.list</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;deb https://apt.dockerproject.org/repo ubuntu-xenial main&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/docker.list</span></code></pre></div>
 <p>Update the package database:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span></code></pre></div>
 <p>Now you should be able to install Docker</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> docker-engine</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> docker-engine</span></code></pre></div>
 <p>Start the docker daemon.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> service docker start</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">sudo</span> service docker start</span></code></pre></div>
 <p>You can check that the Docker is working by running a test
 container:</p>
 <p>For now run as <code>sudo</code></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker run hello-world</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Unable</span> to find image <span class="st">&#39;hello-world:latest&#39;</span> locally</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">latest:</span> Pulling from library/hello-world</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">2db29710123e:</span> Pull complete</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Digest:</span> sha256:7d246653d0511db2a6b2e0436cfd0e52ac8c066000264b3ce63331ac66dca625</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Status:</span> Downloaded newer image for hello-world:latest</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Hello</span> from Docker!</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="ex">This</span> message shows that your installation appears to be working correctly.</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> generate this message, Docker took the following steps:</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a> <span class="ex">1.</span> The Docker client contacted the Docker daemon.</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a> <span class="ex">2.</span> The Docker daemon pulled the <span class="st">&quot;hello-world&quot;</span> image from the Docker Hub.</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">(</span><span class="ex">amd64</span><span class="kw">)</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a> <span class="ex">3.</span> The Docker daemon created a new container from that image which runs the</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">executable</span> that produces the output you are currently reading.</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a> <span class="ex">4.</span> The Docker daemon streamed that output to the Docker client, which sent it</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="ex">to</span> your terminal.</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> try something more ambitious, you can run an Ubuntu container with:</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a> <span class="ex">$</span> docker run <span class="at">-it</span> ubuntu bash</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="ex">Share</span> images, automate workflows, and more with a free Docker ID:</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a> <span class="ex">https://hub.docker.com/</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="ex">For</span> more examples and ideas, visit:</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a> <span class="ex">https://docs.docker.com/get-started/</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">sudo</span> docker run hello-world</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="ex">Unable</span> to find image <span class="st">&#39;hello-world:latest&#39;</span> locally</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="ex">latest:</span> Pulling from library/hello-world</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="ex">2db29710123e:</span> Pull complete</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="ex">Digest:</span> sha256:7d246653d0511db2a6b2e0436cfd0e52ac8c066000264b3ce63331ac66dca625</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="ex">Status:</span> Downloaded newer image for hello-world:latest</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="ex">Hello</span> from Docker!</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="ex">This</span> message shows that your installation appears to be working correctly.</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="ex">To</span> generate this message, Docker took the following steps:</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a> <span class="ex">1.</span> The Docker client contacted the Docker daemon.</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a> <span class="ex">2.</span> The Docker daemon pulled the <span class="st">&quot;hello-world&quot;</span> image from the Docker Hub.</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>    <span class="kw">(</span><span class="ex">amd64</span><span class="kw">)</span></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a> <span class="ex">3.</span> The Docker daemon created a new container from that image which runs the</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a>    <span class="ex">executable</span> that produces the output you are currently reading.</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a> <span class="ex">4.</span> The Docker daemon streamed that output to the Docker client, which sent it</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a>    <span class="ex">to</span> your terminal.</span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a><span class="ex">To</span> try something more ambitious, you can run an Ubuntu container with:</span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a> <span class="ex">$</span> docker run <span class="at">-it</span> ubuntu bash</span>
+<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a><span class="ex">Share</span> images, automate workflows, and more with a free Docker ID:</span>
+<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a> <span class="ex">https://hub.docker.com/</span></span>
+<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" tabindex="-1"></a><span class="ex">For</span> more examples and ideas, visit:</span>
+<span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a> <span class="ex">https://docs.docker.com/get-started/</span></span></code></pre></div>
 </div>
 <div id="running-without-sudo" class="section level4">
 <h4>Running without sudo</h4>
@@ -497,7 +497,7 @@ first image we looked at.</p>
 <p>To get the image we are interested in we first click our quickstart
 link to open a terminal.</p>
 <p>We then issue the following command:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull selenium/standalone-firefox:2.53.0</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">docker</span> pull selenium/standalone-firefox:2.53.0</span></code></pre></div>
 <p>Notice we appended a tag version so we are asking for the
 <code>2.53.0</code> version of this image.</p>
 </div>
@@ -506,7 +506,7 @@ link to open a terminal.</p>
 <p>Similar to windows we use the <code>docker pull</code> command. If
 you did not create and add your user to a <code>Docker</code> group you
 will need to <code>sudo</code></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker pull selenium/standalone-firefox:2.53.0</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">sudo</span> docker pull selenium/standalone-firefox:2.53.0</span></code></pre></div>
 </div>
 </div>
 <div id="start-your-servers" class="section level3">
@@ -523,7 +523,7 @@ the host machine.</p>
 <h4>Windows 10 Running an Image</h4>
 <p>Again we run docker and this time use the <a href="https://docs.docker.com/engine/reference/commandline/run/"><code>run</code></a>
 command.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 selenium/standalone-firefox:2.53.0</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 selenium/standalone-firefox:2.53.0</span></code></pre></div>
 <p>For illustration here we are mapping the container port 4444 to the
 host port 4445 so when we want to refer to our server on the host
 machine we will use 4445 as the port.</p>
@@ -540,16 +540,16 @@ has <code>id=ac61567a8f06</code> and is named
 <p>For ubuntu we also issue a <code>run</code> command followed by a
 listing of running containers with <code>ps</code>.</p>
 <p>Again run as <code>sudo</code> if necessary:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 selenium/standalone-firefox:2.53.0</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker ps</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">CONTAINER</span> ID   IMAGE                                COMMAND                  CREATED       STATUS       PORTS                    NAMES</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="ex">62446e273bb2</span>   selenium/standalone-firefox:2.53.0   <span class="st">&quot;/opt/bin/entry_poin…&quot;</span>   2 hours ago   Up 2 hours   0.0.0.0:4445-<span class="op">&gt;</span>4444/tcp   sleepy_chatterjee</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">sudo</span> docker run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 selenium/standalone-firefox:2.53.0</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="fu">sudo</span> docker ps</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="ex">CONTAINER</span> ID   IMAGE                                COMMAND                  CREATED       STATUS       PORTS                    NAMES</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="ex">62446e273bb2</span>   selenium/standalone-firefox:2.53.0   <span class="st">&quot;/opt/bin/entry_poin…&quot;</span>   2 hours ago   Up 2 hours   0.0.0.0:4445-<span class="op">&gt;</span>4444/tcp   sleepy_chatterjee</span></code></pre></div>
 <p>The <code>Ubuntu</code> container has <code>id=5475923fc4dc</code>
 and is named <code>peaceful_payne</code>.</p>
 <p>A tip if you don’t want to strain your eyes is to use the
 <code>--format</code> argument:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker ps <span class="at">--format</span> <span class="st">&#39;table {{.Names}}\t{{.Image}}\t{{.ID}}&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">sudo</span> docker ps <span class="at">--format</span> <span class="st">&#39;table {{.Names}}\t{{.Image}}\t{{.ID}}&#39;</span></span></code></pre></div>
 <pre><code>NAMES               IMAGE                                CONTAINER ID
 peaceful_payne      selenium/standalone-firefox:2.53.0   5475923fc4dc</code></pre>
 </div>
@@ -565,19 +565,19 @@ machine on windows to run our containers. So the virtual machine is the
 host rather than Win 10. We need the ip address of this virtual machine.
 This is the only added complication. We can get the ip address of the
 virtual machine using <code>docker-machine.exe</code>:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-machine</span> ip</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">docker-machine</span> ip</span></code></pre></div>
 <pre><code>192.168.99.100</code></pre>
 <p>So as we can see the virtual machine has
 <code>ip = 192.168.99.100</code> and as we noted previously we mapped
 port 4444 to port 4445 on the host (the virtual machine in this case).
 So we should have a Selenium server accessible on port 4445 of the
 virtual machine. Lets try it:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">remoteServerAddr =</span> <span class="st">&quot;192.168.99.100&quot;</span>,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">port =</span> 4445L</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(</span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>  <span class="at">remoteServerAddr =</span> <span class="st">&quot;192.168.99.100&quot;</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a>  <span class="at">port =</span> <span class="dv">4445</span><span class="dt">L</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a>)</span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;Connecting to remote server&quot;
 ## $applicationCacheEnabled
 ## [1] TRUE
@@ -626,8 +626,8 @@ virtual machine. Lets try it:</p>
 ## 
 ## $id
 ## [1] &quot;bfe1c24d-8b17-4e64-a062-cba14e99472b&quot;</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;Google&quot;</code></pre>
 <p>So as expected we have version <code>45.0.2</code> of firefox running
@@ -644,9 +644,9 @@ interact with the containers browser.</p>
 <p>On our ubuntu 16.04 box life is simpler. The host in this case is the
 machine itself. The ip address is therefore <code>localhost</code> the
 default for <code>RSelenium</code>:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">port =</span> 4445L)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">port =</span> <span class="dv">4445</span><span class="dt">L</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;Connecting to remote server&quot;
 ## $applicationCacheEnabled
 ## [1] TRUE
@@ -695,8 +695,8 @@ default for <code>RSelenium</code>:</p>
 ## 
 ## $id
 ## [1] &quot;644c353a-34b8-4bb4-bcff-746df5a30af8&quot;</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;Google&quot;
 </code></pre>
@@ -719,18 +719,18 @@ interact with the browser.</p>
 <p>First lets stop the running container. To stop the running container
 we need its ID. We then pass this id to the <a href="https://docs.docker.com/engine/reference/commandline/stop/"><code>stop</code></a>
 command:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps <span class="at">-q</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="ex">docker</span> ps <span class="at">-q</span></span></code></pre></div>
 <pre><code>ac61567a8f06</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> stop <span class="va">$(</span><span class="ex">docker</span> ps <span class="at">-q</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">docker</span> stop <span class="va">$(</span><span class="ex">docker</span> ps <span class="at">-q</span><span class="va">)</span></span></code></pre></div>
 <pre><code>ac61567a8f06</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="ex">docker</span> ps</span></code></pre></div>
 <pre><code>CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</code></pre>
 <p>So we have stopped our container and will have no issues with blocked
 ports. Next we need to <a href="https://docs.docker.com/engine/reference/commandline/pull/"><code>pull</code></a>
 the <a href="https://hub.docker.com/r/selenium/standalone-firefox-debug/"><code>Firefox standalone debug</code></a>
 image. Again this has various tags and we will choose the
 <code>2.53.0</code> one:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull selenium/standalone-firefox-debug:2.53.0</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="ex">docker</span> pull selenium/standalone-firefox-debug:2.53.0</span></code></pre></div>
 <pre><code>2.53.0: Pulling from selenium/standalone-firefox-debug
 
 0be59000882d: Already exists
@@ -765,29 +765,29 @@ map. The Selenium port as before and also now the VNC port. The Selenium
 image expose the VNC port on <code>5900</code> by default and we map
 this port to a port on the host. We will choose <code>5901</code> just
 to illustrate host v container:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 <span class="at">-p</span> 5901:5900 selenium/standalone-firefox-debug:2.53.0</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 <span class="at">-p</span> 5901:5900 selenium/standalone-firefox-debug:2.53.0</span></code></pre></div>
 <pre><code>ee0c0bb8b711723e653ccc26219e314a37c28d2027f939046adcfc90a4beb645</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-machine</span> ip</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="ex">docker-machine</span> ip</span></code></pre></div>
 <pre><code>192.168.99.100</code></pre>
-<div class="sourceCode" id="cb38"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps <span class="at">--format</span> <span class="st">&#39;table {{.Names}}\t{{.Image}}\t{{.ID}}&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="ex">docker</span> ps <span class="at">--format</span> <span class="st">&#39;table {{.Names}}\t{{.Image}}\t{{.ID}}&#39;</span></span></code></pre></div>
 <pre><code>NAMES               IMAGE                                      CONTAINER ID
 focused_tesla       selenium/standalone-firefox-debug:2.53.0   ee0c0bb8b711</code></pre>
 <p>Again we note that the container is ran on a virtual machine not on
 our Windows 10 box so we expose the ip of said virtual machine. Next we
 download a VNC viewer if we don’t have one.</p>
-<p><a href="http://www.tightvnc.com/download.php">TightVNC</a> has
+<p><a href="https://www.tightvnc.com/download.php">TightVNC</a> has
 worked for me so I use it here.</p>
 <p>Our Selenium server is running so lets use RSelenium again to browse
 to <code>Google</code>:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">remoteServerAddr =</span> <span class="st">&quot;192.168.99.100&quot;</span>,</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">port =</span> 4445L</span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>(<span class="at">silent =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span>
-<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">screenshot</span>(<span class="at">display =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(</span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a>  <span class="at">remoteServerAddr =</span> <span class="st">&quot;192.168.99.100&quot;</span>,</span>
+<span id="cb40-4"><a href="#cb40-4" tabindex="-1"></a>  <span class="at">port =</span> <span class="dv">4445</span><span class="dt">L</span></span>
+<span id="cb40-5"><a href="#cb40-5" tabindex="-1"></a>)</span>
+<span id="cb40-6"><a href="#cb40-6" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>(<span class="at">silent =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb40-7"><a href="#cb40-7" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb40-8"><a href="#cb40-8" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span>
+<span id="cb40-9"><a href="#cb40-9" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">screenshot</span>(<span class="at">display =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>Now we open <code>TightVNC</code> and use the VM ip with appropriate
 port for VNC.</p>
 <pre><code>Remote Host: 192.168.99.100:5901</code></pre>
@@ -801,27 +801,27 @@ can be seen by reading the images dockerfile:</p>
 &amp;&amp; x11vnc -storepasswd secret ~/.vnc/passwd</code></pre>
 <p>Enter the password and you should have access to the container
 browser. Navigate to another website;</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.bbc.com&quot;</span>)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.bbc.com&quot;</span>)</span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;BBC - Homepage&quot;</code></pre>
 <p>and you should observe the action on the containers browser. Finally
 stop your containers:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> stop <span class="va">$(</span><span class="ex">docker</span> ps <span class="at">-q</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">docker</span> stop <span class="va">$(</span><span class="ex">docker</span> ps <span class="at">-q</span><span class="va">)</span></span></code></pre></div>
 <pre><code>ee0c0bb8b711</code></pre>
 </div>
 <div id="remote-loggingdebugging-with-linux" class="section level3">
 <h3>Remote Logging/Debugging with Linux</h3>
 <p>Firstly, we stop any running containers which may block our
 ports:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> stop <span class="va">$(</span><span class="ex">docker</span> ps <span class="at">-q</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="ex">docker</span> stop <span class="va">$(</span><span class="ex">docker</span> ps <span class="at">-q</span><span class="va">)</span></span></code></pre></div>
 <pre><code>5475923fc4dc</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="ex">docker</span> ps</span></code></pre></div>
 <pre><code>CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</code></pre>
 <p>Like in windows we <code>pull</code> the <code>2.53.0</code> version
 of the <code>Firefox</code> standalone debug image (again using
 <code>sudo</code> if necessary:</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker pull selenium/standalone-firefox-debug:2.53.0</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a><span class="fu">sudo</span> docker pull selenium/standalone-firefox-debug:2.53.0</span></code></pre></div>
 <pre><code>2.53.0: Pulling from selenium/standalone-firefox-debug
 
 0be59000882d: Already exists 
@@ -850,25 +850,25 @@ a70ecef6edbc: Download complete </code></pre>
 We map Selenium to port 4445 on the host and VNC to port 5901. As noted
 before the host in the case of Ubuntu 16.04 is the machine itself so
 <code>localhost</code> is the relevant ip:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 <span class="at">-p</span> 5901:5900 selenium/standalone-firefox-debug:2.53.0</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a><span class="fu">sudo</span> docker run <span class="at">-d</span> <span class="at">-p</span> 4445:4444 <span class="at">-p</span> 5901:5900 selenium/standalone-firefox-debug:2.53.0</span></code></pre></div>
 <pre><code>dd36811562e83e66ab145efcedca2825a621741f10d8c81a5fb3fb5ba3019032</code></pre>
-<div class="sourceCode" id="cb55"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker ps <span class="at">--format</span> <span class="st">&#39;table {{.Names}}\t{{.Image}}\t{{.ID}}&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" tabindex="-1"></a><span class="fu">sudo</span> docker ps <span class="at">--format</span> <span class="st">&#39;table {{.Names}}\t{{.Image}}\t{{.ID}}&#39;</span></span></code></pre></div>
 <pre><code>NAMES               IMAGE                                      CONTAINER ID
 thirsty_swanson     selenium/standalone-firefox-debug:2.53.0   dd36811562e8</code></pre>
 <p>So we can see that Selenium server is running. Like in Windows we
 need a VNC viewer. You can use <code>TightVNC</code> as with windows and
 a guide to running it is <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-16-04">here</a>.
 We will use <code>Vinagre</code> however. A guide to install
-<code>Vinagre</code> is <a href="https://www.howtoinstall.co/en/ubuntu/xenial/vinagre">here</a>.
-Basically we just need to <code>apt-get</code> it:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install vinagre</span></code></pre></div>
+<code>Vinagre</code> is <a href="https://wiki.gnome.org/Apps/Vinagre">here</a>. Basically we just
+need to <code>apt-get</code> it:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span>
+<span id="cb57-2"><a href="#cb57-2" tabindex="-1"></a><span class="fu">sudo</span> apt-get install vinagre</span></code></pre></div>
 <p>Again, we navigate to Google:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">port =</span> 4445L)</span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>(<span class="at">silent =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a><span class="fu">library</span>(RSelenium)</span>
+<span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">port =</span> <span class="dv">4445</span><span class="dt">L</span>)</span>
+<span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>(<span class="at">silent =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb58-5"><a href="#cb58-5" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;Google&quot;</code></pre>
 <p>Now open Vinagre and input the correct ip/port (127.0.0.1:5901 in
@@ -877,14 +877,14 @@ this case).</p>
 <code>secret</code>.</p>
 <p>You should now be able to interact with the containers browser. Again
 navigate to another website and observe the containers browser:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.bbc.com&quot;</span>)</span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.bbc.com&quot;</span>)</span>
+<span id="cb60-2"><a href="#cb60-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">getTitle</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] &quot;BBC - Homepage&quot;</code></pre>
 <p>Finally close the session:</p>
 <pre><code>remDr$close()</code></pre>
 <p>And close down any running containers:</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker stop <span class="va">$(</span><span class="fu">sudo</span> docker ps <span class="at">-q</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a><span class="fu">sudo</span> docker stop <span class="va">$(</span><span class="fu">sudo</span> docker ps <span class="at">-q</span><span class="va">)</span></span></code></pre></div>
 <pre><code>dd36811562e8</code></pre>
 </div>
 </div>

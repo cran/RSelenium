@@ -29,25 +29,26 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -63,55 +64,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -391,8 +391,8 @@ might approach using RSelenium with combinations of operating systems
 <code>remoteDriver</code> class is instantiated using default options
 for example <code>remdr &lt;- remoteDriver()</code> then the browser
 listed is firefox.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>remdr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remDr</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>remdr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>()</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>remDr</span></code></pre></div>
 <pre><code>## $remoteServerAddr
 ## [1] &quot;localhost&quot;
 ## 
@@ -451,11 +451,11 @@ this case we placed in the Documents folder namely
 system path.</p>
 <p>We assume that a selenium server is also running. A chrome browser
 can be controlled as follows:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">browserName =</span> <span class="st">&quot;chrome&quot;</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(remDr<span class="sc">$</span>sessionInfo)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">browserName =</span> <span class="st">&quot;chrome&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="fu">head</span>(remDr<span class="sc">$</span>sessionInfo)</span></code></pre></div>
 <pre><code>## $platform
 ## [1] &quot;WIN8&quot;
 ## 
@@ -493,11 +493,11 @@ directory namely C:. This directory is already in the system path from
 running the chrome example. If you want to place the internet explorer
 .exe in another folder add this folder to your system path. To control
 internet explorer as a browser is now as simple as:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">browserName =</span> <span class="st">&quot;internet explorer&quot;</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(remDr<span class="sc">$</span>sessionInfo, <span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">browserName =</span> <span class="st">&quot;internet explorer&quot;</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="fu">head</span>(remDr<span class="sc">$</span>sessionInfo, <span class="dv">7</span>)</span></code></pre></div>
 <pre><code>## $platform
 ## [1] &quot;WINDOWS&quot;
 ## 
@@ -528,10 +528,10 @@ so nothing other then having safari installed should be required. For
 the purposes of this vignette I downloaded and installed safari 5.1.7 on
 a windows 8.1 system.</p>
 <p>Once installed controlling safari was as easy as:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">browserName =</span> <span class="st">&quot;safari&quot;</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(remDr<span class="sc">$</span>sessionInfo)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">browserName =</span> <span class="st">&quot;safari&quot;</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="fu">head</span>(remDr<span class="sc">$</span>sessionInfo)</span></code></pre></div>
 <pre><code>## $platform
 ## [1] &quot;WINDOWS&quot;
 ## 
@@ -598,11 +598,11 @@ the directory
 <code>C:\Users\john\Desktop\phantomjs-1.9.7-windows</code>. Once your
 operating system can find <code>phantomjs.exe</code> or the equivalent
 driving a phantomjs browser is as easy as:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">browserName =</span> <span class="st">&quot;phantomjs&quot;</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(remDr<span class="sc">$</span>sessionInfo)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> <span class="fu">remoteDriver</span>(<span class="at">browserName =</span> <span class="st">&quot;phantomjs&quot;</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">open</span>()</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="fu">head</span>(remDr<span class="sc">$</span>sessionInfo)</span></code></pre></div>
 <pre><code>## $platform
 ## [1] &quot;XP&quot;
 ## 
@@ -621,8 +621,8 @@ driving a phantomjs browser is as easy as:</p>
 ## $driverVersion
 ## [1] &quot;1.1.0&quot;</code></pre>
 <p>We can take a screenshot even thou the browser is headless:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">screenshot</span>(<span class="at">display =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>remDr<span class="sc">$</span><span class="fu">screenshot</span>(<span class="at">display =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>PhantomJS is excellent. It has only recently as of version 1.8 had
 Ghost Driver integration and hopefully its importance will increase
 further.</p>
@@ -646,35 +646,35 @@ demonstrate remote testing using Sauce Labs.</p>
 <div id="setting-up-sauce-labs" class="section level3">
 <h3>Setting up Sauce Labs</h3>
 <p>We assume in this vignette that you are setting up Sauce Labs for an
-open source project. Firstly you should register your project <a href="https://saucelabs.com/open-sauce">here</a>. On the <a href="https://app.saucelabs.com/dashboard">account page</a> you will
+open source project. Firstly you should register your project <a href="https://saucelabs.com/">here</a>. On the <a href="https://app.saucelabs.com/dashboard">account page</a> you will
 find the access key for your account that is in a similar format to
 <code>49953c74-5c46-4ff9-b584-cf31a4c71809</code>. Using Sauce Labs is
 pretty straightforward. You need to tell it what OS/Browser combination
 you would like. A list of possible setups can be viewed <a href="https://saucelabs.com/platform/supported-browsers-devices">here</a>.
 As an example lets suppose we wished to run google chrome version 33 on
 OSX version mavericks.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>user <span class="ot">&lt;-</span> <span class="st">&quot;rselenium0&quot;</span> <span class="co"># Your Sauce Labs username</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>pass <span class="ot">&lt;-</span> <span class="st">&quot;49953c74-5c46-4ff9-b584-cf31a4c71809&quot;</span> <span class="co"># Your Sauce Labs access key </span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>port <span class="ot">&lt;-</span> <span class="dv">80</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>ip <span class="ot">&lt;-</span> <span class="fu">paste0</span>(user, <span class="st">&#39;:&#39;</span>, pass, <span class="st">&quot;@ondemand.saucelabs.com&quot;</span>)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>rdBrowser <span class="ot">&lt;-</span> <span class="st">&quot;chrome&quot;</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>version <span class="ot">&lt;-</span> <span class="st">&quot;33&quot;</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>platform <span class="ot">&lt;-</span> <span class="st">&quot;OS X 10.9&quot;</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>extraCapabilities <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;RSelenium OS/Browsers vignette first example&quot;</span>,</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">username =</span> user,</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">accessKey =</span> pass,</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">tags =</span> <span class="fu">list</span>(<span class="st">&quot;RSelenium-vignette&quot;</span>, <span class="st">&quot;OS/Browsers-vignette&quot;</span>)</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> remoteDriver<span class="sc">$</span><span class="fu">new</span>(</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">remoteServerAddr =</span> ip,</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">port =</span> port,</span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">browserName =</span> rdBrowser,</span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">version =</span> version,</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">platform =</span> platform,</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">extraCapabilities =</span> extraCapabilities</span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>user <span class="ot">&lt;-</span> <span class="st">&quot;rselenium0&quot;</span> <span class="co"># Your Sauce Labs username</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>pass <span class="ot">&lt;-</span> <span class="st">&quot;49953c74-5c46-4ff9-b584-cf31a4c71809&quot;</span> <span class="co"># Your Sauce Labs access key </span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>port <span class="ot">&lt;-</span> <span class="dv">80</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>ip <span class="ot">&lt;-</span> <span class="fu">paste0</span>(user, <span class="st">&#39;:&#39;</span>, pass, <span class="st">&quot;@ondemand.saucelabs.com&quot;</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>rdBrowser <span class="ot">&lt;-</span> <span class="st">&quot;chrome&quot;</span></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>version <span class="ot">&lt;-</span> <span class="st">&quot;33&quot;</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>platform <span class="ot">&lt;-</span> <span class="st">&quot;OS X 10.9&quot;</span></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a>extraCapabilities <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;RSelenium OS/Browsers vignette first example&quot;</span>,</span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a>  <span class="at">username =</span> user,</span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a>  <span class="at">accessKey =</span> pass,</span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a>  <span class="at">tags =</span> <span class="fu">list</span>(<span class="st">&quot;RSelenium-vignette&quot;</span>, <span class="st">&quot;OS/Browsers-vignette&quot;</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a>)</span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> remoteDriver<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a>  <span class="at">remoteServerAddr =</span> ip,</span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a>  <span class="at">port =</span> port,</span>
+<span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a>  <span class="at">browserName =</span> rdBrowser,</span>
+<span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a>  <span class="at">version =</span> version,</span>
+<span id="cb13-20"><a href="#cb13-20" tabindex="-1"></a>  <span class="at">platform =</span> platform,</span>
+<span id="cb13-21"><a href="#cb13-21" tabindex="-1"></a>  <span class="at">extraCapabilities =</span> extraCapabilities</span>
+<span id="cb13-22"><a href="#cb13-22" tabindex="-1"></a>)</span></code></pre></div>
 <p>We state the browser and OS we require (chrome 33/ Mac OSX 10.9). The
 user and password are used to form an appropriate ip address for our
 remote server (<a href="http://rselenium0:49953c74-5c46-4ff9-b584-cf31a4c71809@ondemand.saucelabs.com">http://rselenium0:49953c74-5c46-4ff9-b584-cf31a4c71809@ondemand.saucelabs.com</a>
@@ -688,28 +688,28 @@ They are used to annotate our tests.</p>
 <h4>Basic Example</h4>
 <p>As a basic first example we will run a script using the mavericks/
 chrome 33 combination. We run the following commands:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>testScript <span class="ot">&lt;-</span> <span class="cf">function</span>(remDr) {</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">open</span>()</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># highlight the query box</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;q&quot;</span>)<span class="sc">$</span><span class="fu">highlightElement</span>()</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># goto rproject</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.r-project.org&quot;</span>)</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># go Back</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">goBack</span>()</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># go Forward</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">goForward</span>()</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="st">&quot;css selector&quot;</span>, <span class="st">&quot;frame&quot;</span>)</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># highlight the frames</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lapply</span>(webElems, <span class="cf">function</span>(x){x<span class="sc">$</span><span class="fu">highlightElement</span>()})</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">close</span>()</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="fu">testScript</span>(remDr)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>testScript <span class="ot">&lt;-</span> <span class="cf">function</span>(remDr) {</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">open</span>()</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.google.com/ncr&quot;</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>  <span class="co"># highlight the query box</span></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;q&quot;</span>)<span class="sc">$</span><span class="fu">highlightElement</span>()</span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a>  <span class="co"># goto rproject</span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://www.r-project.org&quot;</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a>  <span class="co"># go Back</span></span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">goBack</span>()</span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a>  <span class="co"># go Forward</span></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">goForward</span>()</span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1"></a>  webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="st">&quot;css selector&quot;</span>, <span class="st">&quot;frame&quot;</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1"></a>  <span class="co"># highlight the frames</span></span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1"></a>  <span class="fu">lapply</span>(webElems, <span class="cf">function</span>(x){x<span class="sc">$</span><span class="fu">highlightElement</span>()})</span>
+<span id="cb14-18"><a href="#cb14-18" tabindex="-1"></a>  </span>
+<span id="cb14-19"><a href="#cb14-19" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">close</span>()</span>
+<span id="cb14-20"><a href="#cb14-20" tabindex="-1"></a>}</span>
+<span id="cb14-21"><a href="#cb14-21" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" tabindex="-1"></a><span class="fu">testScript</span>(remDr)</span></code></pre></div>
 <p>And that’s it. We have ran our first remote test using Sauce Labs.
 The results of the test can be viewed <a href="https://app.saucelabs.com/tests/ae22f859de8746f9bfedad2f49c1c329">here</a>.
 I think you will agree its a nice setup. We have access to screenshots
@@ -723,36 +723,36 @@ our test.</p>
 <p>We can easily extend the simple test we ran for multiple OS/Browser
 combinations. The browser and platform variables need to be assigned the
 combinations we require.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>osBrowser <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;OS X 10.9&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">browser =</span> <span class="fu">list</span>(<span class="st">&quot;safari&quot;</span>, <span class="st">&quot;firefox&quot;</span>),</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">version =</span> <span class="fu">list</span>(<span class="st">&#39;7&#39;</span>, <span class="st">&#39;28&#39;</span>)</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Windows 8&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">browser =</span> <span class="fu">list</span>(<span class="st">&quot;chrome&quot;</span>, <span class="st">&quot;firefox&quot;</span>, <span class="st">&quot;internet explorer&quot;</span>),</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">version =</span> <span class="fu">list</span>(<span class="st">&#39;33&#39;</span>, <span class="st">&#39;28&#39;</span>, <span class="st">&#39;10&#39;</span>)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Linux&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">browser =</span> <span class="fu">list</span>(<span class="st">&quot;chrome&quot;</span>, <span class="st">&quot;firefox&quot;</span>, <span class="st">&quot;opera&quot;</span>),</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">version =</span> <span class="fu">list</span>(<span class="st">&#39;33&#39;</span>, <span class="st">&#39;28&#39;</span>, <span class="st">&#39;12&#39;</span>)</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(<span class="fu">seq_along</span>(osBrowser), <span class="cf">function</span>(x) {</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  platform <span class="ot">&lt;-</span> <span class="fu">names</span>(osBrowser)[x]</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lapply</span>(<span class="fu">seq_along</span>(osBrowser[[x]]<span class="sc">$</span>browser), <span class="cf">function</span>(y){</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    rdBrowser <span class="ot">&lt;-</span> osBrowser[[x]]<span class="sc">$</span>browser[[y]]</span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    version <span class="ot">&lt;-</span> osBrowser[[x]]<span class="sc">$</span>version[[y]]</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    remDr <span class="ot">&lt;-</span> remoteDriver<span class="sc">$</span><span class="fu">new</span>(</span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">remoteServerAddr =</span> ip,</span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">port =</span> port,</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">browserName =</span> rdBrowser,</span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">version =</span> version,</span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">platform =</span> platform,</span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">extraCapabilities =</span> extraCapabilities</span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">testScript</span>(remDr)</span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>osBrowser <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>  <span class="st">&quot;OS X 10.9&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>    <span class="at">browser =</span> <span class="fu">list</span>(<span class="st">&quot;safari&quot;</span>, <span class="st">&quot;firefox&quot;</span>),</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>    <span class="at">version =</span> <span class="fu">list</span>(<span class="st">&#39;7&#39;</span>, <span class="st">&#39;28&#39;</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>  ),</span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a>  <span class="st">&quot;Windows 8&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>    <span class="at">browser =</span> <span class="fu">list</span>(<span class="st">&quot;chrome&quot;</span>, <span class="st">&quot;firefox&quot;</span>, <span class="st">&quot;internet explorer&quot;</span>),</span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a>    <span class="at">version =</span> <span class="fu">list</span>(<span class="st">&#39;33&#39;</span>, <span class="st">&#39;28&#39;</span>, <span class="st">&#39;10&#39;</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a>  ),</span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a>  <span class="st">&quot;Linux&quot;</span> <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a>    <span class="at">browser =</span> <span class="fu">list</span>(<span class="st">&quot;chrome&quot;</span>, <span class="st">&quot;firefox&quot;</span>, <span class="st">&quot;opera&quot;</span>),</span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a>    <span class="at">version =</span> <span class="fu">list</span>(<span class="st">&#39;33&#39;</span>, <span class="st">&#39;28&#39;</span>, <span class="st">&#39;12&#39;</span>)</span>
+<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a>  )</span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a>)</span>
+<span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a><span class="fu">lapply</span>(<span class="fu">seq_along</span>(osBrowser), <span class="cf">function</span>(x) {</span>
+<span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a>  platform <span class="ot">&lt;-</span> <span class="fu">names</span>(osBrowser)[x]</span>
+<span id="cb15-17"><a href="#cb15-17" tabindex="-1"></a>  <span class="fu">lapply</span>(<span class="fu">seq_along</span>(osBrowser[[x]]<span class="sc">$</span>browser), <span class="cf">function</span>(y){</span>
+<span id="cb15-18"><a href="#cb15-18" tabindex="-1"></a>    rdBrowser <span class="ot">&lt;-</span> osBrowser[[x]]<span class="sc">$</span>browser[[y]]</span>
+<span id="cb15-19"><a href="#cb15-19" tabindex="-1"></a>    version <span class="ot">&lt;-</span> osBrowser[[x]]<span class="sc">$</span>version[[y]]</span>
+<span id="cb15-20"><a href="#cb15-20" tabindex="-1"></a>    remDr <span class="ot">&lt;-</span> remoteDriver<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb15-21"><a href="#cb15-21" tabindex="-1"></a>      <span class="at">remoteServerAddr =</span> ip,</span>
+<span id="cb15-22"><a href="#cb15-22" tabindex="-1"></a>      <span class="at">port =</span> port,</span>
+<span id="cb15-23"><a href="#cb15-23" tabindex="-1"></a>      <span class="at">browserName =</span> rdBrowser,</span>
+<span id="cb15-24"><a href="#cb15-24" tabindex="-1"></a>      <span class="at">version =</span> version,</span>
+<span id="cb15-25"><a href="#cb15-25" tabindex="-1"></a>      <span class="at">platform =</span> platform,</span>
+<span id="cb15-26"><a href="#cb15-26" tabindex="-1"></a>      <span class="at">extraCapabilities =</span> extraCapabilities</span>
+<span id="cb15-27"><a href="#cb15-27" tabindex="-1"></a>    )</span>
+<span id="cb15-28"><a href="#cb15-28" tabindex="-1"></a>    <span class="fu">testScript</span>(remDr)</span>
+<span id="cb15-29"><a href="#cb15-29" tabindex="-1"></a>  })</span>
+<span id="cb15-30"><a href="#cb15-30" tabindex="-1"></a>})</span></code></pre></div>
 <p>To view the results you can go to the <code>RSelenium</code> project
 page on <a href="https://app.saucelabs.com/u/rselenium">Sauce Labs</a>.
 Listed here are all the tests ran on the <code>RSelenium</code> package.
@@ -770,14 +770,14 @@ project we either do not have or do not want an external version of our
 webpage/website/webapp. A good example would be our
 <code>shinytestapp</code>. Lets open a new R session and run our
 testapp.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(shiny)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">runApp</span>(<span class="fu">file.path</span>(<span class="fu">find.package</span>(<span class="st">&quot;RSelenium&quot;</span>), <span class="st">&quot;apps&quot;</span>, <span class="st">&quot;shinytestapp&quot;</span>), <span class="at">port =</span> <span class="dv">3000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">require</span>(shiny)</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="fu">runApp</span>(<span class="fu">file.path</span>(<span class="fu">find.package</span>(<span class="st">&quot;RSelenium&quot;</span>), <span class="st">&quot;apps&quot;</span>, <span class="st">&quot;shinytestapp&quot;</span>), <span class="at">port =</span> <span class="dv">3000</span>)</span></code></pre></div>
 <p>To access our app we would require the ip address
 <code>http://localhost:3000/</code>. How do we access this from a remote
 webdriver?</p>
 <div id="sauce-connect" class="section level3">
 <h3>Sauce Connect</h3>
-<p>Thankfully Sauce Labs have a solution for this known as <a href="https://docs.saucelabs.com/secure-connections/sauce-connect/">Sauce
+<p>Thankfully Sauce Labs have a solution for this known as <a href="https://docs.saucelabs.com/secure-connections/sauce-connect-5/">Sauce
 Connect</a>. Sauce Connect is a secure tunneling app which allows you to
 execute tests securely when testing behind firewalls via a secure
 connection between Sauce Labs client cloud and your environment. This
@@ -805,9 +805,9 @@ need a locally-defined domain name (which can be set in your hosts file)
 rather than localhost. This is simple to do but for the purposes of this
 vignette we shall connect to <code>http://localhost:3000</code>. Again
 to start with we shall use Mavericks with Chrome 33.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>user <span class="ot">&lt;-</span> <span class="st">&quot;rselenium0&quot;</span> <span class="co"># Your Sauce Labs username</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>pass <span class="ot">&lt;-</span> <span class="st">&quot;49953c74-5c46-4ff9-b584-cf31a4c71809&quot;</span> <span class="co"># Your Sauce Labs access key </span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">require</span>(RSelenium)</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>user <span class="ot">&lt;-</span> <span class="st">&quot;rselenium0&quot;</span> <span class="co"># Your Sauce Labs username</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>pass <span class="ot">&lt;-</span> <span class="st">&quot;49953c74-5c46-4ff9-b584-cf31a4c71809&quot;</span> <span class="co"># Your Sauce Labs access key </span></span></code></pre></div>
 <p><del>port &lt;- 80</del><br> <del>ip &lt;- paste0(user, ‘:’, pass,
 “<span class="citation">@ondemand.saucelabs.com</span>”)</del></p>
 <pre><code>port &lt;- 4445
@@ -837,30 +837,30 @@ remDr &lt;- remoteDriver$new(
 to a localhost address Sauce Connect will intervene. Also we connect to
 Sauce Labs through Sauce Connect on <code>localhost:4445</code> by
 default instead of <code>ondemand.saucelabs.com:80</code>.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>localScript <span class="ot">&lt;-</span> <span class="cf">function</span>(remDr){</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">open</span>()</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">setImplicitWaitTimeout</span>(<span class="dv">2000</span>) <span class="co"># wait for elements for 2 seconds</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://localhost:3000&quot;</span>)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># highlight the labels</span></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="st">&quot;css selector&quot;</span>, <span class="st">&quot;#ctrlSelect span&quot;</span>)</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lapply</span>(webElems, <span class="cf">function</span>(x) {x<span class="sc">$</span><span class="fu">highlightElement</span>()})</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  appIds <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;summary&quot;</span>, <span class="st">&quot;distPlot&quot;</span>, <span class="st">&quot;ggPlot&quot;</span>, <span class="st">&quot;dttable&quot;</span>)</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Click each checkbox and check for its output</span></span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lapply</span>(<span class="fu">seq_along</span>(webElems), <span class="cf">function</span>(x) {</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="sc">!</span>webElems[[x]]<span class="sc">$</span><span class="fu">isElementSelected</span>()[[<span class="dv">1</span>]]) {</span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>      webElems[[x]]<span class="sc">$</span><span class="fu">clickElement</span>()</span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>      <span class="co"># test for its output</span></span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>      out <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;id&quot;</span>, appIds[x])</span>
-<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>      out<span class="sc">$</span><span class="fu">highlightElement</span>()</span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">close</span>()</span>
-<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="fu">localScript</span>(remDr)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>localScript <span class="ot">&lt;-</span> <span class="cf">function</span>(remDr){</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">open</span>()</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">setImplicitWaitTimeout</span>(<span class="dv">2000</span>) <span class="co"># wait for elements for 2 seconds</span></span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">navigate</span>(<span class="st">&quot;http://localhost:3000&quot;</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a>  <span class="co"># highlight the labels</span></span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a>  webElems <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElements</span>(<span class="st">&quot;css selector&quot;</span>, <span class="st">&quot;#ctrlSelect span&quot;</span>)</span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a>  <span class="fu">lapply</span>(webElems, <span class="cf">function</span>(x) {x<span class="sc">$</span><span class="fu">highlightElement</span>()})</span>
+<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
+<span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a>  appIds <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;summary&quot;</span>, <span class="st">&quot;distPlot&quot;</span>, <span class="st">&quot;ggPlot&quot;</span>, <span class="st">&quot;dttable&quot;</span>)</span>
+<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a>  <span class="co"># Click each checkbox and check for its output</span></span>
+<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a>  <span class="fu">lapply</span>(<span class="fu">seq_along</span>(webElems), <span class="cf">function</span>(x) {</span>
+<span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a>    <span class="cf">if</span>(<span class="sc">!</span>webElems[[x]]<span class="sc">$</span><span class="fu">isElementSelected</span>()[[<span class="dv">1</span>]]) {</span>
+<span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a>      webElems[[x]]<span class="sc">$</span><span class="fu">clickElement</span>()</span>
+<span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a>      <span class="co"># test for its output</span></span>
+<span id="cb21-16"><a href="#cb21-16" tabindex="-1"></a>      out <span class="ot">&lt;-</span> remDr<span class="sc">$</span><span class="fu">findElement</span>(<span class="st">&quot;id&quot;</span>, appIds[x])</span>
+<span id="cb21-17"><a href="#cb21-17" tabindex="-1"></a>      out<span class="sc">$</span><span class="fu">highlightElement</span>()</span>
+<span id="cb21-18"><a href="#cb21-18" tabindex="-1"></a>    }</span>
+<span id="cb21-19"><a href="#cb21-19" tabindex="-1"></a>  })</span>
+<span id="cb21-20"><a href="#cb21-20" tabindex="-1"></a>  </span>
+<span id="cb21-21"><a href="#cb21-21" tabindex="-1"></a>  remDr<span class="sc">$</span><span class="fu">close</span>()</span>
+<span id="cb21-22"><a href="#cb21-22" tabindex="-1"></a>}</span>
+<span id="cb21-23"><a href="#cb21-23" tabindex="-1"></a></span>
+<span id="cb21-24"><a href="#cb21-24" tabindex="-1"></a><span class="fu">localScript</span>(remDr)</span></code></pre></div>
 </div>
 </div>
 
